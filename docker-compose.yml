@@ -1,0 +1,67 @@
+version: '3.8'
+
+services:
+  # MongoDB
+  mongodb:
+    image: mongo:7.0
+    container_name: control-almacen-db
+    restart: unless-stopped
+    ports:
+      - "28000:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin123
+      MONGO_INITDB_DATABASE: control_almacen
+    volumes:
+      - mongo_data:/data/db
+      - ./backend/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+    networks:
+      - app-network
+
+  # Backend FastAPI
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: control-almacen-backend
+    restart: unless-stopped
+    ports:
+      - "7070:7070"
+    environment:
+      - MONGO_DETAILS_OK=mongodb://admin:admin123@mongodb:27017/control_almacen?authSource=admin
+      - BD_DETAILS_OK=control_almacen
+      - MONGO_TOKEN_OK=ztrackztrack2025!
+      - JWT_SECRET_KEY=tu_clave_secreta_super_segura_2024
+      - JWT_ALGORITHM=HS256
+      - JWT_EXPIRATION_HOURS=24
+    depends_on:
+      - mongodb
+    volumes:
+      - ./backend/static_files:/app/static_files
+      - ./backend/uploads:/app/uploads
+    networks:
+      - app-network
+
+  # Frontend Next.js
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: control-almacen-frontend
+    restart: unless-stopped
+    ports:
+      - "9090:9090"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:7070
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  mongo_data:
+  

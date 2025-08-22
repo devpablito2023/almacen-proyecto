@@ -1,0 +1,599 @@
+2025-08-21 11:40:17,405 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-21 11:40:45,127 - server.app - INFO - GET / - Status: 200 - Time: 0.000s
+2025-08-21 11:40:45,156 - server.app - INFO - GET /favicon.ico - Status: 404 - Time: 0.000s
+2025-08-21 11:40:53,248 - server.app - INFO - GET /docs - Status: 200 - Time: 0.000s
+2025-08-21 11:40:53,436 - server.app - INFO - GET /openapi.json - Status: 200 - Time: 0.014s
+2025-08-21 11:41:21,114 - server.functions.auth - ERROR - Error en autenticación: Base de datos no inicializada
+2025-08-21 11:41:21,115 - server.config.database - ERROR - Error registrando actividad: Base de datos no inicializada
+2025-08-21 11:41:21,115 - server.routes.auth - WARNING - Login fallido para user@example.com: Error interno del servidor
+2025-08-21 11:41:21,115 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.007s
+2025-08-21 11:42:59,113 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-21 11:43:14,414 - server.app - INFO - GET /docs - Status: 200 - Time: 0.000s
+2025-08-21 11:43:14,470 - server.app - INFO - GET /openapi.json - Status: 200 - Time: 0.010s
+2025-08-21 11:43:18,778 - server.functions.auth - ERROR - Error en autenticación: Base de datos no inicializada
+2025-08-21 11:43:18,778 - server.config.database - ERROR - Error registrando actividad: Base de datos no inicializada
+2025-08-21 11:43:18,778 - server.routes.auth - WARNING - Login fallido para user@example.com: Error interno del servidor
+2025-08-21 11:43:18,778 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.005s
+2025-08-21 11:45:11,160 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-21 11:49:56,702 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-21 11:52:12,105 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-21 11:52:33,783 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-21 11:52:48,201 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-21 11:53:10,377 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-21 11:57:54,920 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-21 11:58:32,601 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-21 11:58:46,848 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-21 11:59:22,543 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-21 11:59:59,758 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-21 12:00:49,091 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-21 12:01:07,121 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-21 12:01:50,935 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-21 12:02:40,692 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-21 12:06:56,057 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-21 12:07:15,452 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-21 12:09:22,813 - server.app - INFO - GET /health - Status: 200 - Time: 0.000s
+2025-08-21 12:09:36,018 - server.app - INFO - GET / - Status: 200 - Time: 0.000s
+2025-08-21 12:09:49,529 - server.functions.auth - ERROR - Error en autenticación: Base de datos no inicializada
+2025-08-21 12:09:49,529 - server.config.database - ERROR - Error registrando actividad: Base de datos no inicializada
+2025-08-21 12:09:49,529 - server.routes.auth - WARNING - Login fallido para user@example.com: Error interno del servidor
+2025-08-21 12:09:49,529 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.003s
+2025-08-21 12:13:23,739 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-21 12:13:23,739 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-21 12:13:23,747 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-21 12:14:03,473 - server.app - INFO - GET /docs - Status: 200 - Time: 0.000s
+2025-08-21 12:14:03,582 - server.app - INFO - GET /openapi.json - Status: 200 - Time: 0.009s
+2025-08-21 12:14:13,532 - server.functions.auth - ERROR - Error en autenticación: Command find requires authentication, full error: {'ok': 0.0, 'errmsg': 'Command find requires authentication', 'code': 13, 'codeName': 'Unauthorized'}
+2025-08-21 12:14:13,533 - server.config.database - ERROR - Error registrando actividad: Command insert requires authentication, full error: {'ok': 0.0, 'errmsg': 'Command insert requires authentication', 'code': 13, 'codeName': 'Unauthorized'}
+2025-08-21 12:14:13,533 - server.routes.auth - WARNING - Login fallido para user@example.com: Error interno del servidor
+2025-08-21 12:14:13,533 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.008s
+2025-08-21 12:20:26,468 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-21 12:20:26,468 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-21 12:20:26,481 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-21 12:22:42,313 - server.app - INFO - GET /docs - Status: 200 - Time: 0.000s
+2025-08-21 12:22:42,493 - server.app - INFO - GET /openapi.json - Status: 200 - Time: 0.009s
+2025-08-21 12:23:09,732 - server.app - INFO - POST /api/auth/login - Status: 422 - Time: 0.001s
+2025-08-21 12:23:18,466 - server.functions.auth - WARNING - Contraseña incorrecta para usuario: admin@almacen.com
+2025-08-21 12:23:18,471 - server.routes.auth - WARNING - Login fallido para admin@almacen.com: Credenciales inválidas
+2025-08-21 12:23:18,471 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.191s
+2025-08-21 12:23:40,130 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-21 12:23:40,130 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-21 12:23:40,141 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-21 12:23:43,342 - server.functions.auth - WARNING - Contraseña incorrecta para usuario: admin@almacen.com
+2025-08-21 12:23:43,344 - server.routes.auth - WARNING - Login fallido para admin@almacen.com: Credenciales inválidas
+2025-08-21 12:23:43,344 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.181s
+2025-08-21 12:25:36,636 - server.functions.auth - WARNING - Contraseña incorrecta para usuario: admin@almacen.com
+2025-08-21 12:25:36,637 - server.routes.auth - WARNING - Login fallido para admin@almacen.com: Credenciales inválidas
+2025-08-21 12:25:36,638 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.181s
+2025-08-21 12:26:18,847 - server.functions.auth - WARNING - Contraseña incorrecta para usuario: admin@almacen.com
+2025-08-21 12:26:18,848 - server.routes.auth - WARNING - Login fallido para admin@almacen.com: Credenciales inválidas
+2025-08-21 12:26:18,849 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.181s
+2025-08-21 12:27:42,330 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-21 12:27:42,330 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-21 12:27:42,340 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-21 12:27:46,447 - server.functions.auth - WARNING - Contraseña incorrecta para usuario: admin@almacen.com
+2025-08-21 12:27:46,448 - server.routes.auth - WARNING - Login fallido para admin@almacen.com: Credenciales inválidas
+2025-08-21 12:27:46,449 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.187s
+2025-08-21 12:28:08,366 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-21 12:28:08,366 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-21 12:28:08,377 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-21 12:28:10,484 - server.functions.auth - WARNING - Contraseña incorrecta para usuario: admin@almacen.com
+2025-08-21 12:28:10,485 - server.routes.auth - WARNING - Login fallido para admin@almacen.com: Credenciales inválidas
+2025-08-21 12:28:10,485 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.184s
+2025-08-21 14:33:07,170 - server.functions.auth - WARNING - Contraseña incorrecta para usuario: admin@almacen.com
+2025-08-21 14:33:07,174 - server.routes.auth - WARNING - Login fallido para admin@almacen.com: Credenciales inválidas
+2025-08-21 14:33:07,175 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.185s
+2025-08-21 14:33:55,802 - server.config.security - ERROR - Error creando token: module 'jwt' has no attribute 'encode'
+2025-08-21 14:33:55,802 - server.routes.auth - WARNING - Login fallido para admin@almacen.com: Error generando token
+2025-08-21 14:33:55,803 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.181s
+2025-08-21 14:34:23,021 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-21 14:34:23,022 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-21 14:34:23,035 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-21 14:34:25,839 - server.config.security - ERROR - Error creando token: module 'jwt' has no attribute 'encode'
+2025-08-21 14:34:25,839 - server.routes.auth - WARNING - Login fallido para admin@almacen.com: Error generando token
+2025-08-21 14:34:25,839 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.184s
+2025-08-21 14:39:04,248 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-21 14:39:04,248 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-21 14:39:04,259 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-21 14:39:08,937 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-21 14:39:08,938 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.187s
+2025-08-21 14:40:20,811 - server.app - INFO - GET /api/usuarios/ - Status: 200 - Time: 0.007s
+2025-08-21 14:41:06,597 - server.app - INFO - GET /api/usuarios/1 - Status: 200 - Time: 0.002s
+2025-08-21 16:13:29,516 - server.app - INFO - OPTIONS /api/auth/login - Status: 200 - Time: 0.000s
+2025-08-21 16:13:29,742 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-21 16:13:29,742 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.224s
+2025-08-21 17:52:37,543 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-21 17:52:37,544 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-21 17:52:37,569 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-21 17:53:00,407 - server.app - INFO - GET /docs - Status: 200 - Time: 0.000s
+2025-08-21 17:53:01,113 - server.app - INFO - GET /openapi.json - Status: 200 - Time: 0.010s
+2025-08-21 17:56:39,776 - server.app - INFO - OPTIONS /api/auth/login - Status: 200 - Time: 0.001s
+2025-08-21 17:56:39,981 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-21 17:56:39,981 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.202s
+2025-08-21 18:26:05,246 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-21 18:26:05,247 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-21 18:26:05,269 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-21 18:31:21,112 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-21 18:31:21,113 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-21 18:31:21,138 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-21 18:50:04,515 - server.app - INFO - OPTIONS /dashboard/stats - Status: 200 - Time: 0.001s
+2025-08-21 18:50:04,516 - server.app - INFO - OPTIONS /dashboard/productos-bajo-stock - Status: 200 - Time: 0.002s
+2025-08-21 18:50:04,517 - server.app - INFO - OPTIONS /dashboard/solicitudes-recientes - Status: 200 - Time: 0.003s
+2025-08-21 18:50:04,517 - server.app - INFO - OPTIONS /dashboard/movimientos-recientes - Status: 200 - Time: 0.003s
+2025-08-21 18:50:04,518 - server.app - INFO - OPTIONS /dashboard/chart-ingresos-salidas - Status: 200 - Time: 0.002s
+2025-08-21 18:50:04,518 - server.app - INFO - OPTIONS /dashboard/chart-tipos-producto - Status: 200 - Time: 0.001s
+2025-08-21 18:50:04,523 - server.app - INFO - OPTIONS /dashboard/chart-solicitudes-estado - Status: 200 - Time: 0.001s
+2025-08-21 18:50:04,524 - server.app - INFO - OPTIONS /dashboard/stats - Status: 200 - Time: 0.001s
+2025-08-21 18:50:04,524 - server.app - INFO - OPTIONS /dashboard/productos-bajo-stock - Status: 200 - Time: 0.001s
+2025-08-21 18:50:04,524 - server.app - INFO - OPTIONS /dashboard/solicitudes-recientes - Status: 200 - Time: 0.001s
+2025-08-21 18:50:04,524 - server.app - INFO - OPTIONS /dashboard/movimientos-recientes - Status: 200 - Time: 0.001s
+2025-08-21 18:50:04,524 - server.app - INFO - OPTIONS /dashboard/chart-ingresos-salidas - Status: 200 - Time: 0.001s
+2025-08-21 18:50:04,533 - server.app - INFO - OPTIONS /dashboard/chart-tipos-producto - Status: 200 - Time: 0.002s
+2025-08-21 18:50:04,533 - server.app - INFO - OPTIONS /dashboard/chart-solicitudes-estado - Status: 200 - Time: 0.002s
+2025-08-21 18:50:04,533 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.002s
+2025-08-21 18:50:04,533 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.002s
+2025-08-21 18:50:04,533 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.002s
+2025-08-21 18:50:04,534 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.002s
+2025-08-21 18:50:04,540 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 18:50:04,541 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.001s
+2025-08-21 18:50:04,541 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.001s
+2025-08-21 18:50:04,541 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.001s
+2025-08-21 18:50:04,541 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.001s
+2025-08-21 18:50:04,541 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 18:50:04,546 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 18:50:04,546 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 18:50:04,546 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.001s
+2025-08-21 18:50:04,546 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.001s
+2025-08-21 18:50:04,841 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.000s
+2025-08-21 18:50:04,841 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.000s
+2025-08-21 18:50:04,842 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.000s
+2025-08-21 18:50:04,844 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.000s
+2025-08-21 18:50:04,848 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 18:50:04,848 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.001s
+2025-08-21 18:50:04,848 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.001s
+2025-08-21 18:50:04,849 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.000s
+2025-08-21 18:50:04,857 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.005s
+2025-08-21 18:50:04,857 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.005s
+2025-08-21 18:50:04,858 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.004s
+2025-08-21 18:50:04,858 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.004s
+2025-08-21 18:50:04,858 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 18:50:04,858 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 18:53:28,808 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.001s
+2025-08-21 18:53:28,808 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.001s
+2025-08-21 18:53:28,809 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 18:53:28,810 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 18:53:28,813 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 18:53:28,814 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.001s
+2025-08-21 18:53:28,814 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.001s
+2025-08-21 18:53:28,815 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.000s
+2025-08-21 18:53:28,822 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.002s
+2025-08-21 18:53:28,822 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.002s
+2025-08-21 18:53:28,823 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.002s
+2025-08-21 18:53:28,823 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.002s
+2025-08-21 18:53:28,823 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.002s
+2025-08-21 18:53:28,823 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.002s
+2025-08-21 18:53:29,298 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.000s
+2025-08-21 18:53:29,299 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.001s
+2025-08-21 18:53:29,299 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 18:53:29,299 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 18:53:29,299 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 18:53:29,299 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.001s
+2025-08-21 18:53:29,304 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.001s
+2025-08-21 18:53:29,304 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.001s
+2025-08-21 18:53:29,304 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 18:53:29,304 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.001s
+2025-08-21 18:53:29,304 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 18:53:29,304 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.001s
+2025-08-21 18:53:29,309 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 18:53:29,309 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.001s
+2025-08-21 18:59:29,423 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.002s
+2025-08-21 18:59:29,424 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.002s
+2025-08-21 18:59:29,424 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.002s
+2025-08-21 18:59:29,425 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.002s
+2025-08-21 18:59:29,425 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.002s
+2025-08-21 18:59:29,425 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.002s
+2025-08-21 18:59:29,433 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.002s
+2025-08-21 18:59:29,434 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.002s
+2025-08-21 18:59:29,434 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.002s
+2025-08-21 18:59:29,434 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.002s
+2025-08-21 18:59:29,435 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.002s
+2025-08-21 18:59:29,435 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.002s
+2025-08-21 18:59:29,439 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.000s
+2025-08-21 18:59:29,439 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.000s
+2025-08-21 18:59:30,139 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.000s
+2025-08-21 18:59:30,140 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.001s
+2025-08-21 18:59:30,140 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 18:59:30,140 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 18:59:30,140 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 18:59:30,140 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.001s
+2025-08-21 18:59:30,141 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.000s
+2025-08-21 18:59:30,147 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.001s
+2025-08-21 18:59:30,147 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 18:59:30,147 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.001s
+2025-08-21 18:59:30,147 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 18:59:30,147 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.001s
+2025-08-21 18:59:30,148 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 18:59:30,152 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.000s
+2025-08-21 19:12:53,332 - server.app - INFO - OPTIONS /api/auth/login - Status: 200 - Time: 0.000s
+2025-08-21 19:12:53,550 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-21 19:12:53,550 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.216s
+2025-08-21 19:12:56,114 - server.app - INFO - OPTIONS /dashboard/stats - Status: 200 - Time: 0.000s
+2025-08-21 19:12:56,115 - server.app - INFO - OPTIONS /dashboard/productos-bajo-stock - Status: 200 - Time: 0.000s
+2025-08-21 19:12:56,120 - server.app - INFO - OPTIONS /dashboard/solicitudes-recientes - Status: 200 - Time: 0.001s
+2025-08-21 19:12:56,120 - server.app - INFO - OPTIONS /dashboard/movimientos-recientes - Status: 200 - Time: 0.001s
+2025-08-21 19:12:56,120 - server.app - INFO - OPTIONS /dashboard/chart-ingresos-salidas - Status: 200 - Time: 0.002s
+2025-08-21 19:12:56,120 - server.app - INFO - OPTIONS /dashboard/chart-tipos-producto - Status: 200 - Time: 0.002s
+2025-08-21 19:12:56,121 - server.app - INFO - OPTIONS /dashboard/chart-solicitudes-estado - Status: 200 - Time: 0.001s
+2025-08-21 19:12:56,121 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.001s
+2025-08-21 19:12:56,131 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.002s
+2025-08-21 19:12:56,131 - server.app - INFO - OPTIONS /dashboard/solicitudes-recientes - Status: 200 - Time: 0.002s
+2025-08-21 19:12:56,131 - server.app - INFO - OPTIONS /dashboard/movimientos-recientes - Status: 200 - Time: 0.002s
+2025-08-21 19:12:56,131 - server.app - INFO - OPTIONS /dashboard/chart-ingresos-salidas - Status: 200 - Time: 0.002s
+2025-08-21 19:12:56,131 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.002s
+2025-08-21 19:12:56,131 - server.app - INFO - OPTIONS /dashboard/chart-solicitudes-estado - Status: 200 - Time: 0.002s
+2025-08-21 19:12:56,138 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.001s
+2025-08-21 19:12:56,138 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 19:12:56,138 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:12:56,139 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:12:56,139 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.001s
+2025-08-21 19:12:56,139 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.001s
+2025-08-21 19:12:56,144 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.001s
+2025-08-21 19:12:56,145 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 19:12:56,145 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:12:56,145 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:12:56,145 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.001s
+2025-08-21 19:13:12,647 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.001s
+2025-08-21 19:13:12,648 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.001s
+2025-08-21 19:13:12,648 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:13:12,648 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:13:12,648 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 19:13:12,648 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.001s
+2025-08-21 19:13:12,653 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.001s
+2025-08-21 19:13:12,653 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.001s
+2025-08-21 19:13:12,653 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.001s
+2025-08-21 19:13:12,654 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:13:12,654 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:13:12,654 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 19:13:12,658 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.000s
+2025-08-21 19:13:12,658 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.000s
+2025-08-21 19:13:12,834 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.001s
+2025-08-21 19:13:12,835 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.001s
+2025-08-21 19:13:12,835 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:13:12,835 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:13:12,835 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 19:13:12,835 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.001s
+2025-08-21 19:13:12,839 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.001s
+2025-08-21 19:13:12,839 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.001s
+2025-08-21 19:13:12,839 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.001s
+2025-08-21 19:13:12,839 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.001s
+2025-08-21 19:13:12,839 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 19:13:12,839 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:13:12,845 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.000s
+2025-08-21 19:13:12,845 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.000s
+2025-08-21 19:13:39,895 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.001s
+2025-08-21 19:13:39,895 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.001s
+2025-08-21 19:13:39,895 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:13:39,895 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:13:39,895 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 19:13:39,895 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.001s
+2025-08-21 19:13:39,900 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.001s
+2025-08-21 19:13:39,900 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.001s
+2025-08-21 19:13:39,900 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:13:39,900 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 19:13:39,900 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:13:39,900 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.001s
+2025-08-21 19:13:39,905 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.000s
+2025-08-21 19:13:39,905 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.000s
+2025-08-21 19:13:40,065 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.001s
+2025-08-21 19:13:40,065 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.001s
+2025-08-21 19:13:40,066 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:13:40,067 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.000s
+2025-08-21 19:13:40,068 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.000s
+2025-08-21 19:13:40,070 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.000s
+2025-08-21 19:13:40,070 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.000s
+2025-08-21 19:13:40,071 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.000s
+2025-08-21 19:13:40,072 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.000s
+2025-08-21 19:13:40,073 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.000s
+2025-08-21 19:13:40,074 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:13:40,077 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 19:13:40,078 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.001s
+2025-08-21 19:13:40,078 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.001s
+2025-08-21 19:13:44,656 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.001s
+2025-08-21 19:13:44,657 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.001s
+2025-08-21 19:13:44,657 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:13:44,657 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:13:44,657 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 19:13:44,657 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.001s
+2025-08-21 19:13:44,662 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.001s
+2025-08-21 19:13:44,662 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.002s
+2025-08-21 19:13:44,663 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.002s
+2025-08-21 19:13:44,663 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.002s
+2025-08-21 19:13:44,663 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.001s
+2025-08-21 19:13:44,663 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:13:44,667 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.000s
+2025-08-21 19:13:44,667 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.000s
+2025-08-21 19:13:44,833 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.000s
+2025-08-21 19:13:44,834 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.001s
+2025-08-21 19:13:44,835 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:13:44,835 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.000s
+2025-08-21 19:13:44,837 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.000s
+2025-08-21 19:13:44,838 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.000s
+2025-08-21 19:13:44,841 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.002s
+2025-08-21 19:13:44,841 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.002s
+2025-08-21 19:13:44,841 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.002s
+2025-08-21 19:13:44,841 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.002s
+2025-08-21 19:13:44,841 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.002s
+2025-08-21 19:13:44,843 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 19:13:44,849 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.000s
+2025-08-21 19:13:44,849 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.000s
+2025-08-21 19:15:02,040 - server.app - INFO - OPTIONS /api/auth/login - Status: 200 - Time: 0.000s
+2025-08-21 19:15:02,227 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-21 19:15:02,228 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.186s
+2025-08-21 19:15:02,277 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.000s
+2025-08-21 19:15:02,279 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.001s
+2025-08-21 19:15:02,279 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:15:02,279 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:15:02,279 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 19:15:02,279 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.001s
+2025-08-21 19:15:02,280 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.000s
+2025-08-21 19:15:02,283 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.001s
+2025-08-21 19:15:02,283 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:15:02,283 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.001s
+2025-08-21 19:15:02,284 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:15:02,284 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 19:15:02,284 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.001s
+2025-08-21 19:15:02,287 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.000s
+2025-08-21 19:15:35,275 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.001s
+2025-08-21 19:15:35,275 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.001s
+2025-08-21 19:15:35,275 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:15:35,275 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:15:35,275 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 19:15:35,275 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.001s
+2025-08-21 19:15:35,279 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.001s
+2025-08-21 19:15:35,280 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.001s
+2025-08-21 19:15:35,280 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 19:15:35,280 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:15:35,280 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.001s
+2025-08-21 19:15:35,280 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:15:35,284 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.000s
+2025-08-21 19:15:35,284 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.000s
+2025-08-21 19:15:35,451 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.000s
+2025-08-21 19:15:35,453 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.001s
+2025-08-21 19:15:35,453 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:15:35,453 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:15:35,453 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.002s
+2025-08-21 19:15:35,453 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.001s
+2025-08-21 19:15:35,454 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.001s
+2025-08-21 19:15:35,459 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.001s
+2025-08-21 19:15:35,459 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.001s
+2025-08-21 19:15:35,459 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.001s
+2025-08-21 19:15:35,459 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 19:15:35,459 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:15:35,459 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:15:35,465 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.000s
+2025-08-21 19:15:39,597 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.001s
+2025-08-21 19:15:39,597 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.001s
+2025-08-21 19:15:39,598 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:15:39,598 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:15:39,598 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 19:15:39,598 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.001s
+2025-08-21 19:15:39,603 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.001s
+2025-08-21 19:15:39,604 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.001s
+2025-08-21 19:15:39,604 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.001s
+2025-08-21 19:15:39,604 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:15:39,604 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 19:15:39,604 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:15:39,607 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.000s
+2025-08-21 19:15:39,608 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.000s
+2025-08-21 19:15:39,761 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.001s
+2025-08-21 19:15:39,763 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.001s
+2025-08-21 19:15:39,763 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:15:39,763 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:15:39,763 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 19:15:39,763 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.001s
+2025-08-21 19:15:39,764 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.000s
+2025-08-21 19:15:39,793 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.026s
+2025-08-21 19:15:39,793 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.026s
+2025-08-21 19:15:39,793 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.026s
+2025-08-21 19:15:39,793 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.026s
+2025-08-21 19:15:39,793 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.026s
+2025-08-21 19:15:39,794 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:15:39,797 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.000s
+2025-08-21 19:15:45,341 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.001s
+2025-08-21 19:15:45,341 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.001s
+2025-08-21 19:15:45,342 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.002s
+2025-08-21 19:15:45,342 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.002s
+2025-08-21 19:15:45,342 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.002s
+2025-08-21 19:15:45,342 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.002s
+2025-08-21 19:15:45,346 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.001s
+2025-08-21 19:15:45,347 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.001s
+2025-08-21 19:15:45,347 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.001s
+2025-08-21 19:15:45,347 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:15:45,347 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.001s
+2025-08-21 19:15:45,347 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:15:45,351 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.000s
+2025-08-21 19:15:45,352 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.000s
+2025-08-21 19:15:45,499 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.000s
+2025-08-21 19:15:45,500 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.001s
+2025-08-21 19:15:45,500 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:15:45,500 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:15:45,501 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 19:15:45,501 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.001s
+2025-08-21 19:15:45,501 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.001s
+2025-08-21 19:15:45,504 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.001s
+2025-08-21 19:15:45,505 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.001s
+2025-08-21 19:15:45,505 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:15:45,505 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:15:45,505 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 19:15:45,505 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.001s
+2025-08-21 19:15:45,510 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.000s
+2025-08-21 19:16:01,492 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.001s
+2025-08-21 19:16:01,492 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.001s
+2025-08-21 19:16:01,492 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:16:01,492 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:16:01,492 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 19:16:01,493 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.001s
+2025-08-21 19:16:01,497 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.001s
+2025-08-21 19:16:01,497 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.001s
+2025-08-21 19:16:01,497 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.001s
+2025-08-21 19:16:01,498 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 19:16:01,498 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:16:01,498 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:16:01,502 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.000s
+2025-08-21 19:16:01,502 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.000s
+2025-08-21 19:16:01,670 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.000s
+2025-08-21 19:16:01,671 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.001s
+2025-08-21 19:16:01,671 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:16:01,671 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:16:01,671 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 19:16:01,671 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.001s
+2025-08-21 19:16:01,675 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.001s
+2025-08-21 19:16:01,676 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.001s
+2025-08-21 19:16:01,676 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.001s
+2025-08-21 19:16:01,676 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:16:01,676 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 19:16:01,676 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.001s
+2025-08-21 19:16:01,680 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.000s
+2025-08-21 19:16:01,680 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.000s
+2025-08-21 19:16:22,594 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.001s
+2025-08-21 19:16:22,594 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.001s
+2025-08-21 19:16:22,595 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:16:22,595 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:16:22,595 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 19:16:22,595 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.001s
+2025-08-21 19:16:22,600 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.001s
+2025-08-21 19:16:22,601 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.001s
+2025-08-21 19:16:22,601 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 19:16:22,601 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:16:22,601 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.001s
+2025-08-21 19:16:22,601 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:16:22,605 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.000s
+2025-08-21 19:16:22,605 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.001s
+2025-08-21 19:16:22,760 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.000s
+2025-08-21 19:16:22,760 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.000s
+2025-08-21 19:16:22,762 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.000s
+2025-08-21 19:16:22,763 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:16:22,763 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.000s
+2025-08-21 19:16:22,763 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.000s
+2025-08-21 19:16:22,763 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.001s
+2025-08-21 19:16:22,764 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.000s
+2025-08-21 19:16:22,764 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.000s
+2025-08-21 19:16:22,768 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:16:22,768 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:16:22,769 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.001s
+2025-08-21 19:16:22,769 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 19:16:22,769 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.001s
+2025-08-21 19:16:54,187 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.001s
+2025-08-21 19:16:54,188 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.001s
+2025-08-21 19:16:54,188 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:16:54,188 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:16:54,188 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 19:16:54,188 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.001s
+2025-08-21 19:16:54,192 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.001s
+2025-08-21 19:16:54,192 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.001s
+2025-08-21 19:16:54,192 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.001s
+2025-08-21 19:16:54,192 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:16:54,192 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:16:54,192 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.001s
+2025-08-21 19:16:54,196 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.000s
+2025-08-21 19:16:54,196 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.000s
+2025-08-21 19:16:54,358 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.001s
+2025-08-21 19:16:54,359 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.001s
+2025-08-21 19:16:54,359 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:16:54,359 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:16:54,359 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 19:16:54,359 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.001s
+2025-08-21 19:16:54,365 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.002s
+2025-08-21 19:16:54,366 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 19:16:54,366 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.002s
+2025-08-21 19:16:54,366 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.002s
+2025-08-21 19:16:54,366 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.002s
+2025-08-21 19:16:54,366 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.002s
+2025-08-21 19:16:54,372 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.000s
+2025-08-21 19:16:54,372 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.000s
+2025-08-21 19:17:31,619 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.001s
+2025-08-21 19:17:31,620 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.001s
+2025-08-21 19:17:31,620 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:17:31,620 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:17:31,620 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 19:17:31,620 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.001s
+2025-08-21 19:17:31,624 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.001s
+2025-08-21 19:17:31,624 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.001s
+2025-08-21 19:17:31,624 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.001s
+2025-08-21 19:17:31,624 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:17:31,624 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 19:17:31,624 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.001s
+2025-08-21 19:17:31,628 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.000s
+2025-08-21 19:17:31,629 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.000s
+2025-08-21 19:17:31,785 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.000s
+2025-08-21 19:17:31,787 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.001s
+2025-08-21 19:17:31,788 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:17:31,788 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:17:31,788 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 19:17:31,788 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.001s
+2025-08-21 19:17:31,788 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.001s
+2025-08-21 19:17:31,793 - server.app - INFO - GET /dashboard/stats - Status: 404 - Time: 0.001s
+2025-08-21 19:17:31,793 - server.app - INFO - GET /dashboard/productos-bajo-stock - Status: 404 - Time: 0.001s
+2025-08-21 19:17:31,794 - server.app - INFO - GET /dashboard/solicitudes-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:17:31,794 - server.app - INFO - GET /dashboard/chart-ingresos-salidas - Status: 404 - Time: 0.001s
+2025-08-21 19:17:31,794 - server.app - INFO - GET /dashboard/movimientos-recientes - Status: 404 - Time: 0.001s
+2025-08-21 19:17:31,794 - server.app - INFO - GET /dashboard/chart-solicitudes-estado - Status: 404 - Time: 0.001s
+2025-08-21 19:17:31,798 - server.app - INFO - GET /dashboard/chart-tipos-producto - Status: 404 - Time: 0.000s
+2025-08-22 00:15:53,453 - server.app - INFO - OPTIONS /dashboard/data - Status: 200 - Time: 0.010s
+2025-08-22 00:15:53,472 - server.app - INFO - OPTIONS /dashboard/stock-alerts - Status: 200 - Time: 0.026s
+2025-08-22 00:15:53,472 - server.app - INFO - OPTIONS /dashboard/data - Status: 200 - Time: 0.025s
+2025-08-22 00:15:53,473 - server.app - INFO - OPTIONS /dashboard/stock-alerts - Status: 200 - Time: 0.025s
+2025-08-22 00:15:53,489 - server.app - INFO - GET /dashboard/stock-alerts - Status: 404 - Time: 0.011s
+2025-08-22 00:15:53,490 - server.app - INFO - GET /dashboard/data - Status: 404 - Time: 0.001s
+2025-08-22 00:15:53,493 - server.app - INFO - GET /dashboard/data - Status: 404 - Time: 0.001s
+2025-08-22 00:15:53,494 - server.app - INFO - GET /dashboard/stock-alerts - Status: 404 - Time: 0.001s
+2025-08-22 00:16:19,460 - server.app - INFO - GET /dashboard/data - Status: 404 - Time: 0.001s
+2025-08-22 00:16:19,460 - server.app - INFO - GET /dashboard/stock-alerts - Status: 404 - Time: 0.001s
+2025-08-22 00:16:19,463 - server.app - INFO - GET /dashboard/data - Status: 404 - Time: 0.001s
+2025-08-22 00:16:19,463 - server.app - INFO - GET /dashboard/stock-alerts - Status: 404 - Time: 0.000s
+2025-08-22 00:16:19,667 - server.app - INFO - GET /dashboard/data - Status: 404 - Time: 0.000s
+2025-08-22 00:16:19,668 - server.app - INFO - GET /dashboard/stock-alerts - Status: 404 - Time: 0.000s
+2025-08-22 00:16:19,672 - server.app - INFO - GET /dashboard/data - Status: 404 - Time: 0.001s
+2025-08-22 00:16:19,673 - server.app - INFO - GET /dashboard/stock-alerts - Status: 404 - Time: 0.001s
+2025-08-22 00:16:26,046 - server.app - INFO - GET /dashboard/data - Status: 404 - Time: 0.001s
+2025-08-22 00:16:26,046 - server.app - INFO - GET /dashboard/stock-alerts - Status: 404 - Time: 0.001s
+2025-08-22 00:16:26,048 - server.app - INFO - GET /dashboard/data - Status: 404 - Time: 0.000s
+2025-08-22 00:16:26,048 - server.app - INFO - GET /dashboard/stock-alerts - Status: 404 - Time: 0.000s
+2025-08-22 00:16:26,330 - server.app - INFO - GET /dashboard/data - Status: 404 - Time: 0.001s
+2025-08-22 00:16:26,331 - server.app - INFO - GET /dashboard/stock-alerts - Status: 404 - Time: 0.001s
+2025-08-22 00:16:26,335 - server.app - INFO - GET /dashboard/data - Status: 404 - Time: 0.001s
+2025-08-22 00:16:26,335 - server.app - INFO - GET /dashboard/stock-alerts - Status: 404 - Time: 0.001s
+2025-08-22 00:17:12,617 - server.app - INFO - GET /dashboard/data - Status: 404 - Time: 0.000s
+2025-08-22 00:17:12,617 - server.app - INFO - GET /dashboard/stock-alerts - Status: 404 - Time: 0.000s
+2025-08-22 00:17:12,619 - server.app - INFO - GET /dashboard/data - Status: 404 - Time: 0.000s
+2025-08-22 00:17:12,619 - server.app - INFO - GET /dashboard/stock-alerts - Status: 404 - Time: 0.000s
+2025-08-22 00:17:12,932 - server.app - INFO - GET /dashboard/data - Status: 404 - Time: 0.002s
+2025-08-22 00:17:12,934 - server.app - INFO - GET /dashboard/stock-alerts - Status: 404 - Time: 0.002s
+2025-08-22 00:17:12,941 - server.app - INFO - GET /dashboard/data - Status: 404 - Time: 0.002s
+2025-08-22 00:17:12,942 - server.app - INFO - GET /dashboard/stock-alerts - Status: 404 - Time: 0.002s
+2025-08-22 00:18:00,975 - server.app - INFO - OPTIONS /api/auth/login - Status: 200 - Time: 0.001s
+2025-08-22 00:18:01,408 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-22 00:18:01,409 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.426s
+2025-08-22 00:18:01,506 - server.app - INFO - OPTIONS /dashboard/data - Status: 200 - Time: 0.000s
+2025-08-22 00:18:01,509 - server.app - INFO - OPTIONS /dashboard/stock-alerts - Status: 200 - Time: 0.001s
+2025-08-22 00:18:01,512 - server.app - INFO - OPTIONS /dashboard/data - Status: 200 - Time: 0.000s
+2025-08-22 00:18:01,525 - server.app - INFO - OPTIONS /dashboard/stock-alerts - Status: 200 - Time: 0.004s
+2025-08-22 00:18:01,526 - server.app - INFO - GET /dashboard/stock-alerts - Status: 404 - Time: 0.004s
+2025-08-22 00:18:01,527 - server.app - INFO - GET /dashboard/data - Status: 404 - Time: 0.004s
+2025-08-22 00:18:01,541 - server.app - INFO - GET /dashboard/data - Status: 404 - Time: 0.001s
+2025-08-22 00:18:01,541 - server.app - INFO - GET /dashboard/stock-alerts - Status: 404 - Time: 0.001s
+2025-08-22 00:18:07,087 - server.app - INFO - GET /dashboard/data - Status: 404 - Time: 0.000s
+2025-08-22 00:18:07,087 - server.app - INFO - GET /dashboard/stock-alerts - Status: 404 - Time: 0.000s
+2025-08-22 00:18:07,090 - server.app - INFO - GET /dashboard/data - Status: 404 - Time: 0.001s
+2025-08-22 00:18:07,091 - server.app - INFO - GET /dashboard/stock-alerts - Status: 404 - Time: 0.001s
+2025-08-22 00:18:07,445 - server.app - INFO - GET /dashboard/data - Status: 404 - Time: 0.002s
+2025-08-22 00:18:07,446 - server.app - INFO - GET /dashboard/stock-alerts - Status: 404 - Time: 0.002s
+2025-08-22 00:18:07,454 - server.app - INFO - GET /dashboard/data - Status: 404 - Time: 0.002s
+2025-08-22 00:18:07,455 - server.app - INFO - GET /dashboard/stock-alerts - Status: 404 - Time: 0.002s
+2025-08-22 00:18:39,849 - server.app - INFO - GET /dashboard/data - Status: 404 - Time: 0.001s
+2025-08-22 00:18:39,849 - server.app - INFO - GET /dashboard/stock-alerts - Status: 404 - Time: 0.002s
+2025-08-22 00:18:39,851 - server.app - INFO - GET /dashboard/data - Status: 404 - Time: 0.000s
+2025-08-22 00:18:39,851 - server.app - INFO - GET /dashboard/stock-alerts - Status: 404 - Time: 0.000s
+2025-08-22 00:18:40,188 - server.app - INFO - GET /dashboard/data - Status: 404 - Time: 0.001s
+2025-08-22 00:18:40,189 - server.app - INFO - GET /dashboard/stock-alerts - Status: 404 - Time: 0.001s
+2025-08-22 00:18:40,197 - server.app - INFO - GET /dashboard/data - Status: 404 - Time: 0.002s
+2025-08-22 00:18:40,198 - server.app - INFO - GET /dashboard/stock-alerts - Status: 404 - Time: 0.002s
