@@ -137,7 +137,8 @@ export async function POST(request: NextRequest) {
       id: user.id_usuario,
       nombre: user.nombre_usuario,
       rol: user.tipo_usuario,
-      email: user.email_usuario
+      email: user.email_usuario,
+      area: user.area_usuario || ''
     }), {
       httpOnly: false, // Accesible desde JavaScript
       secure: process.env.NODE_ENV === 'production',
@@ -146,7 +147,13 @@ export async function POST(request: NextRequest) {
       path: '/',
     });
 
-    console.log(`✅ API Login: Login exitoso para ${user.nombre_usuario} (${user.email_usuario})`);
+    console.log(`✅ API Login: Cookies configuradas para ${user.nombre_usuario}`);
+    console.log(`🍪 Auth Token: ${jwtToken.substring(0, 20)}...`);
+    console.log(`🍪 User Info: ${JSON.stringify({
+      id: user.id_usuario,
+      nombre: user.nombre_usuario,
+      rol: user.tipo_usuario
+    })}`);
     
     return response;
 

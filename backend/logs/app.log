@@ -944,3 +944,7 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-08-25 09:58:48,658 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
 2025-08-25 09:58:58,928 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
 2025-08-25 09:58:58,928 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.183s
+2025-08-25 10:31:12,242 - server.app - INFO - GET /docs - Status: 200 - Time: 0.000s
+2025-08-25 10:31:12,479 - server.app - INFO - GET /openapi.json - Status: 200 - Time: 0.010s
+2025-08-25 10:38:59,829 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-25 10:38:59,829 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.190s

@@ -20,6 +20,7 @@ class AuthService {
   }> {
     try {
       console.log('🔐 AuthService: Iniciando login para', credentials.email_usuario);
+      
       const response = await fetch(`${this.baseURL}/login`, {
         method: 'POST',
         headers: {
@@ -282,6 +283,13 @@ class AuthService {
       const cookies = document.cookie.split(';');
       const authCookie = cookies.find(c => c.trim().startsWith('auth-token='));
       const userCookie = cookies.find(c => c.trim().startsWith('user-info='));
+      
+      console.log('🍪 AuthService: Verificando cookies locales', {
+        totalCookies: cookies.length,
+        hasAuthToken: !!authCookie,
+        hasUserInfo: !!userCookie,
+        cookieNames: cookies.map(c => c.trim().split('=')[0])
+      });
       
       return !!(authCookie && userCookie);
     } catch (error) {

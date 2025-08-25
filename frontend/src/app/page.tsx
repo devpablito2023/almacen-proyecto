@@ -1,6 +1,13 @@
-import { redirect } from "next/navigation";
+// src/app/page.tsx
+import { redirect } from 'next/navigation';
 
-export default function Home() {
-  // Por ahora siempre lleva a login
-  redirect("/login");
+/**
+ * PÁGINA RAÍZ CON REDIRECCIÓN
+ * 
+ * Redirige automáticamente a /login.
+ * El middleware se encargará de redirigir a dashboard si ya está autenticado.
+ */
+
+export default function HomePage() {
+  redirect('/login');
 }
