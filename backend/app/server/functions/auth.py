@@ -5,8 +5,16 @@ from server.config.security import SecurityManager
 from server.models.usuarios import UsuarioLogin, ChangePassword
 from datetime import datetime
 import logging
+from passlib.context import CryptContext
+
 
 logger = logging.getLogger(__name__)
+
+#pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+
+
+#def get_password_hash(password):
+    #return pwd_context.hash(password)
 
 async def authenticate_user(login_data: UsuarioLogin):
     """Autenticar usuario"""
@@ -24,11 +32,14 @@ async def authenticate_user(login_data: UsuarioLogin):
             )
         
         # Verificar contraseña
+        #print("vamos a verificar la contraseña")
+        #debe = get_password_hash("admin123")
+        #print("debe ser:", debe)
         if not SecurityManager.verify_password(login_data.password, usuario["password_hash"]):
             logger.warning(f"Contraseña incorrecta para usuario: {login_data.email_usuario}")
             #aquiva la validacion 
-            print("Contraseña incorrecta para usuario:", login_data.password)
-            print(usuario["password_hash"] )
+            #print("Contraseña incorrecta para usuario:", login_data.password)
+            #print(usuario["password_hash"] )
             # Incrementar intentos fallidos
             await usuarios_collection().update_one(
                 {"_id": usuario["_id"]},

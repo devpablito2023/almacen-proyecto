@@ -597,3 +597,311 @@
 2025-08-22 00:18:40,189 - server.app - INFO - GET /dashboard/stock-alerts - Status: 404 - Time: 0.001s
 2025-08-22 00:18:40,197 - server.app - INFO - GET /dashboard/data - Status: 404 - Time: 0.002s
 2025-08-22 00:18:40,198 - server.app - INFO - GET /dashboard/stock-alerts - Status: 404 - Time: 0.002s
+2025-08-23 14:48:52,552 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-23 14:48:52,553 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-23 14:49:22,649 - server.config.database - ERROR - ❌ Error conectando a MongoDB: localhost:27017: [Errno 111] Connection refused (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 68aa1b2469464372c0548f20, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [Errno 111] Connection refused (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-08-23 14:50:15,362 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-23 14:50:15,363 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-23 14:50:15,376 - server.config.database - ERROR - ❌ Error conectando a MongoDB: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2025-08-23 14:52:49,840 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-23 14:52:49,841 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-23 14:52:49,846 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-23 14:53:00,800 - server.app - INFO - GET /docs - Status: 200 - Time: 0.000s
+2025-08-23 14:53:00,973 - server.app - INFO - GET /openapi.json - Status: 200 - Time: 0.010s
+2025-08-23 16:02:39,749 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-23 16:02:39,750 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-23 16:02:39,759 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-23 16:03:59,925 - server.app - INFO - GET /docs - Status: 200 - Time: 0.000s
+2025-08-23 16:04:00,077 - server.app - INFO - GET /openapi.json - Status: 200 - Time: 0.010s
+2025-08-23 16:04:06,746 - server.functions.auth - WARNING - Intento de login con email inexistente: user@example.com
+2025-08-23 16:04:06,746 - server.routes.auth - WARNING - Login fallido para user@example.com: Credenciales inválidas
+2025-08-23 16:04:06,746 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.008s
+2025-08-23 16:07:22,211 - server.app - INFO - OPTIONS /auth/login - Status: 200 - Time: 0.000s
+2025-08-23 16:07:22,215 - server.app - INFO - POST /auth/login - Status: 404 - Time: 0.001s
+2025-08-23 16:07:49,615 - server.app - INFO - OPTIONS /auth/login - Status: 200 - Time: 0.000s
+2025-08-23 16:07:49,617 - server.app - INFO - POST /auth/login - Status: 404 - Time: 0.000s
+2025-08-23 16:09:08,800 - server.app - INFO - OPTIONS /api/auth/login - Status: 200 - Time: 0.000s
+2025-08-23 16:09:08,802 - server.app - INFO - POST /api/auth/login - Status: 422 - Time: 0.001s
+2025-08-23 16:11:54,685 - server.app - INFO - OPTIONS /api/auth/login - Status: 200 - Time: 0.000s
+2025-08-23 16:11:54,865 - server.functions.auth - WARNING - Contraseña incorrecta para usuario: admin@almacen.com
+2025-08-23 16:11:54,866 - server.routes.auth - WARNING - Login fallido para admin@almacen.com: Credenciales inválidas
+2025-08-23 16:11:54,867 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.180s
+2025-08-23 16:12:56,763 - server.functions.auth - WARNING - Contraseña incorrecta para usuario: admin@almacen.com
+2025-08-23 16:12:56,765 - server.routes.auth - WARNING - Login fallido para admin@almacen.com: Credenciales inválidas
+2025-08-23 16:12:56,765 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.179s
+2025-08-23 16:16:49,613 - server.functions.auth - WARNING - Contraseña incorrecta para usuario: admin@almacen.com
+2025-08-23 16:16:49,614 - server.routes.auth - WARNING - Login fallido para admin@almacen.com: Credenciales inválidas
+2025-08-23 16:16:49,614 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.179s
+2025-08-23 16:29:12,900 - server.app - INFO - OPTIONS /api/auth/login - Status: 200 - Time: 0.000s
+2025-08-23 16:29:13,084 - server.functions.auth - WARNING - Contraseña incorrecta para usuario: admin@almacen.com
+2025-08-23 16:29:13,085 - server.routes.auth - WARNING - Login fallido para admin@almacen.com: Credenciales inválidas
+2025-08-23 16:29:13,086 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.182s
+2025-08-23 16:31:14,893 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-23 16:31:14,893 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-23 16:31:14,900 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-23 16:31:22,858 - server.functions.auth - ERROR - Error en autenticación: name 'get_password_hash' is not defined
+2025-08-23 16:31:22,859 - server.routes.auth - WARNING - Login fallido para admin@almacen.com: Error interno del servidor
+2025-08-23 16:31:22,859 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.006s
+2025-08-23 16:33:00,592 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-23 16:33:00,592 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-23 16:33:00,597 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-23 16:33:08,549 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-08-23 16:33:08,918 - server.functions.auth - WARNING - Contraseña incorrecta para usuario: admin@almacen.com
+2025-08-23 16:33:08,919 - server.routes.auth - WARNING - Login fallido para admin@almacen.com: Credenciales inválidas
+2025-08-23 16:33:08,920 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.377s
+2025-08-23 16:33:50,995 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-23 16:33:50,995 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.350s
+2025-08-23 16:35:12,640 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-23 16:35:12,640 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-23 16:35:12,645 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-23 16:35:22,026 - server.functions.auth - ERROR - Error en autenticación: name 'get_password_hash' is not defined
+2025-08-23 16:35:22,027 - server.routes.auth - WARNING - Login fallido para admin@almacen.com: Error interno del servidor
+2025-08-23 16:35:22,027 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.007s
+2025-08-23 16:35:34,016 - server.functions.auth - ERROR - Error en autenticación: name 'get_password_hash' is not defined
+2025-08-23 16:35:34,017 - server.routes.auth - WARNING - Login fallido para admin@almacen.com: Error interno del servidor
+2025-08-23 16:35:34,017 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.002s
+2025-08-23 16:35:50,575 - server.functions.auth - ERROR - Error en autenticación: name 'get_password_hash' is not defined
+2025-08-23 16:35:50,576 - server.routes.auth - WARNING - Login fallido para admin@almacen.com: Error interno del servidor
+2025-08-23 16:35:50,577 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.005s
+2025-08-23 16:36:17,666 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-23 16:36:17,666 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-23 16:36:17,671 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-23 16:36:20,359 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-23 16:36:20,359 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.185s
+2025-08-23 16:36:26,151 - server.functions.auth - WARNING - Contraseña incorrecta para usuario: admin@almacen.com
+2025-08-23 16:36:26,152 - server.routes.auth - WARNING - Login fallido para admin@almacen.com: Credenciales inválidas
+2025-08-23 16:36:26,152 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.179s
+2025-08-23 16:36:30,578 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-23 16:36:30,579 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.182s
+2025-08-23 16:39:43,183 - server.app - INFO - OPTIONS /api/auth/login - Status: 200 - Time: 0.000s
+2025-08-23 16:39:43,367 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-23 16:39:43,367 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.182s
+2025-08-23 16:44:34,139 - server.app - INFO - OPTIONS /auth/login - Status: 200 - Time: 0.000s
+2025-08-23 16:44:34,141 - server.app - INFO - POST /auth/login - Status: 404 - Time: 0.000s
+2025-08-23 16:45:29,640 - server.app - INFO - POST /auth/login - Status: 404 - Time: 0.000s
+2025-08-23 16:45:57,931 - server.functions.auth - WARNING - Contraseña incorrecta para usuario: admin@almacen.com
+2025-08-23 16:45:57,932 - server.routes.auth - WARNING - Login fallido para admin@almacen.com: Credenciales inválidas
+2025-08-23 16:45:57,932 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.181s
+2025-08-23 16:46:26,193 - server.functions.auth - WARNING - Contraseña incorrecta para usuario: admin@almacen.com
+2025-08-23 16:46:26,195 - server.routes.auth - WARNING - Login fallido para admin@almacen.com: Credenciales inválidas
+2025-08-23 16:46:26,195 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.177s
+2025-08-23 16:47:07,878 - server.functions.auth - WARNING - Contraseña incorrecta para usuario: admin@almacen.com
+2025-08-23 16:47:07,879 - server.routes.auth - WARNING - Login fallido para admin@almacen.com: Credenciales inválidas
+2025-08-23 16:47:07,879 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.186s
+2025-08-23 16:47:48,469 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-23 16:47:48,469 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.178s
+2025-08-23 16:47:52,064 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-23 16:47:52,064 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.178s
+2025-08-23 17:07:15,798 - server.app - INFO - OPTIONS /api/auth/login - Status: 200 - Time: 0.000s
+2025-08-23 17:07:15,981 - server.functions.auth - WARNING - Contraseña incorrecta para usuario: admin@almacen.com
+2025-08-23 17:07:15,983 - server.routes.auth - WARNING - Login fallido para admin@almacen.com: Credenciales inválidas
+2025-08-23 17:07:15,983 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.183s
+2025-08-23 17:07:25,869 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-23 17:07:25,869 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.180s
+2025-08-23 17:08:50,837 - server.app - INFO - GET /docs - Status: 200 - Time: 0.000s
+2025-08-23 17:08:51,060 - server.app - INFO - GET /openapi.json - Status: 200 - Time: 0.011s
+2025-08-23 17:11:10,569 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-23 17:11:10,570 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-23 17:11:10,574 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-24 11:06:09,361 - server.app - INFO - OPTIONS /auth/login - Status: 200 - Time: 0.000s
+2025-08-24 11:06:09,363 - server.app - INFO - POST /auth/login - Status: 404 - Time: 0.000s
+2025-08-24 11:06:26,443 - server.app - INFO - POST /auth/login - Status: 404 - Time: 0.000s
+2025-08-24 11:07:42,982 - server.app - INFO - OPTIONS /auth/login4 - Status: 200 - Time: 0.000s
+2025-08-24 11:07:42,985 - server.app - INFO - POST /auth/login4 - Status: 404 - Time: 0.000s
+2025-08-24 11:08:10,560 - server.app - INFO - GET /health - Status: 200 - Time: 0.000s
+2025-08-24 11:08:50,011 - server.app - INFO - POST /auth/login4 - Status: 404 - Time: 0.000s
+2025-08-24 11:09:15,752 - server.app - INFO - POST /auth/login4 - Status: 404 - Time: 0.000s
+2025-08-24 11:09:29,913 - server.app - INFO - POST /auth/login4 - Status: 404 - Time: 0.000s
+2025-08-24 11:10:26,756 - server.app - INFO - POST /auth/login - Status: 404 - Time: 0.000s
+2025-08-24 11:24:57,574 - server.app - INFO - OPTIONS /auth/login - Status: 200 - Time: 0.000s
+2025-08-24 11:24:57,576 - server.app - INFO - POST /auth/login - Status: 404 - Time: 0.000s
+2025-08-24 11:31:21,440 - server.app - INFO - POST /auth/login - Status: 404 - Time: 0.000s
+2025-08-24 11:32:01,800 - server.app - INFO - POST /auth/login - Status: 404 - Time: 0.001s
+2025-08-24 11:32:42,275 - server.app - INFO - POST /auth/login - Status: 404 - Time: 0.000s
+2025-08-24 11:35:06,601 - server.app - INFO - OPTIONS /auth/login - Status: 200 - Time: 0.000s
+2025-08-24 11:35:06,603 - server.app - INFO - POST /auth/login - Status: 404 - Time: 0.000s
+2025-08-24 11:36:53,525 - server.app - INFO - POST /auth/login - Status: 404 - Time: 0.000s
+2025-08-24 11:41:52,946 - server.app - INFO - POST /auth/login - Status: 404 - Time: 0.000s
+2025-08-24 11:45:23,091 - server.app - INFO - OPTIONS /api/auth/login - Status: 200 - Time: 0.000s
+2025-08-24 11:45:23,095 - server.app - INFO - POST /api/auth/login - Status: 422 - Time: 0.001s
+2025-08-24 11:46:22,320 - server.app - INFO - POST /api/auth/login - Status: 422 - Time: 0.000s
+2025-08-24 11:49:29,731 - server.app - INFO - POST /api/auth/login - Status: 422 - Time: 0.001s
+2025-08-24 11:55:16,793 - server.app - INFO - POST /api/auth/login - Status: 422 - Time: 0.000s
+2025-08-24 12:03:16,884 - server.app - INFO - OPTIONS /api/auth/login - Status: 200 - Time: 0.000s
+2025-08-24 12:03:16,895 - server.functions.auth - WARNING - Intento de login con email inexistente: admin@empresa.com
+2025-08-24 12:03:16,895 - server.routes.auth - WARNING - Login fallido para admin@empresa.com: Credenciales inválidas
+2025-08-24 12:03:16,896 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.009s
+2025-08-24 12:03:47,225 - server.functions.auth - WARNING - Intento de login con email inexistente: admin@empresa.com
+2025-08-24 12:03:47,225 - server.routes.auth - WARNING - Login fallido para admin@empresa.com: Credenciales inválidas
+2025-08-24 12:03:47,225 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.002s
+2025-08-24 12:05:55,639 - server.functions.auth - WARNING - Intento de login con email inexistente: admin@empresa.com
+2025-08-24 12:05:55,639 - server.routes.auth - WARNING - Login fallido para admin@empresa.com: Credenciales inválidas
+2025-08-24 12:05:55,640 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.002s
+2025-08-24 12:07:25,341 - server.functions.auth - WARNING - Intento de login con email inexistente: admin@empresa.com
+2025-08-24 12:07:25,341 - server.routes.auth - WARNING - Login fallido para admin@empresa.com: Credenciales inválidas
+2025-08-24 12:07:25,342 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.002s
+2025-08-24 12:08:12,494 - server.functions.auth - WARNING - Intento de login con email inexistente: admin@empresa.com
+2025-08-24 12:08:12,494 - server.routes.auth - WARNING - Login fallido para admin@empresa.com: Credenciales inválidas
+2025-08-24 12:08:12,494 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.002s
+2025-08-24 12:10:25,238 - server.functions.auth - WARNING - Intento de login con email inexistente: admin@empresa.com
+2025-08-24 12:10:25,238 - server.routes.auth - WARNING - Login fallido para admin@empresa.com: Credenciales inválidas
+2025-08-24 12:10:25,238 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.002s
+2025-08-24 12:18:18,603 - server.app - INFO - OPTIONS /api/auth/login - Status: 200 - Time: 0.000s
+2025-08-24 12:18:18,606 - server.functions.auth - WARNING - Intento de login con email inexistente: admin@empresa.com
+2025-08-24 12:18:18,606 - server.routes.auth - WARNING - Login fallido para admin@empresa.com: Credenciales inválidas
+2025-08-24 12:18:18,607 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.002s
+2025-08-24 12:20:50,792 - server.functions.auth - WARNING - Intento de login con email inexistente: admin@empresa.com
+2025-08-24 12:20:50,792 - server.routes.auth - WARNING - Login fallido para admin@empresa.com: Credenciales inválidas
+2025-08-24 12:20:50,792 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.002s
+2025-08-24 12:21:38,137 - server.functions.auth - WARNING - Intento de login con email inexistente: admin@empresa.com
+2025-08-24 12:21:38,138 - server.routes.auth - WARNING - Login fallido para admin@empresa.com: Credenciales inválidas
+2025-08-24 12:21:38,138 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.001s
+2025-08-24 12:22:55,778 - server.functions.auth - WARNING - Intento de login con email inexistente: user@example.com
+2025-08-24 12:22:55,778 - server.routes.auth - WARNING - Login fallido para user@example.com: Credenciales inválidas
+2025-08-24 12:22:55,779 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.002s
+2025-08-24 12:23:47,067 - server.app - INFO - POST /api/usuarios/ - Status: 403 - Time: 0.001s
+2025-08-24 12:25:01,108 - server.functions.auth - WARNING - Intento de login con email inexistente: admin@empresa.com
+2025-08-24 12:25:01,108 - server.routes.auth - WARNING - Login fallido para admin@empresa.com: Credenciales inválidas
+2025-08-24 12:25:01,108 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.002s
+2025-08-24 12:26:48,541 - server.functions.auth - WARNING - Intento de login con email inexistente: admin@empresa.com
+2025-08-24 12:26:48,541 - server.routes.auth - WARNING - Login fallido para admin@empresa.com: Credenciales inválidas
+2025-08-24 12:26:48,542 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.001s
+2025-08-24 12:27:35,655 - server.functions.auth - WARNING - Intento de login con email inexistente: admin@empresa.com
+2025-08-24 12:27:35,655 - server.routes.auth - WARNING - Login fallido para admin@empresa.com: Credenciales inválidas
+2025-08-24 12:27:35,655 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.002s
+2025-08-24 12:27:37,031 - server.functions.auth - WARNING - Intento de login con email inexistente: admin@empresa.com
+2025-08-24 12:27:37,031 - server.routes.auth - WARNING - Login fallido para admin@empresa.com: Credenciales inválidas
+2025-08-24 12:27:37,031 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.002s
+2025-08-24 12:28:10,072 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-24 12:28:10,073 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.186s
+2025-08-24 12:31:49,713 - server.app - INFO - OPTIONS /api/auth/login - Status: 200 - Time: 0.000s
+2025-08-24 12:31:49,716 - server.functions.auth - WARNING - Intento de login con email inexistente: admin@empresa.com
+2025-08-24 12:31:49,716 - server.routes.auth - WARNING - Login fallido para admin@empresa.com: Credenciales inválidas
+2025-08-24 12:31:49,716 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.002s
+2025-08-24 12:33:06,348 - server.functions.auth - WARNING - Intento de login con email inexistente: admin@empresa.com
+2025-08-24 12:33:06,348 - server.routes.auth - WARNING - Login fallido para admin@empresa.com: Credenciales inválidas
+2025-08-24 12:33:06,348 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.002s
+2025-08-24 12:36:24,002 - server.functions.auth - WARNING - Intento de login con email inexistente: admin@empresa.com
+2025-08-24 12:36:24,002 - server.routes.auth - WARNING - Login fallido para admin@empresa.com: Credenciales inválidas
+2025-08-24 12:36:24,003 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.002s
+2025-08-24 13:15:54,349 - server.app - INFO - OPTIONS /api/auth/login - Status: 200 - Time: 0.000s
+2025-08-24 13:15:54,544 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-24 13:15:54,544 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.193s
+2025-08-24 13:22:08,053 - server.app - INFO - POST /api/auth/login - Status: 422 - Time: 0.000s
+2025-08-24 13:22:52,712 - server.app - INFO - POST /api/auth/login - Status: 422 - Time: 0.001s
+2025-08-24 13:23:41,249 - server.functions.auth - WARNING - Intento de login con email inexistente: dd@sd.com
+2025-08-24 13:23:41,249 - server.routes.auth - WARNING - Login fallido para dd@sd.com: Credenciales inválidas
+2025-08-24 13:23:41,249 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.003s
+2025-08-24 13:25:37,592 - server.functions.auth - WARNING - Contraseña incorrecta para usuario: admin@almacen.com
+2025-08-24 13:25:37,593 - server.routes.auth - WARNING - Login fallido para admin@almacen.com: Credenciales inválidas
+2025-08-24 13:25:37,593 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.187s
+2025-08-24 13:25:44,571 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-24 13:25:44,571 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.181s
+2025-08-24 13:36:54,934 - server.app - INFO - OPTIONS /api/auth/login - Status: 200 - Time: 0.000s
+2025-08-24 13:36:55,112 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-24 13:36:55,112 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.177s
+2025-08-24 13:39:37,159 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-24 13:39:37,159 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.180s
+2025-08-24 13:39:44,911 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-24 13:39:44,911 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.179s
+2025-08-24 13:44:31,803 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-24 13:44:31,803 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.181s
+2025-08-24 13:48:11,914 - server.app - INFO - OPTIONS /api/auth/login - Status: 200 - Time: 0.000s
+2025-08-24 13:48:12,100 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-24 13:48:12,100 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.184s
+2025-08-24 14:06:18,515 - server.app - INFO - OPTIONS /api/auth/login - Status: 200 - Time: 0.000s
+2025-08-24 14:06:18,697 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-24 14:06:18,697 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.181s
+2025-08-24 14:09:04,215 - server.app - INFO - OPTIONS /api/auth/login - Status: 200 - Time: 0.000s
+2025-08-24 14:09:04,398 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-24 14:09:04,399 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.182s
+2025-08-24 14:16:20,941 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-24 14:16:20,942 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.179s
+2025-08-24 14:21:35,330 - server.app - INFO - OPTIONS /api/auth/login - Status: 200 - Time: 0.000s
+2025-08-24 14:21:35,512 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-24 14:21:35,513 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.181s
+2025-08-24 14:21:41,988 - server.app - INFO - OPTIONS /api/auth/login - Status: 200 - Time: 0.000s
+2025-08-24 14:21:42,168 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-24 14:21:42,168 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.178s
+2025-08-24 14:32:53,815 - server.app - INFO - OPTIONS /api/auth/login - Status: 200 - Time: 0.000s
+2025-08-24 14:32:53,997 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-24 14:32:53,997 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.180s
+2025-08-24 14:41:39,261 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-24 14:41:39,261 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.178s
+2025-08-24 14:43:46,723 - server.app - INFO - OPTIONS /api/auth/login - Status: 200 - Time: 0.000s
+2025-08-24 14:43:46,904 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-24 14:43:46,905 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.180s
+2025-08-24 14:49:25,117 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-24 14:49:25,118 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.186s
+2025-08-24 14:50:39,239 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-24 14:50:39,240 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.181s
+2025-08-24 14:51:25,186 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-24 14:51:25,187 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.179s
+2025-08-24 14:52:34,646 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-24 14:52:34,646 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.178s
+2025-08-24 14:53:56,487 - server.app - INFO - OPTIONS /api/auth/login - Status: 200 - Time: 0.000s
+2025-08-24 14:53:56,668 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-24 14:53:56,669 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.180s
+2025-08-24 15:05:25,500 - server.app - INFO - OPTIONS /api/auth/login - Status: 200 - Time: 0.000s
+2025-08-24 15:05:25,685 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-24 15:05:25,685 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.183s
+2025-08-24 15:05:40,668 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-24 15:05:40,668 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.178s
+2025-08-24 15:15:11,915 - server.app - INFO - OPTIONS /api/auth/login - Status: 200 - Time: 0.000s
+2025-08-24 15:15:12,095 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-24 15:15:12,096 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.179s
+2025-08-24 15:15:49,738 - server.app - INFO - OPTIONS /api/auth/login - Status: 200 - Time: 0.000s
+2025-08-24 15:15:49,918 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-24 15:15:49,918 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.178s
+2025-08-24 15:16:23,442 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-24 15:16:23,442 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.179s
+2025-08-24 15:16:24,634 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-24 15:16:24,634 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.184s
+2025-08-24 15:18:21,964 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-24 15:18:21,965 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.182s
+2025-08-24 17:10:55,248 - server.app - INFO - OPTIONS /api/auth/login - Status: 200 - Time: 0.000s
+2025-08-24 17:10:55,428 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-24 17:10:55,429 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.179s
+2025-08-24 17:14:04,909 - server.app - INFO - OPTIONS /api/auth/login - Status: 200 - Time: 0.000s
+2025-08-24 17:14:05,091 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-24 17:14:05,091 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.180s
+2025-08-24 17:14:53,926 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-24 17:14:53,926 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.180s
+2025-08-24 17:15:32,137 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-24 17:15:32,137 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.181s
+2025-08-24 17:35:20,137 - server.app - INFO - OPTIONS /api/auth/login - Status: 200 - Time: 0.000s
+2025-08-24 17:35:20,320 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-24 17:35:20,320 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.181s
+2025-08-24 17:37:45,323 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-24 17:37:45,323 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.181s
+2025-08-24 17:49:59,533 - server.app - INFO - OPTIONS /api/auth/login - Status: 200 - Time: 0.000s
+2025-08-24 17:49:59,721 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-24 17:49:59,721 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.188s
+2025-08-24 17:55:39,352 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-24 17:55:39,353 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.188s
+2025-08-24 17:57:02,124 - server.app - INFO - OPTIONS /api/auth/login - Status: 200 - Time: 0.000s
+2025-08-24 17:57:02,312 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-24 17:57:02,312 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.186s
+2025-08-24 19:02:17,277 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-24 19:02:17,278 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-24 19:02:17,286 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-24 19:03:38,447 - server.app - INFO - OPTIONS /api/auth/login - Status: 200 - Time: 0.000s
+2025-08-24 19:03:38,648 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-24 19:03:38,649 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.200s
+2025-08-24 19:04:13,478 - server.app - INFO - GET /docs - Status: 200 - Time: 0.000s
+2025-08-24 19:04:13,892 - server.app - INFO - GET /openapi.json - Status: 200 - Time: 0.011s
+2025-08-24 19:24:14,214 - server.app - INFO - OPTIONS /auth/login - Status: 200 - Time: 0.000s
+2025-08-24 19:24:14,217 - server.app - INFO - POST /auth/login - Status: 404 - Time: 0.000s
+2025-08-24 19:26:06,113 - server.app - INFO - OPTIONS /api/auth/login - Status: 200 - Time: 0.000s
+2025-08-24 19:26:06,117 - server.app - INFO - POST /api/auth/login - Status: 422 - Time: 0.001s
+2025-08-24 19:28:31,963 - server.app - INFO - POST /api/auth/login - Status: 422 - Time: 0.001s
+2025-08-25 09:20:19,487 - server.functions.auth - WARNING - Intento de login con email inexistente: user@example.com
+2025-08-25 09:20:19,487 - server.routes.auth - WARNING - Login fallido para user@example.com: Credenciales inválidas
+2025-08-25 09:20:19,488 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.002s
+2025-08-25 09:21:33,674 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-25 09:21:33,674 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.242s

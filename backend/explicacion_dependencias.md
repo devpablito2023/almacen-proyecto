@@ -61,3 +61,5 @@ Pandas/Excel: Para procesamiento masivo de datos
 Email: Para notificaciones automáticas
 
 Esta configuración es suficiente para la Fase 1 y preparada para expansión en fases posteriores.
+
+pip install PyJWT
