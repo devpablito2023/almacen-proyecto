@@ -3,28 +3,15 @@ import { NextRequest, NextResponse } from 'next/server';
 import { SignJWT } from 'jose';
 import { LoginCredentials, AuthResponse } from '@/types/auth';
 
-/**
- * ENDPOINT DE LOGIN
- * 
- * Flujo:
- * 1. Recibe credenciales del frontend
- * 2. Las envía al backend FastAPI
- * 3. Si son válidas, crea JWT propio
- * 4. Setea cookie HTTP-Only con el JWT
- * 5. Retorna respuesta al frontend
- */
-
 // Configuración JWT
 const JWT_SECRET = new TextEncoder().encode(
-  process.env.JWT_SECRET || 'tu_jwt_secret_muy_seguro_de_32_caracteres'
+  process.env.JWT_SECRET || 'mi_jwt_secret_super_seguro_de_32_caracteres_para_almacen'
 );
 
-const JWT_EXPIRES_IN = process.env.JWT_EXPIRES_IN || '8h'; // 8 horas por defecto
-
 export async function POST(request: NextRequest) {
+  console.log('🚀 API Login: POST request recibido');
+  
   try {
-    console.log('🚀 API Login: Iniciando proceso de autenticación');
-    
     // ========================================
     // 1. VALIDAR ENTRADA
     // ========================================
@@ -41,12 +28,14 @@ export async function POST(request: NextRequest) {
       }, { status: 400 });
     }
 
+    console.log(`📡 API Login: Enviando credenciales al backend para ${email_usuario}`);
+
     // ========================================
     // 2. AUTENTICAR CON BACKEND FASTAPI
     // ========================================
-    console.log(`📡 API Login: Enviando credenciales al backend para ${email_usuario}`);
+    const backendUrl = process.env.BACKEND_URL || 'http://localhost:7070';
     
-    const backendResponse = await fetch(`${process.env.BACKEND_URL || 'http://localhost:7070'}/auth/login`, {
+    const backendResponse = await fetch(`${backendUrl}/auth/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -58,7 +47,19 @@ export async function POST(request: NextRequest) {
       })
     });
 
-    const backendData: AuthResponse = await backendResponse.json();
+    let backendData: AuthResponse;
+    
+    try {
+      backendData = await backendResponse.json();
+    } catch (parseError) {
+      console.error('❌ API Login: Error parsing JSON del backend:', parseError);
+      return NextResponse.json({
+        success: false,
+        message: 'Error de comunicación con el servidor',
+        code: 502,
+        timestamp: new Date().toISOString()
+      }, { status: 502 });
+    }
     
     console.log(`📡 API Login: Respuesta del backend - Status: ${backendResponse.status}`, {
       success: backendData.success,
@@ -75,25 +76,25 @@ export async function POST(request: NextRequest) {
         success: false,
         message: backendData.message || 'Credenciales inválidas',
         code: backendResponse.status,
+        error: backendData.error || 'LOGIN_FAILED',
         timestamp: new Date().toISOString()
       }, { status: backendResponse.status });
     }
 
-    const { access_token, refresh_token, user } = backendData.data; // ← Corregido: access_token
+    const { access_token, refresh_token, user } = backendData.data;
 
     // ========================================
     // 4. CREAR JWT PROPIO (para cookies)
     // ========================================
     console.log(`🔐 API Login: Creando JWT propio para usuario ${user.nombre_usuario}`);
     
-    // Calcular tiempo de expiración
     const expirationTime = new Date();
     expirationTime.setHours(expirationTime.getHours() + 8); // 8 horas
 
     const jwtToken = await new SignJWT({ 
       user,
-      backendToken: access_token, // ← Usar access_token del backend
-      refreshToken: refresh_token, // ← Guardar también refresh_token
+      backendToken: access_token, // Token del backend FastAPI
+      refreshToken: refresh_token, // Refresh token del backend
       loginTime: new Date().toISOString(),
       expiresAt: expirationTime.toISOString()
     })
@@ -106,7 +107,7 @@ export async function POST(request: NextRequest) {
     .sign(JWT_SECRET);
 
     // ========================================
-    // 5. CREAR RESPUESTA CON COOKIE
+    // 5. CREAR RESPUESTA CON COOKIES
     // ========================================
     const response = NextResponse.json({
       success: true,
@@ -116,29 +117,29 @@ export async function POST(request: NextRequest) {
       data: {
         user: {
           ...user,
-          // No incluir información sensible
           ultimo_login: new Date().toISOString()
         }
-        // NO incluimos el token en la respuesta JSON por seguridad
+        // NO incluimos tokens en la respuesta por seguridad
       }
     });
 
-    // Configurar cookie HTTP-Only
+    // Cookie HTTP-Only principal con JWT
     response.cookies.set('auth-token', jwtToken, {
-      httpOnly: true, // No accesible desde JavaScript (XSS protection)
-      secure: process.env.NODE_ENV === 'production', // Solo HTTPS en producción
-      sameSite: 'strict', // CSRF protection
-      maxAge: 8 * 60 * 60, // 8 horas en segundos
-      path: '/', // Disponible en toda la aplicación
+      httpOnly: true,
+      secure: process.env.NODE_ENV === 'production',
+      sameSite: 'strict',
+      maxAge: 8 * 60 * 60, // 8 horas
+      path: '/',
     });
 
-    // Cookie adicional para info básica del usuario (accesible desde JS)
+    // Cookie accesible con info básica del usuario
     response.cookies.set('user-info', JSON.stringify({
       id: user.id_usuario,
       nombre: user.nombre_usuario,
       rol: user.tipo_usuario,
       email: user.email_usuario,
-      area: user.area_usuario || ''
+      area: user.area_usuario || '',
+      codigo: user.codigo_usuario
     }), {
       httpOnly: false, // Accesible desde JavaScript
       secure: process.env.NODE_ENV === 'production',
@@ -148,7 +149,7 @@ export async function POST(request: NextRequest) {
     });
 
     console.log(`✅ API Login: Cookies configuradas para ${user.nombre_usuario}`);
-    console.log(`🍪 Auth Token: ${jwtToken.substring(0, 20)}...`);
+    console.log(`🍪 Auth Token length: ${jwtToken.length}`);
     console.log(`🍪 User Info: ${JSON.stringify({
       id: user.id_usuario,
       nombre: user.nombre_usuario,
@@ -169,11 +170,10 @@ export async function POST(request: NextRequest) {
   }
 }
 
-// Manejo de métodos no permitidos
 export async function GET() {
   return NextResponse.json({
     success: false,
-    message: 'Método no permitido',
+    message: 'Método no permitido - usar POST',
     code: 405,
     timestamp: new Date().toISOString()
   }, { status: 405 });

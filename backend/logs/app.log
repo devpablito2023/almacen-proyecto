@@ -948,3 +948,9 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-08-25 10:31:12,479 - server.app - INFO - GET /openapi.json - Status: 200 - Time: 0.010s
 2025-08-25 10:38:59,829 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
 2025-08-25 10:38:59,829 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.190s
+2025-08-25 10:47:14,980 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-25 10:47:14,980 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.179s
+2025-08-25 11:10:16,590 - server.functions.auth - ERROR - Error verificando token: module 'jwt' has no attribute 'JWTError'
+2025-08-25 11:10:16,591 - server.app - INFO - POST /api/auth/logout - Status: 401 - Time: 0.001s
+2025-08-25 11:10:36,999 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-25 11:10:36,999 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.180s

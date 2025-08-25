@@ -273,6 +273,8 @@ class AuthService {
   /**
    * Verifica si hay una sesión activa (sin API call)
    */
+
+  /*
   hasActiveSession(): boolean {
     try {
       // Solo funciona en el cliente
@@ -297,11 +299,28 @@ class AuthService {
       return false;
     }
   }
+*/
+
+hasActiveSession(): boolean {
+  try {
+    if (typeof window === 'undefined') return false;
+
+    const cookies = document.cookie.split(';');
+    const userCookie = cookies.find(c => c.trim().startsWith('user-info='));
+
+    return !!userCookie;
+  } catch (error) {
+    console.error('❌ AuthService: Error verificando sesión:', error);
+    return false;
+  }
+}
+
 
   /**
    * Limpia el estado de autenticación localmente
    * Útil para casos de emergencia o testing
    */
+  /*
   clearAuthState(): void {
     try {
       // Solo funciona en el cliente
@@ -318,6 +337,28 @@ class AuthService {
       console.error('❌ AuthService: Error limpiando estado:', error);
     }
   }
+    */
+clearAuthState(): void {
+  try {
+    if (typeof window === 'undefined') return;
+
+    // Avisar al backend para borrar cookies HttpOnly
+    fetch('/api/auth/logout', { method: 'POST', credentials: 'include' })
+      .catch(() => console.warn('⚠️ No se pudo limpiar cookies en backend'));
+
+    // Borrar user-info (visible)
+    document.cookie = 'user-info=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+
+    console.log('🧹 AuthService: Estado de auth limpiado localmente');
+  } catch (error) {
+    console.error('❌ AuthService: Error limpiando estado:', error);
+  }
+}
+
+
+
+
+
 }
 
 // Instancia singleton
@@ -356,6 +397,8 @@ export function getAuthDebugInfo() {
 /**
  * Función para testing - simular diferentes estados
  */
+
+/*
 export function mockAuthState(user?: User, hasToken: boolean = true) {
   if (typeof window === 'undefined') return;
   if (process.env.NODE_ENV !== 'development') {
@@ -377,6 +420,37 @@ export function mockAuthState(user?: User, hasToken: boolean = true) {
     document.cookie = `user-info=${encodeURIComponent(userInfoCookie)}; path=/;`;
     document.cookie = `auth-token=mock_token_${Date.now()}; path=/;`;
     
+    console.log('🧪 Estado mock creado:', { user: user.nombre_usuario, rol: user.tipo_usuario });
+  } else {
+    authService.clearAuthState();
+    console.log('🧪 Estado mock limpiado');
+  }
+}
+
+*/
+
+export function mockAuthState(user?: User, hasToken: boolean = true) {
+  if (typeof window === 'undefined') return;
+  if (process.env.NODE_ENV !== 'development') {
+    console.warn('⚠️ mockAuthState solo debe usarse en desarrollo');
+    return;
+  }
+
+  console.log('🧪 AuthService: Mocking auth state para testing');
+
+  if (user && hasToken) {
+    const userInfoCookie = JSON.stringify({
+      id: user.id_usuario,
+      nombre: user.nombre_usuario,
+      email: user.email_usuario,
+      rol: user.tipo_usuario,
+      area: user.area_usuario
+    });
+
+    document.cookie = `user-info=${encodeURIComponent(userInfoCookie)}; path=/;`;
+    // Nota: auth-token no es visible normalmente, pero lo dejamos para mock
+    document.cookie = `auth-token=mock_token_${Date.now()}; path=/;`;
+
     console.log('🧪 Estado mock creado:', { user: user.nombre_usuario, rol: user.tipo_usuario });
   } else {
     authService.clearAuthState();
