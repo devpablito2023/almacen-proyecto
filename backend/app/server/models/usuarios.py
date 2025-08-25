@@ -51,7 +51,7 @@ class UsuarioResponse(BaseSchema):
 class UsuarioLogin(BaseModel):
     """Schema para login"""
     email_usuario: EmailStr = Field(..., description="Email de usuario")
-    password: str = Field(..., min_length=1, description="Contraseña")
+    password_usuario: str = Field(..., min_length=1, description="Contraseña")
 
 class ChangePassword(BaseModel):
     """Schema para cambiar contraseña"""

@@ -20,7 +20,6 @@ class AuthService {
   }> {
     try {
       console.log('🔐 AuthService: Iniciando login para', credentials.email_usuario);
-      
       const response = await fetch(`${this.baseURL}/login`, {
         method: 'POST',
         headers: {

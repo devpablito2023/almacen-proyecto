@@ -905,3 +905,42 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-08-25 09:20:19,488 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.002s
 2025-08-25 09:21:33,674 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
 2025-08-25 09:21:33,674 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.242s
+2025-08-25 09:35:02,618 - server.app - INFO - POST /auth/login - Status: 404 - Time: 0.000s
+2025-08-25 09:35:39,496 - server.app - INFO - POST /auth/login - Status: 404 - Time: 0.001s
+2025-08-25 09:36:46,013 - server.app - INFO - POST /api/auth/login - Status: 422 - Time: 0.001s
+2025-08-25 09:37:02,855 - server.app - INFO - POST /auth/login - Status: 404 - Time: 0.001s
+2025-08-25 09:37:29,010 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 09:37:29,010 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 09:37:29,015 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 09:37:31,118 - server.app - INFO - POST /auth/login - Status: 404 - Time: 0.000s
+2025-08-25 09:38:16,600 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 09:38:16,600 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 09:38:16,605 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 09:38:18,105 - server.app - INFO - POST /auth/login - Status: 404 - Time: 0.001s
+2025-08-25 09:38:35,680 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 09:38:35,681 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 09:38:35,686 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 09:38:36,870 - server.app - INFO - POST /auth/login - Status: 404 - Time: 0.001s
+2025-08-25 09:39:45,779 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 09:39:45,779 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 09:39:45,784 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 09:39:49,377 - server.app - INFO - POST /auth/login - Status: 404 - Time: 0.001s
+2025-08-25 09:41:41,783 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 09:41:41,784 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 09:41:41,789 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 09:41:45,991 - server.app - INFO - POST /auth/login - Status: 404 - Time: 0.000s
+2025-08-25 09:43:39,082 - server.app - INFO - POST /auth/login - Status: 404 - Time: 0.001s
+2025-08-25 09:51:22,245 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 09:51:22,246 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 09:51:22,251 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 09:52:20,937 - server.app - INFO - POST /auth/login - Status: 404 - Time: 0.000s
+2025-08-25 09:52:33,187 - server.app - INFO - POST /auth/login - Status: 404 - Time: 0.001s
+2025-08-25 09:54:22,280 - server.app - INFO - POST /api/auth/login - Status: 422 - Time: 0.006s
+2025-08-25 09:57:15,459 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 09:57:15,459 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 09:57:15,464 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 09:58:48,653 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 09:58:48,654 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 09:58:48,658 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 09:58:58,928 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-25 09:58:58,928 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.183s

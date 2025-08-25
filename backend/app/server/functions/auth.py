@@ -17,12 +17,15 @@ logger = logging.getLogger(__name__)
     #return pwd_context.hash(password)
 
 async def authenticate_user(login_data: UsuarioLogin):
+    print("aqui estamos")
+    print("login_data:", login_data)
     """Autenticar usuario"""
     try:
         # Buscar usuario por email
         usuario = await usuarios_collection().find_one(
             {"email_usuario": login_data.email_usuario, "estado_usuario": 1}
         )
+        print("usuario encontrado:", usuario)
         
         if not usuario:
             logger.warning(f"Intento de login con email inexistente: {login_data.email_usuario}")
@@ -35,7 +38,7 @@ async def authenticate_user(login_data: UsuarioLogin):
         #print("vamos a verificar la contraseña")
         #debe = get_password_hash("admin123")
         #print("debe ser:", debe)
-        if not SecurityManager.verify_password(login_data.password, usuario["password_hash"]):
+        if not SecurityManager.verify_password(login_data.password_usuario, usuario["password_hash"]):
             logger.warning(f"Contraseña incorrecta para usuario: {login_data.email_usuario}")
             #aquiva la validacion 
             #print("Contraseña incorrecta para usuario:", login_data.password)

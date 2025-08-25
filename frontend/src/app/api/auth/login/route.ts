@@ -63,7 +63,7 @@ export async function POST(request: NextRequest) {
     console.log(`📡 API Login: Respuesta del backend - Status: ${backendResponse.status}`, {
       success: backendData.success,
       hasUser: !!backendData.data?.user,
-      hasToken: !!backendData.data?.token
+      hasToken: !!backendData.data?.access_token
     });
 
     // ========================================
@@ -79,7 +79,7 @@ export async function POST(request: NextRequest) {
       }, { status: backendResponse.status });
     }
 
-    const { user, token: backendToken } = backendData.data;
+    const { access_token, refresh_token, user } = backendData.data; // ← Corregido: access_token
 
     // ========================================
     // 4. CREAR JWT PROPIO (para cookies)
@@ -92,8 +92,10 @@ export async function POST(request: NextRequest) {
 
     const jwtToken = await new SignJWT({ 
       user,
-      backendToken, // Guardamos también el token del backend por si lo necesitamos
-      loginTime: new Date().toISOString()
+      backendToken: access_token, // ← Usar access_token del backend
+      refreshToken: refresh_token, // ← Guardar también refresh_token
+      loginTime: new Date().toISOString(),
+      expiresAt: expirationTime.toISOString()
     })
     .setProtectedHeader({ alg: 'HS256' })
     .setIssuedAt()

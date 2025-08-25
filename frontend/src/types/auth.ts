@@ -47,9 +47,13 @@ export interface AuthResponse {
   message: string;
   code: number;
   timestamp: string;
+  error?: string; // Campo adicional para errores
   data?: {
+    access_token: string; // Token de acceso
+    refresh_token: string; // Token de refresh
+    token_type: string; // Tipo de token (bearer)
+    expires_in: number; // Tiempo de expiración en segundos
     user: User;
-    token: string;
   };
 }
 
