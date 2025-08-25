@@ -1,5 +1,5 @@
 // src/lib/auth/permissions.ts
-import { UserRole, RolePermissions } from '@/types/auth';
+import { UserRole, SystemModule, ModulePermissions,RolePermissions } from '@/types/auth';
 
 /**
  * MATRIZ DE PERMISOS POR ROL
@@ -10,7 +10,7 @@ import { UserRole, RolePermissions } from '@/types/auth';
  * - Granularidad por operación (CRUD + Export)
  */
 
-export const ROLE_PERMISSIONS: Record<UserRole, RolePermissions> = {
+export const ROLE_PERMISSIONS: Record<UserRole,  RolePermissions> = {
   // SUPERUSUARIO (tipo 0) - Acceso completo
   0: {
     dashboard: { canAccess: ['*'], canCreate: true, canEdit: true, canDelete: true, canExport: true },
@@ -89,7 +89,7 @@ export const ROLE_NAMES: Record<UserRole, string> = {
 /**
  * Módulos disponibles en el sistema
  */
-export const SYSTEM_MODULES = [
+export const SYSTEM_MODULES: SystemModule[] = [
   'dashboard',
   'productos',
   'stock',
@@ -102,9 +102,7 @@ export const SYSTEM_MODULES = [
   'kardex',
   'reportes',
   'configuracion'
-] as const;
-
-export type SystemModule = typeof SYSTEM_MODULES[number];
+];
 
 /**
  * Verifica si un usuario tiene permiso para acceder a un módulo
@@ -135,16 +133,14 @@ export function hasOperationPermission(
   const rolePermissions = ROLE_PERMISSIONS[userRole];
   const modulePermissions = rolePermissions[module];
   
-  return modulePermissions?.[`can${operation.charAt(0).toUpperCase() + operation.slice(1)}` as keyof typeof modulePermissions] === true;
+  const permissionKey = `can${operation.charAt(0).toUpperCase() + operation.slice(1)}` as keyof ModulePermissions;
+  return modulePermissions?.[permissionKey] === true;
 }
 
 /**
  * Obtiene todos los módulos accesibles por un rol
  */
 export function getAccessibleModules(userRole: UserRole): SystemModule[] {
-  const rolePermissions = ROLE_PERMISSIONS[userRole];
-  if (!rolePermissions) return [];
-  
   return SYSTEM_MODULES.filter(module => hasModuleAccess(userRole, module));
 }
 

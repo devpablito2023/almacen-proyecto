@@ -1,14 +1,21 @@
 // src/app/(dashboard)/layout.tsx
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
+import Sidebar from '@/components/layout/Sidebar';
+import Header from '@/components/layout/Header';
+import { usePathname } from 'next/navigation';
 
 /**
- * LAYOUT PRINCIPAL PARA DASHBOARD
+ * LAYOUT PRINCIPAL PROFESIONAL
  * 
- * Layout básico para testing del sistema de auth.
- * Incluye sidebar simple y header con info del usuario.
+ * Layout completo con:
+ * - Sidebar inteligente con permisos
+ * - Header responsive con búsqueda
+ * - Breadcrumbs automáticos
+ * - Estados de carga y error
+ * - Responsive design completo
  */
 
 interface DashboardLayoutProps {
@@ -16,138 +23,223 @@ interface DashboardLayoutProps {
 }
 
 const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
-  const { user, isLoading, logout, roleName } = useAuth();
+  const { user, isLoading, isInitialized } = useAuth();
+  const pathname = usePathname();
+  
+  // Estado del sidebar
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
+  const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
 
-  if (isLoading) {
+  // Generar breadcrumbs automáticamente
+  const generateBreadcrumbs = () => {
+    const segments = pathname.split('/').filter(Boolean);
+    const breadcrumbs: { label: string; href?: string }[] = [];
+
+    if (segments.length > 1) {
+      // Mapeo de rutas a nombres amigables
+      const routeNames: Record<string, string> = {
+        dashboard: 'Dashboard',
+        productos: 'Productos',
+        stock: 'Stock',
+        ingresos: 'Ingresos',
+        ot: 'Órdenes de Trabajo',
+        solicitudes: 'Solicitudes',
+        asignaciones: 'Asignaciones',
+        kardex: 'Kardex',
+        colaboradores: 'Colaboradores',
+        usuarios: 'Usuarios',
+        reportes: 'Reportes',
+        configuracion: 'Configuración'
+      };
+
+      let currentPath = '';
+      segments.forEach((segment, index) => {
+        currentPath += `/${segment}`;
+        const isLast = index === segments.length - 1;
+        
+        if (segment !== 'dashboard' || segments.length > 1) {
+          breadcrumbs.push({
+            label: routeNames[segment] || segment,
+            href: isLast ? undefined : currentPath
+          });
+        }
+      });
+    }
+
+    return breadcrumbs;
+  };
+
+  // Generar título de página
+  const generatePageTitle = () => {
+    const segments = pathname.split('/').filter(Boolean);
+    if (segments.length <= 1) return 'Dashboard';
+    
+    const routeNames: Record<string, string> = {
+      productos: 'Gestión de Productos',
+      stock: 'Control de Stock',
+      ingresos: 'Ingresos de Mercancía',
+      ot: 'Órdenes de Trabajo',
+      solicitudes: 'Solicitudes de Materiales',
+      asignaciones: 'Asignaciones de Productos',
+      kardex: 'Kardex de Movimientos',
+      colaboradores: 'Gestión de Colaboradores',
+      usuarios: 'Administración de Usuarios',
+      reportes: 'Reportes y Analytics',
+      configuracion: 'Configuración del Sistema'
+    };
+
+    const lastSegment = segments[segments.length - 1];
+    return routeNames[lastSegment] || lastSegment;
+  };
+
+  const breadcrumbs = generateBreadcrumbs();
+  const pageTitle = generatePageTitle();
+
+  // Estados de carga
+  if (!isInitialized || isLoading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>
-          <p className="mt-2 text-sm text-gray-600">Cargando dashboard...</p>
+          <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mb-4"></div>
+          <p className="text-sm text-gray-600">Cargando sistema...</p>
+          <p className="text-xs text-gray-400 mt-1">Inicializando permisos y configuración</p>
         </div>
       </div>
     );
   }
 
+  // Estado de error (usuario no autenticado)
   if (!user) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-red-50">
-        <div className="text-center">
-          <div className="text-red-600 text-xl mb-2">❌</div>
-          <p className="text-red-700">Usuario no autenticado</p>
+        <div className="text-center max-w-md">
+          <div className="mx-auto h-12 w-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
+            <svg className="h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.863-.833-2.634 0L4.168 16.5c-.77.833.192 2.5 1.732 2.5z" />
+            </svg>
+          </div>
+          <h2 className="text-lg font-semibold text-gray-900 mb-2">
+            Acceso No Autorizado
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Tu sesión ha expirado o no tienes permisos para acceder a esta área.
+          </p>
+          <button
+            onClick={() => window.location.href = '/login'}
+            className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+          >
+            Volver al Login
+          </button>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gray-100">
-      {/* Header */}
-      <header className="bg-white shadow-sm border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            {/* Logo y título */}
-            <div className="flex items-center">
-              <div className="flex-shrink-0">
-                <div className="h-8 w-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                  <svg className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-                  </svg>
-                </div>
-              </div>
-              <div className="ml-4">
-                <h1 className="text-lg font-semibold text-gray-900">
-                  Control de Almacén
-                </h1>
-                <p className="text-sm text-gray-500">
-                  Sistema de Gestión de Inventario
-                </p>
-              </div>
-            </div>
+    <div className="flex h-screen bg-gray-50">
+      
+      {/* Sidebar Desktop */}
+      <div className="hidden lg:flex">
+        <Sidebar 
+          isCollapsed={isSidebarCollapsed}
+          onToggleCollapse={setIsSidebarCollapsed}
+        />
+      </div>
 
-            {/* Info del usuario y logout */}
-            <div className="flex items-center space-x-4">
-              <div className="text-right">
-                <p className="text-sm font-medium text-gray-900">
-                  {user.nombre_usuario}
-                </p>
-                <p className="text-xs text-gray-500">
-                  {roleName} • {user.email_usuario}
-                </p>
-              </div>
-              
+      {/* Sidebar Mobile - Overlay */}
+      {isMobileSidebarOpen && (
+        <div className="fixed inset-0 z-50 lg:hidden">
+          {/* Backdrop */}
+          <div 
+            className="fixed inset-0 bg-black bg-opacity-50 transition-opacity"
+            onClick={() => setIsMobileSidebarOpen(false)}
+          />
+          
+          {/* Sidebar móvil */}
+          <div className="fixed inset-y-0 left-0 w-64 bg-white shadow-xl transform transition-transform">
+            <div className="flex items-center justify-between p-4 border-b border-gray-200">
+              <h2 className="text-lg font-semibold text-gray-900">Navegación</h2>
               <button
-                onClick={logout}
-                className="bg-red-600 hover:bg-red-700 text-white px-3 py-1.5 rounded-md text-sm font-medium transition-colors"
+                onClick={() => setIsMobileSidebarOpen(false)}
+                className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
               >
-                Cerrar Sesión
+                <svg className="h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
               </button>
             </div>
+            <Sidebar />
           </div>
         </div>
-      </header>
+      )}
 
-      {/* Sidebar */}
-      <div className="flex">
-        <nav className="bg-white w-64 min-h-screen shadow-sm border-r border-gray-200">
-          <div className="p-4">
-            <h2 className="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-4">
-              Módulos
-            </h2>
-            <div className="space-y-1">
-              <a
-                href="/dashboard"
-                className="bg-blue-50 text-blue-700 border-blue-200 group flex items-center px-3 py-2 text-sm font-medium rounded-md border"
-              >
-                <svg className="text-blue-500 mr-3 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 5a2 2 0 012-2h4a2 2 0 012 2v12H8V5z" />
-                </svg>
-                Dashboard
-              </a>
+      {/* Área principal */}
+      <div className="flex flex-col flex-1 min-w-0">
+        
+        {/* Header */}
+        <Header 
+          title={pageTitle}
+          breadcrumbs={breadcrumbs}
+        />
 
-              <a
-                href="/dashboard/productos"
-                className="text-gray-600 hover:bg-gray-50 group flex items-center px-3 py-2 text-sm font-medium rounded-md"
-              >
-                <svg className="text-gray-400 mr-3 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-                </svg>
-                Productos
-              </a>
-
-              <a
-                href="/dashboard/stock"
-                className="text-gray-600 hover:bg-gray-50 group flex items-center px-3 py-2 text-sm font-medium rounded-md"
-              >
-                <svg className="text-gray-400 mr-3 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
-                </svg>
-                Stock
-              </a>
-            </div>
-          </div>
-        </nav>
+        {/* Botón menú móvil */}
+        <div className="lg:hidden sticky top-16 z-30 bg-white border-b border-gray-200 px-4 py-2">
+          <button
+            onClick={() => setIsMobileSidebarOpen(true)}
+            className="inline-flex items-center px-3 py-2 border border-gray-300 shadow-sm text-sm leading-4 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+          >
+            <svg className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            Menú
+          </button>
+        </div>
 
         {/* Contenido principal */}
-        <main className="flex-1 p-6">
-          {children}
+        <main className="flex-1 overflow-y-auto focus:outline-none">
+          <div className="py-6">
+            <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${
+              isSidebarCollapsed ? 'lg:px-6' : 'lg:px-8'
+            }`}>
+              {children}
+            </div>
+          </div>
         </main>
+
+        {/* Footer */}
+        <footer className="bg-white border-t border-gray-200 px-4 py-3">
+          <div className="max-w-7xl mx-auto flex items-center justify-between text-xs text-gray-500">
+            <div>
+              Sistema Control de Almacén &copy; {new Date().getFullYear()}
+            </div>
+            <div className="flex items-center space-x-4">
+              <span>Usuario: {user.nombre_usuario}</span>
+              <span>•</span>
+              <span>Versión 1.0.0</span>
+              <span>•</span>
+              <span className="flex items-center">
+                <div className="h-2 w-2 bg-green-400 rounded-full mr-1"></div>
+                Sistema Activo
+              </span>
+            </div>
+          </div>
+        </footer>
       </div>
 
       {/* Debug panel para desarrollo */}
       {process.env.NODE_ENV === 'development' && (
-        <div className="fixed bottom-4 left-4">
-          <details className="bg-white rounded-lg shadow-lg border border-gray-200">
-            <summary className="p-3 cursor-pointer text-xs font-medium text-gray-700">
-              🔧 Auth Debug
+        <div className="fixed bottom-4 right-4 z-40">
+          <details className="bg-white rounded-lg shadow-lg border border-gray-200 max-w-xs">
+            <summary className="p-3 cursor-pointer text-xs font-medium text-gray-700 hover:bg-gray-50">
+              🔧 Layout Debug
             </summary>
-            <div className="p-3 border-t border-gray-200 text-xs font-mono">
-              <div><strong>User:</strong> {user.nombre_usuario}</div>
-              <div><strong>Role:</strong> {user.tipo_usuario} ({roleName})</div>
-              <div><strong>Email:</strong> {user.email_usuario}</div>
-              <div><strong>Area:</strong> {user.area_usuario || 'N/A'}</div>
-              <div><strong>Status:</strong> {user.estado_usuario === 1 ? 'Activo' : 'Inactivo'}</div>
+            <div className="p-3 border-t border-gray-200 text-xs font-mono space-y-1">
+              <div><strong>Path:</strong> {pathname}</div>
+              <div><strong>Title:</strong> {pageTitle}</div>
+              <div><strong>Breadcrumbs:</strong> {breadcrumbs.length}</div>
+              <div><strong>Sidebar:</strong> {isSidebarCollapsed ? 'Collapsed' : 'Expanded'}</div>
+              <div><strong>Mobile:</strong> {isMobileSidebarOpen ? 'Open' : 'Closed'}</div>
+              <div><strong>User Role:</strong> {user.tipo_usuario}</div>
             </div>
           </details>
         </div>

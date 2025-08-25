@@ -17,7 +17,7 @@ import { getAuthDebugInfo } from '@/lib/auth/authService';
  * - Redirección automática si ya está autenticado
  */
 
-interface LoginFormProps {
+interface LoginFormProps { 
   onSuccess?: () => void;
   className?: string;
 }

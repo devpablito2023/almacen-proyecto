@@ -4,8 +4,8 @@
 import { useState, useCallback, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { authService } from '@/lib/auth/authService';
-import { ROLE_DEFAULT_ROUTES, ROLE_PERMISSIONS ,ROLE_NAMES, hasModuleAccess, hasOperationPermission,SystemModule } from '@/lib/auth/permissions';
-import type { User, LoginCredentials, UserRole } from '@/types/auth';
+import { ROLE_DEFAULT_ROUTES, ROLE_PERMISSIONS ,ROLE_NAMES, hasModuleAccess, hasOperationPermission } from '@/lib/auth/permissions';
+import type { User, LoginCredentials, UserRole,SystemModule } from '@/types/auth';
 
 /**
  * HOOK DE AUTENTICACIÓN PROFESIONAL

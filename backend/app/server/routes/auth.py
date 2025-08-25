@@ -1,29 +1,78 @@
 # backend/app/server/routes/auth.py
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, status,Request
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from server.functions.auth import authenticate_user, change_user_password, verify_user_token, refresh_access_token
 from server.models.usuarios import UsuarioLogin, ChangePassword
 from server.models.responses import success_response, error_response
+from jose import JWTError, ExpiredSignatureError
+
 import logging
 
 logger = logging.getLogger(__name__)
 router = APIRouter()
-security = HTTPBearer()
+#security = HTTPBearer()
+security = HTTPBearer(auto_error=False)  # No rompas si no hay header
 
-async def get_current_user(credentials: HTTPAuthorizationCredentials = Depends(security)):
-    """Dependencia para obtener usuario actual desde token"""
+#async def get_current_user(credentials: HTTPAuthorizationCredentials = Depends(security)):
+    #"""Dependencia para obtener usuario actual desde token"""
+    #try:
+        #token = credentials.credentials
+        #user_data = await verify_user_token(token)
+        #return user_data
+    #except HTTPException:
+        #raise
+    #except Exception as e:
+        #logger.error(f"Error en get_current_user: {e}")
+        #raise HTTPException(
+            #status_code=status.HTTP_401_UNAUTHORIZED,
+            #detail="Token inválido"
+        #)
+
+async def get_current_user(
+    request: Request,
+    credentials: HTTPAuthorizationCredentials = Depends(security)
+):
+    """Dependencia para obtener usuario actual desde token (cookie o header)"""
     try:
-        token = credentials.credentials
+        token = None
+
+        # 1. Intentar leer cookie
+        if "auth-token" in request.cookies:
+            token = request.cookies.get("auth-token")
+
+        # 2. Si no hay cookie, revisar Authorization header
+        if not token and credentials:
+            token = credentials.credentials
+
+        if not token:
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="No se proporcionó token"
+            )
+
+        # 3. Verificar token con tu SecurityManager
         user_data = await verify_user_token(token)
         return user_data
-    except HTTPException:
-        raise
-    except Exception as e:
-        logger.error(f"Error en get_current_user: {e}")
+
+    except ExpiredSignatureError:
+        logger.error("❌ Token expirado en get_current_user")
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Token expirado"
+        )
+    except JWTError as e:
+        logger.error(f"❌ Token inválido en get_current_user: {e}")
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Token inválido"
         )
+    except Exception as e:
+        logger.error(f"🔥 Error inesperado en get_current_user: {e}")
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Error interno en autenticación"
+        )
+
 
 @router.post("/login", summary="Iniciar sesión")
 async def login(login_data: UsuarioLogin):

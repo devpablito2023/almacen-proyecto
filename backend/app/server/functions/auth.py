@@ -6,6 +6,8 @@ from server.models.usuarios import UsuarioLogin, ChangePassword
 from datetime import datetime
 import logging
 from passlib.context import CryptContext
+from jose import JWTError, ExpiredSignatureError
+
 
 
 logger = logging.getLogger(__name__)
@@ -175,10 +177,12 @@ async def verify_user_token(token: str):
     try:
         # Decodificar token
         payload = SecurityManager.verify_token(token)
-        
+        print("payload despues de verificar token:", payload)
         # Buscar usuario en BD para verificar que sigue activo
+        user_data = payload.get("user")
         usuario = await usuarios_collection().find_one(
-            {"id_usuario": payload["user_id"], "estado_usuario": 1},
+            #{"id_usuario": payload["user_id"], "estado_usuario": 1},
+            {"id_usuario": user_data["id_usuario"], "estado_usuario": 1},
             {"password_hash": 0, "_id": 0}
         )
         
@@ -195,8 +199,10 @@ async def verify_user_token(token: str):
         
     except HTTPException:
         raise
-    except Exception as e:
-        logger.error(f"Error verificando token: {e}")
+    #except Exception as e:
+    except JWTError as e:
+
+        logger.error(f"Error verificando vvv token: {e}")
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Token inválido"

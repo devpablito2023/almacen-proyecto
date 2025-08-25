@@ -977,3 +977,318 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-08-25 12:11:09,292 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
 2025-08-25 12:11:09,293 - server.config.database - INFO - 🔗 Conectando a MongoDB...
 2025-08-25 12:11:09,297 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 14:11:08,315 - server.app - INFO - POST /api/productos/ - Status: 403 - Time: 0.000s
+2025-08-25 14:12:32,947 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-25 14:12:32,948 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.180s
+2025-08-25 14:12:41,061 - server.app - INFO - GET /docs - Status: 200 - Time: 0.000s
+2025-08-25 14:12:41,268 - server.app - INFO - GET /openapi.json - Status: 200 - Time: 0.010s
+2025-08-25 14:13:14,445 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-25 14:13:14,445 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.178s
+2025-08-25 14:13:45,777 - server.functions.auth - ERROR - Error verificando token: module 'jwt' has no attribute 'JWTError'
+2025-08-25 14:13:45,778 - server.app - INFO - POST /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 14:14:46,372 - server.app - INFO - POST /api/productos/ - Status: 422 - Time: 0.002s
+2025-08-25 14:14:59,269 - server.functions.productos - INFO - Producto creado exitosamente: STRING
+2025-08-25 14:14:59,269 - server.app - INFO - POST /api/productos/ - Status: 200 - Time: 0.017s
+2025-08-25 15:24:49,550 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 15:24:49,550 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 15:24:49,556 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 15:29:04,786 - server.functions.auth - ERROR - Error verificando token: module 'jwt' has no attribute 'JWTError'
+2025-08-25 15:29:04,786 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 15:29:04,812 - server.functions.auth - ERROR - Error verificando token: module 'jwt' has no attribute 'JWTError'
+2025-08-25 15:29:04,812 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 15:29:50,010 - server.functions.auth - ERROR - Error verificando token: module 'jwt' has no attribute 'JWTError'
+2025-08-25 15:29:50,010 - server.app - INFO - POST /api/auth/logout - Status: 401 - Time: 0.000s
+2025-08-25 15:29:53,754 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-25 15:29:53,755 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.204s
+2025-08-25 15:30:04,053 - server.functions.auth - ERROR - Error verificando token: module 'jwt' has no attribute 'JWTError'
+2025-08-25 15:30:04,053 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 15:30:04,081 - server.functions.auth - ERROR - Error verificando token: module 'jwt' has no attribute 'JWTError'
+2025-08-25 15:30:04,081 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 15:35:28,153 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 15:35:28,154 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 15:35:28,158 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 15:35:36,046 - server.functions.auth - ERROR - Error verificando token: module 'jwt' has no attribute 'JWTError'
+2025-08-25 15:35:36,047 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 15:35:36,083 - server.functions.auth - ERROR - Error verificando token: module 'jwt' has no attribute 'JWTError'
+2025-08-25 15:35:36,083 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 15:35:45,146 - server.functions.auth - ERROR - Error verificando token: module 'jwt' has no attribute 'JWTError'
+2025-08-25 15:35:45,146 - server.app - INFO - POST /api/auth/logout - Status: 401 - Time: 0.001s
+2025-08-25 15:35:48,367 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-25 15:35:48,368 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.182s
+2025-08-25 15:35:58,052 - server.functions.auth - ERROR - Error verificando token: module 'jwt' has no attribute 'JWTError'
+2025-08-25 15:35:58,052 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.000s
+2025-08-25 15:35:58,071 - server.functions.auth - ERROR - Error verificando token: module 'jwt' has no attribute 'JWTError'
+2025-08-25 15:35:58,072 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 15:36:17,676 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 15:36:17,676 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 15:36:17,681 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 15:36:20,587 - server.config.security - ERROR - Error verificando token: Signature verification failed.
+2025-08-25 15:36:20,587 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.003s
+2025-08-25 15:36:20,605 - server.config.security - ERROR - Error verificando token: Signature verification failed.
+2025-08-25 15:36:20,606 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 15:37:25,213 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 15:37:25,213 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 15:37:25,218 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 15:37:27,418 - server.config.security - ERROR - Error verificando tokenee: Signature verification failed.
+2025-08-25 15:37:27,418 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 15:37:27,449 - server.config.security - ERROR - Error verificando tokenee: Signature verification failed.
+2025-08-25 15:37:27,450 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 15:37:41,205 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 15:37:41,205 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 15:37:41,210 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 15:37:52,182 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 15:37:52,183 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 15:37:52,187 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 15:37:53,611 - server.config.security - ERROR - Error verificando token: Signature verification failed.
+2025-08-25 15:37:53,611 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.002s
+2025-08-25 15:37:53,634 - server.config.security - ERROR - Error verificando token: Signature verification failed.
+2025-08-25 15:37:53,634 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 15:38:01,170 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 15:38:01,170 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 15:38:01,175 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 15:38:07,649 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 15:38:07,650 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 15:38:07,654 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 15:38:09,267 - server.config.security - ERROR - Error verificando token: Signature verification failed.
+2025-08-25 15:38:09,267 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.002s
+2025-08-25 15:38:09,287 - server.config.security - ERROR - Error verificando token: Signature verification failed.
+2025-08-25 15:38:09,287 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 15:38:16,139 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 15:38:16,140 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 15:38:16,144 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 15:38:58,669 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 15:38:58,669 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 15:38:58,673 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 15:39:01,805 - server.config.security - ERROR - Error verificando token: Signature verification failed.
+2025-08-25 15:39:01,806 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 15:39:01,843 - server.config.security - ERROR - Error verificando token: Signature verification failed.
+2025-08-25 15:39:01,843 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 15:39:49,184 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 15:39:49,184 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 15:39:49,189 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 15:39:54,042 - server.config.security - ERROR - Error verificando token: Signature verification failed.
+2025-08-25 15:39:54,042 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.002s
+2025-08-25 15:39:54,064 - server.config.security - ERROR - Error verificando token: Signature verification failed.
+2025-08-25 15:39:54,065 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 15:41:05,215 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 15:41:05,215 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 15:41:05,219 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 15:41:08,925 - server.functions.auth - ERROR - Error verificando token: Signature verification failed.
+2025-08-25 15:41:08,925 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.002s
+2025-08-25 15:41:08,957 - server.functions.auth - ERROR - Error verificando token: Signature verification failed.
+2025-08-25 15:41:08,957 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 15:43:22,309 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 15:43:22,309 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 15:43:22,314 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 15:43:44,034 - server.functions.auth - ERROR - Error verificando token: Signature verification failed.
+2025-08-25 15:43:44,034 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.002s
+2025-08-25 15:43:44,053 - server.functions.auth - ERROR - Error verificando token: Signature verification failed.
+2025-08-25 15:43:44,053 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 15:45:20,502 - server.functions.auth - ERROR - Error verificando token: Signature verification failed.
+2025-08-25 15:45:20,502 - server.app - INFO - POST /api/auth/logout - Status: 401 - Time: 0.000s
+2025-08-25 15:45:22,593 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-25 15:45:22,593 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.184s
+2025-08-25 15:45:50,619 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-25 15:45:50,619 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.180s
+2025-08-25 15:46:46,020 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-25 15:46:46,020 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.181s
+2025-08-25 15:47:00,885 - server.functions.auth - ERROR - Error verificando token: Invalid audience
+2025-08-25 15:47:00,885 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 15:47:00,913 - server.functions.auth - ERROR - Error verificando token: Invalid audience
+2025-08-25 15:47:00,913 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 15:48:07,233 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.006s
+2025-08-25 15:55:18,460 - server.functions.auth - ERROR - Error verificando token: Invalid audience
+2025-08-25 15:55:18,460 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 15:55:33,188 - server.functions.auth - ERROR - Error verificando token: Invalid audience
+2025-08-25 15:55:33,188 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 15:55:33,212 - server.functions.auth - ERROR - Error verificando token: Invalid audience
+2025-08-25 15:55:33,213 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 15:57:45,588 - server.functions.auth - ERROR - Error verificando token: Invalid audience
+2025-08-25 15:57:45,588 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.002s
+2025-08-25 15:57:45,624 - server.functions.auth - ERROR - Error verificando token: Invalid audience
+2025-08-25 15:57:45,624 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 15:57:58,624 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 15:57:58,624 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 15:57:58,629 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 15:58:02,029 - server.functions.auth - ERROR - Error verificando token: Invalid audience
+2025-08-25 15:58:02,029 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.002s
+2025-08-25 15:58:02,064 - server.functions.auth - ERROR - Error verificando token: Invalid audience
+2025-08-25 15:58:02,064 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 16:03:19,401 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 16:03:19,402 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 16:03:19,406 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 16:03:43,380 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 16:03:43,380 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 16:03:43,385 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 16:03:53,286 - server.functions.auth - ERROR - Error verificando token: audience must be a string or None
+2025-08-25 16:03:53,286 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.002s
+2025-08-25 16:03:53,324 - server.functions.auth - ERROR - Error verificando token: audience must be a string or None
+2025-08-25 16:03:53,324 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 16:05:28,162 - server.functions.auth - ERROR - Error verificando token: audience must be a string or None
+2025-08-25 16:05:28,162 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 16:05:28,186 - server.functions.auth - ERROR - Error verificando token: audience must be a string or None
+2025-08-25 16:05:28,186 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 16:05:49,102 - server.functions.auth - ERROR - Error verificando token: audience must be a string or None
+2025-08-25 16:05:49,102 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 16:05:49,132 - server.functions.auth - ERROR - Error verificando token: audience must be a string or None
+2025-08-25 16:05:49,133 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 16:07:18,182 - server.functions.auth - ERROR - Error verificando token: audience must be a string or None
+2025-08-25 16:07:18,182 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 16:07:18,200 - server.functions.auth - ERROR - Error verificando token: audience must be a string or None
+2025-08-25 16:07:18,201 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 16:07:52,622 - server.functions.auth - ERROR - Error verificando token: audience must be a string or None
+2025-08-25 16:07:52,622 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 16:07:52,647 - server.functions.auth - ERROR - Error verificando token: audience must be a string or None
+2025-08-25 16:07:52,647 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 16:08:05,595 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 16:08:05,595 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 16:08:05,600 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 16:08:09,543 - server.functions.auth - ERROR - Error verificando token: audience must be a string or None
+2025-08-25 16:08:09,543 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 16:08:09,563 - server.functions.auth - ERROR - Error verificando token: audience must be a string or None
+2025-08-25 16:08:09,563 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 16:09:09,623 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 16:09:09,623 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 16:09:09,628 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 16:09:14,741 - server.functions.auth - ERROR - Error verificando token: Invalid audience
+2025-08-25 16:09:14,741 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 16:09:14,765 - server.functions.auth - ERROR - Error verificando token: Invalid audience
+2025-08-25 16:09:14,765 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 16:10:36,706 - server.functions.auth - ERROR - Error verificando token: Invalid audience
+2025-08-25 16:10:36,707 - server.app - INFO - POST /api/auth/logout - Status: 401 - Time: 0.001s
+2025-08-25 16:10:42,727 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-25 16:10:42,727 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.184s
+2025-08-25 16:10:54,866 - server.functions.auth - ERROR - Error verificando token: 'user_id'
+2025-08-25 16:10:54,866 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 16:10:54,903 - server.functions.auth - ERROR - Error verificando token: 'user_id'
+2025-08-25 16:10:54,903 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 16:12:33,223 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 16:12:33,223 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 16:12:33,228 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 16:12:36,231 - server.functions.auth - ERROR - Error verificando token: 'user_id'
+2025-08-25 16:12:36,231 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.002s
+2025-08-25 16:12:36,253 - server.functions.auth - ERROR - Error verificando token: 'user_id'
+2025-08-25 16:12:36,253 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 16:12:44,697 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 16:12:44,697 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 16:12:44,702 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 16:12:52,669 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 16:12:52,669 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 16:12:52,674 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 16:12:55,449 - server.functions.auth - ERROR - Error verificando token: 'user_id'
+2025-08-25 16:12:55,450 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.002s
+2025-08-25 16:12:55,477 - server.functions.auth - ERROR - Error verificando token: 'user_id'
+2025-08-25 16:12:55,478 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.002s
+2025-08-25 16:13:11,155 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 16:13:11,155 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 16:13:11,160 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 16:13:18,114 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 16:13:18,114 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 16:13:18,118 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 16:13:21,368 - server.functions.auth - ERROR - Error verificando token: 'user_id'
+2025-08-25 16:13:21,368 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.002s
+2025-08-25 16:13:21,417 - server.functions.auth - ERROR - Error verificando token: 'user_id'
+2025-08-25 16:13:21,417 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 16:13:35,602 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 16:13:35,602 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 16:13:35,607 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 16:13:51,105 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 16:13:51,105 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 16:13:51,110 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 16:13:54,886 - server.functions.auth - ERROR - Error verificando token: 'user_id'
+2025-08-25 16:13:54,887 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.002s
+2025-08-25 16:13:54,909 - server.functions.auth - ERROR - Error verificando token: 'user_id'
+2025-08-25 16:13:54,909 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 16:14:09,590 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 16:14:09,591 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 16:14:09,595 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 16:14:37,077 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 16:14:37,077 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 16:14:37,081 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 16:14:41,218 - server.functions.auth - ERROR - Error verificando vvv token: 'user_id'
+2025-08-25 16:14:41,218 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.002s
+2025-08-25 16:14:41,255 - server.functions.auth - ERROR - Error verificando vvv token: 'user_id'
+2025-08-25 16:14:41,255 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 16:15:19,462 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 16:15:19,462 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 16:15:19,467 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 16:16:52,998 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 16:16:52,999 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 16:16:53,003 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 16:16:58,631 - server.routes.auth - ERROR - Error en get_current_user: name 'JWTError' is not defined
+2025-08-25 16:16:58,631 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.002s
+2025-08-25 16:16:58,650 - server.routes.auth - ERROR - Error en get_current_user: name 'JWTError' is not defined
+2025-08-25 16:16:58,650 - server.app - INFO - GET /api/productos/ - Status: 401 - Time: 0.001s
+2025-08-25 16:24:01,954 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 16:24:01,954 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 16:24:01,958 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 16:24:54,465 - server.routes.auth - ERROR - 🔥 Error inesperado en get_current_user: name 'JWTError' is not defined
+2025-08-25 16:24:54,465 - server.app - INFO - GET /api/productos/ - Status: 500 - Time: 0.002s
+2025-08-25 16:24:54,494 - server.routes.auth - ERROR - 🔥 Error inesperado en get_current_user: name 'JWTError' is not defined
+2025-08-25 16:24:54,495 - server.app - INFO - GET /api/productos/ - Status: 500 - Time: 0.001s
+2025-08-25 16:26:41,561 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 16:26:41,561 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 16:26:41,566 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 16:26:44,916 - server.routes.auth - ERROR - 🔥 Error inesperado en get_current_user: 'user_id'
+2025-08-25 16:26:44,916 - server.app - INFO - GET /api/productos/ - Status: 500 - Time: 0.002s
+2025-08-25 16:26:44,935 - server.routes.auth - ERROR - 🔥 Error inesperado en get_current_user: 'user_id'
+2025-08-25 16:26:44,935 - server.app - INFO - GET /api/productos/ - Status: 500 - Time: 0.001s
+2025-08-25 16:30:33,235 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 16:30:33,236 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 16:30:33,240 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 16:30:47,956 - server.routes.auth - ERROR - 🔥 Error inesperado en get_current_user: 'id_usuario'
+2025-08-25 16:30:47,957 - server.app - INFO - GET /api/productos/ - Status: 500 - Time: 0.002s
+2025-08-25 16:30:47,981 - server.routes.auth - ERROR - 🔥 Error inesperado en get_current_user: 'id_usuario'
+2025-08-25 16:30:47,981 - server.app - INFO - GET /api/productos/ - Status: 500 - Time: 0.001s
+2025-08-25 16:31:39,759 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 16:31:39,759 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 16:31:39,764 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 16:31:43,945 - server.routes.auth - ERROR - 🔥 Error inesperado en get_current_user: 'id_usuario'
+2025-08-25 16:31:43,945 - server.app - INFO - GET /api/productos/ - Status: 500 - Time: 0.002s
+2025-08-25 16:31:43,969 - server.routes.auth - ERROR - 🔥 Error inesperado en get_current_user: 'id_usuario'
+2025-08-25 16:31:43,969 - server.app - INFO - GET /api/productos/ - Status: 500 - Time: 0.001s
+2025-08-25 16:32:51,299 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 16:32:51,299 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 16:32:51,303 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 16:33:00,748 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 16:33:00,773 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.003s
+2025-08-25 16:33:38,904 - server.routes.auth - INFO - Usuario admin@almacen.com cerró sesión
+2025-08-25 16:33:38,904 - server.app - INFO - POST /api/auth/logout - Status: 200 - Time: 0.002s
+2025-08-25 16:33:51,407 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-25 16:33:51,407 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.181s
+2025-08-25 16:33:59,955 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 16:34:00,008 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.003s
+2025-08-25 16:34:15,409 - server.app - INFO - GET /api/productos/export - Status: 422 - Time: 0.002s
+2025-08-25 16:34:33,524 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 16:34:33,551 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 16:38:02,053 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 16:38:02,089 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 16:40:51,139 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 16:40:51,167 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 16:59:21,416 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.003s
+2025-08-25 16:59:21,437 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.003s
+2025-08-25 17:07:06,196 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 17:07:06,218 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 17:09:38,958 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.003s
+2025-08-25 17:09:38,983 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 17:13:10,507 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.003s
+2025-08-25 17:13:10,535 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 17:14:37,838 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 17:14:37,874 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.003s
+2025-08-25 17:15:36,343 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 17:15:36,369 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 17:19:36,937 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.003s
+2025-08-25 17:19:36,964 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.003s
+2025-08-25 17:27:23,444 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.003s
+2025-08-25 17:27:23,474 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 17:29:20,795 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.003s
+2025-08-25 17:29:20,815 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.003s
+2025-08-25 17:44:37,394 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 17:44:37,415 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.003s
+2025-08-25 17:45:12,664 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 17:45:12,683 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.003s
+2025-08-25 17:46:58,062 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.003s
+2025-08-25 17:46:58,087 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.003s
+2025-08-25 17:47:02,670 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.003s
+2025-08-25 17:47:02,687 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.003s
+2025-08-25 17:47:14,767 - server.app - INFO - GET /api/productos/export - Status: 422 - Time: 0.002s

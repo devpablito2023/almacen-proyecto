@@ -103,7 +103,7 @@ export async function POST(request: NextRequest) {
     .setExpirationTime(expirationTime)
     .setSubject(user.id_usuario.toString())
     .setIssuer('control-almacen-frontend')
-    .setAudience('control-almacen-users')
+    .setAudience('control-almacen')
     .sign(JWT_SECRET);
 
     // ========================================

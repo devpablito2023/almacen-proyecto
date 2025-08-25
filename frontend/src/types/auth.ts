@@ -12,6 +12,24 @@
 export type UserRole = 0 | 1 | 2 | 3 | 4 | 5;
 
 /**
+ * Módulos disponibles en el sistema
+ * Basado en la estructura definida en las especificaciones
+ */
+export type SystemModule = 
+  | 'dashboard'
+  | 'productos' 
+  | 'stock'
+  | 'ingresos'
+  | 'kardex'
+  | 'ot'
+  | 'solicitudes'
+  | 'asignaciones'
+  | 'colaboradores'
+  | 'usuarios'
+  | 'reportes'
+  | 'configuracion';
+
+/**
  * Interface del usuario completa
  * Basada en los campos definidos en las especificaciones
  */
@@ -84,6 +102,7 @@ export interface ModulePermissions {
 
 /**
  * Configuración de permisos por rol
+ * Mapea cada módulo del sistema con sus permisos específicos
  */
 export interface RolePermissions {
   [key: string]: ModulePermissions;

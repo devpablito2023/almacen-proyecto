@@ -1,6 +1,8 @@
 # backend/app/server/config/security.py
 import os
-import jwt
+from jose import JWTError, jwt
+
+#import jwt
 import bcrypt
 from datetime import datetime, timedelta
 from typing import Optional, Dict, Any
@@ -11,7 +13,11 @@ logger = logging.getLogger(__name__)
 
 # Configuración JWT
 JWT_SECRET = os.getenv("JWT_SECRET")
+print("JWT_SECRET")
+print(JWT_SECRET)
 JWT_ALGORITHM = "HS256"
+AUDIENCE = "control-almacen"
+ISSUER = "control-almacen-backend"
 JWT_EXPIRE_HOURS = int(os.getenv("JWT_EXPIRE_HOURS", 8))
 
 if not JWT_SECRET:
@@ -94,9 +100,15 @@ class SecurityManager:
     @staticmethod
     def verify_token(token: str) -> Dict[str, Any]:
         """Verificar y decodificar JWT token"""
+        print("validar token")
+        print(token)
+        payload = jwt.decode(token, JWT_SECRET, algorithms=[JWT_ALGORITHM],audience=AUDIENCE)
+        print("payload 1")
+        print(payload)
         try:
-            payload = jwt.decode(token, JWT_SECRET, algorithms=[JWT_ALGORITHM])
-            
+            payload = jwt.decode(token, JWT_SECRET, algorithms=[JWT_ALGORITHM],audience=AUDIENCE)
+            print("payload")
+            print(payload)
             # Verificar que no esté expirado
             if datetime.utcnow() > datetime.fromtimestamp(payload["exp"]):
                 raise HTTPException(
