@@ -954,3 +954,26 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-08-25 11:10:16,591 - server.app - INFO - POST /api/auth/logout - Status: 401 - Time: 0.001s
 2025-08-25 11:10:36,999 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
 2025-08-25 11:10:36,999 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.180s
+2025-08-25 11:12:28,999 - server.functions.auth - ERROR - Error verificando token: module 'jwt' has no attribute 'JWTError'
+2025-08-25 11:12:28,999 - server.app - INFO - POST /api/auth/logout - Status: 401 - Time: 0.001s
+2025-08-25 11:12:39,718 - server.functions.auth - WARNING - Intento de login con email inexistente: admin@almacen.co
+2025-08-25 11:12:39,718 - server.routes.auth - WARNING - Login fallido para admin@almacen.co: Credenciales inválidas
+2025-08-25 11:12:39,718 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.001s
+2025-08-25 11:19:08,964 - server.functions.auth - WARNING - Intento de login con email inexistente: jefe@almacen.com
+2025-08-25 11:19:08,964 - server.routes.auth - WARNING - Login fallido para jefe@almacen.com: Credenciales inválidas
+2025-08-25 11:19:08,964 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.002s
+2025-08-25 11:19:17,038 - server.functions.auth - WARNING - Intento de login con email inexistente: ot@almacen.com
+2025-08-25 11:19:17,038 - server.routes.auth - WARNING - Login fallido para ot@almacen.com: Credenciales inválidas
+2025-08-25 11:19:17,038 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.002s
+2025-08-25 11:19:19,923 - server.functions.auth - WARNING - Intento de login con email inexistente: invalid@test.com
+2025-08-25 11:19:19,923 - server.routes.auth - WARNING - Login fallido para invalid@test.com: Credenciales inválidas
+2025-08-25 11:19:19,923 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.002s
+2025-08-25 11:19:23,724 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-25 11:19:23,725 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.181s
+2025-08-25 11:23:31,603 - server.functions.auth - ERROR - Error verificando token: module 'jwt' has no attribute 'JWTError'
+2025-08-25 11:23:31,604 - server.app - INFO - POST /api/auth/logout - Status: 401 - Time: 0.000s
+2025-08-25 11:59:09,547 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-25 11:59:09,548 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.178s
+2025-08-25 12:11:09,292 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 12:11:09,293 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 12:11:09,297 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa

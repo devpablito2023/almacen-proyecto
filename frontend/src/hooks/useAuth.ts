@@ -62,7 +62,7 @@ export function useAuth(): UseAuthReturn {
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [isInitialized, setIsInitialized] = useState(false);
+  const [isInitialized, setIsInitialized] = useState(false); 
 
   const router = useRouter();
 
@@ -171,6 +171,7 @@ export function useAuth(): UseAuthReturn {
         setError(null);
 
         // Redirigir a la ruta apropiada según el rol
+        console.log('Rol del usuario:', result.user.tipo_usuario);
         const defaultRoute = ROLE_DEFAULT_ROUTES[result.user.tipo_usuario] || '/dashboard';
         
         // Pequeño delay para asegurar que el estado se actualice

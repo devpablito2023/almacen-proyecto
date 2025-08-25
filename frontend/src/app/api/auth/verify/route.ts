@@ -49,7 +49,7 @@ export async function GET(request: NextRequest) {
       const { payload } = await jwtVerify(token.value, JWT_SECRET);
       user = payload.user as User;
     } catch (jwtError) {
-      console.log('❌ API Verify: Token inválido');
+      console.log('❌ API Verify: Token inválido', jwtError);
       
       const response = NextResponse.json({
         success: false,
@@ -148,6 +148,7 @@ export async function POST(request: NextRequest) {
       const { payload } = await jwtVerify(token.value, JWT_SECRET);
       user = payload.user as User;
     } catch (jwtError) {
+      console.log('❌ API Verify POST: Token inválido', jwtError);
       return NextResponse.json({
         success: false,
         message: 'Token inválido',

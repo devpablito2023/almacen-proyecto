@@ -24,7 +24,7 @@ export async function POST(request: NextRequest) {
         const userData = JSON.parse(userInfo.value);
         userEmail = userData.email || 'unknown';
       } catch (e) {
-        console.log('⚠️ API Logout: Error parsing user info cookie');
+        console.log('⚠️ API Logout: Error parsing user info cookie:'  , e);
       }
     }
 

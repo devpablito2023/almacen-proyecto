@@ -2,6 +2,7 @@
 'use client';
 
 import React from 'react';
+// pide LoginForm component
 import LoginForm from '@/components/forms/LoginForm';
 
 /**
@@ -44,8 +45,22 @@ const LoginPage: React.FC = () => {
 /**
  * Panel de testing para desarrollo
  */
+interface TestResult {
+  credentials: string;
+  status: number | string;
+  success: boolean;
+  message: string;
+  hasUser?: boolean;
+  userRole?: number;
+  expectedRole?: number | null;
+  roleMatch?: boolean;
+  responseTime?: string;
+  timestamp: string;
+  error?: string | null;
+}
+
 const TestingPanel: React.FC = () => {
-  const [testResults, setTestResults] = React.useState<any[]>([]);
+  const [testResults, setTestResults] = React.useState<TestResult[]>([]);
   const [isTesting, setIsTesting] = React.useState(false);
 
   // Credenciales de prueba según los roles
