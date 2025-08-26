@@ -13,7 +13,7 @@ import LoginForm from '@/components/forms/LoginForm';
  * - Manejo de redirecciones
  * - Testing de diferentes credenciales
  */
-console.log('🔄 Cargando LoginPage desde login/page.tsx');
+console.log('🔄 Cargando LoginPage desde login/page.tsx'); 
 const LoginPage: React.FC = () => {
   const handleLoginSuccess = () => {
     console.log('✅ LoginPage: Login exitoso, el hook useAuth manejará la redirección');

@@ -8,7 +8,7 @@ import { LoginCredentials, AuthResponse, User } from '@/types/auth';
  * Usado por los hooks y componentes de React.
  */
 class AuthService {
-  private baseURL = '/api/auth'; 
+  private baseURL = '/api/auth';   
 
   /**
    * Realiza login del usuario

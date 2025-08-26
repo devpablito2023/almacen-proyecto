@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '@/hooks/useAuth';
-import { getAuthDebugInfo } from '@/lib/auth/authService';
+import { getAuthDebugInfo } from '@/lib/auth/authService'; 
  
 /**
  * FORMULARIO DE LOGIN PROFESIONAL

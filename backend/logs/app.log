@@ -1992,3 +1992,14 @@ NameError: name 'stats_collection' is not defined. Did you mean: 'stock_collecti
 2025-08-26 11:52:20,098 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.178s
 2025-08-26 11:52:24,347 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
 2025-08-26 11:52:24,373 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-26 12:14:48,971 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-26 12:14:48,971 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-26 12:14:48,976 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-26 12:23:15,327 - server.app - INFO - GET /api/productos/export - Status: 422 - Time: 0.004s
+2025-08-26 13:32:56,876 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-26 13:32:56,877 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-26 13:32:56,881 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-26 13:36:38,531 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-26 13:36:38,559 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-26 13:37:26,362 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.005s
+2025-08-26 13:37:26,392 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s

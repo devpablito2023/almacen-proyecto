@@ -22,50 +22,12 @@ import {
 } from '@/types/productos';
 
 import {authService} from '@/lib/auth/authService';   
-
-
 const cookieUser = authService.getUserInfoFromCookie();
 console.log("cookieUser en productos/page.tsx:", cookieUser);
         if (cookieUser ) {
           console.log(`👤 useAuth: Usuario encontrado en cookies: ${cookieUser.nombre_usuario}`);
 }
-//getUserInfoFromCookie
-/*
-interface Producto {
-  id_producto: number;
-  codigo_producto: string;
-  nombre_producto: string;
-  tipo_producto: string;
-  categoria_producto: string;
-  proveedor_producto: string;
-  costo_unitario: number | null;
-  precio_referencial: number | null;
-  ubicacion_fisica: string;
-  stock_minimo: number;
-  stock_maximo: number;
-  stock_critico: number;
-  estado_producto: number;
-  descripcion_producto: string;
-  url_foto_producto: string | null;
-  magnitud_producto: string;
-  requiere_lote: boolean;
-  dias_vida_util: number;
-  created_at: string;
-  created_by: number;
-  created_by_name: string;
-  updated_at: string | null;
-  updated_by: number | null;
-  updated_by_name: string | null;
-}
 
-interface ProductoStats {
-  total_productos: number;
-  productos_activos: number;
-  productos_stock_bajo: number;
-  valor_total_inventario: number;
-}
-
-*/
 export default function ProductosPage() {
   const { user } = useAuthStore();
   const [productos, setProductos] = useState<Producto[]>([]);
