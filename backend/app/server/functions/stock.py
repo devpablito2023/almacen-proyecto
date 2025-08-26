@@ -10,6 +10,8 @@ from datetime import datetime, date, timedelta
 from typing import List, Optional
 import logging
 import math
+from server.config.database import stats_collection
+
 
 logger = logging.getLogger(__name__)
 
@@ -101,9 +103,15 @@ async def obtener_stock(page: int = 1, limit: int = 20, stock_bajo: bool = False
         
         # Calcular paginación
         pages = math.ceil(total / limit) if total > 0 else 0
-        
+
+
+        stats = await obtener_stats_stock()
+
         return {
-            "data": stock_data,
+            "data": {
+                "stock" : stock_data,
+                "stats": stats
+            },
             "total": total,
             "page": page,
             "limit": limit,
@@ -541,3 +549,71 @@ async def obtener_movimientos_stock(producto_id: Optional[int] = None, limit: in
     # TODO: Implementar cuando se tenga el módulo kardex en Fase 2
     # Por ahora retorna lista vacía
     return []
+
+
+async def obtener_estadistica_stock():
+    stats = await stats_collection().find_one({"_id": "stock_stats"}, {"_id": 0})
+    return stats
+
+
+async def actualizar_stock_stats():
+    """Recalcular estadísticas completas y guardarlas en DB"""
+    stats = await obtener_stats_stock()  # tu función actual con agregaciones
+    await stats_collection().update_one(
+        {"_id": "stock_stats"},
+        {"$set": {**stats, "last_updated": datetime.now()}},
+        upsert=True
+    )
+    return stats
+
+async def obtener_stats_stock():
+    """Recalcular todas las estadísticas y guardarlas en la colección stats"""
+    try:
+        total_productos = await productos_collection().count_documents({"estado_producto": 1})
+        productos_con_stock = await stock_collection().count_documents({"estado_stock": 1, "cantidad_total": {"$gt": 0}})
+        productos_stock_bajo = await stock_collection().count_documents({"estado_stock": 1, "cantidad_total": {"$gt": 0, "$lte": 5}})
+        productos_stock_critico = await stock_collection().count_documents({"estado_stock": 1, "cantidad_total": {"$lte": 2}})
+        productos_sin_stock = await stock_collection().count_documents({"estado_stock": 1, "cantidad_total": 0})
+
+        # Valor inventario total
+        pipeline_valor = [
+            {"$match": {"estado_stock": 1}},
+            {"$group": {"_id": None, "total": {"$sum": "$valor_inventario"}}}
+        ]
+        valor_data = await stock_collection().aggregate(pipeline_valor).to_list(length=1)
+        valor_total_inventario = valor_data[0]["total"] if valor_data else 0.0
+
+        # Productos con movimiento hoy
+        hoy = datetime.combine(datetime.today(), datetime.min.time())  # ✅ datetime, no date
+        productos_con_movimiento_hoy = await stock_collection().count_documents({
+            "estado_stock": 1,
+            "fecha_ultimo_movimiento": {"$gte": hoy}
+        })
+
+        # Vencimientos
+        fecha_actual = datetime.combine(datetime.today(), datetime.min.time())   # ✅ datetime
+        fecha_limite = fecha_actual + timedelta(days=30)
+        proximos_vencer = await stock_collection().count_documents({
+            "estado_stock": 1,
+            "fecha_vencimiento": {"$gte": fecha_actual, "$lte": fecha_limite}
+        })
+
+        stats_doc = {
+            "_id": "stock_stats",
+            "total_productos": total_productos,
+            "productos_con_stock": productos_con_stock,
+            "productos_stock_bajo": productos_stock_bajo,
+            "productos_stock_critico": productos_stock_critico,
+            "productos_sin_stock": productos_sin_stock,
+            "valor_total_inventario": valor_total_inventario,
+            "productos_con_movimiento_hoy": productos_con_movimiento_hoy,
+            "productos_vencimiento_proximo": proximos_vencer,
+            "rotacion_promedio": 0,  # ⚠️ pendiente kardex
+            "last_updated": datetime.now()
+        }
+
+        await stats_collection().update_one({"_id": "stock_stats"}, {"$set": stats_doc}, upsert=True)
+        return stats_doc
+    except Exception as e:
+        logger.error(f"Error recalculando stats: {e}")
+        raise HTTPException(status_code=500, detail="Error recalculando estadísticas")

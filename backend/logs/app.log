@@ -1587,3 +1587,408 @@ TypeError: 'function' object is not subscriptable
 2025-08-25 19:05:26,902 - server.app - INFO - GET /api/productos/2 - Status: 200 - Time: 0.002s
 2025-08-25 19:05:30,817 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
 2025-08-25 19:05:30,842 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 19:35:31,971 - server.routes.auth - ERROR - 🔥 Error inesperado en get_current_user: 
+2025-08-25 19:35:31,972 - server.app - INFO - GET /api/productos/ - Status: 500 - Time: 0.002s
+2025-08-25 19:35:31,993 - server.routes.auth - ERROR - 🔥 Error inesperado en get_current_user: 
+2025-08-25 19:35:31,994 - server.app - INFO - GET /api/productos/ - Status: 500 - Time: 0.001s
+2025-08-25 19:36:11,330 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 19:36:11,330 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 19:36:11,336 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 19:40:16,891 - server.routes.auth - ERROR - 🔥 Error inesperado en get_current_user: 
+2025-08-25 19:40:16,891 - server.app - INFO - GET /api/stock/ - Status: 500 - Time: 0.004s
+2025-08-25 19:40:58,265 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-25 19:40:58,265 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.184s
+2025-08-25 19:41:32,041 - server.routes.auth - ERROR - 🔥 Error inesperado en get_current_user: 
+2025-08-25 19:41:32,042 - server.app - INFO - GET /api/stock/ - Status: 500 - Time: 0.001s
+2025-08-25 19:41:45,305 - server.app - INFO - GET /api/productos/stats - Status: 200 - Time: 0.001s
+2025-08-25 19:41:46,171 - server.app - INFO - GET /api/productos/stats - Status: 200 - Time: 0.001s
+2025-08-25 19:41:46,704 - server.app - INFO - GET /api/productos/stats - Status: 200 - Time: 0.001s
+2025-08-25 19:41:46,980 - server.app - INFO - GET /api/productos/stats - Status: 200 - Time: 0.001s
+2025-08-25 19:41:47,153 - server.app - INFO - GET /api/productos/stats - Status: 200 - Time: 0.001s
+2025-08-25 19:41:47,753 - server.app - INFO - GET /api/productos/stats - Status: 200 - Time: 0.001s
+2025-08-25 19:41:59,841 - server.routes.auth - ERROR - 🔥 Error inesperado en get_current_user: 
+2025-08-25 19:41:59,842 - server.app - INFO - GET /api/stock/ - Status: 500 - Time: 0.001s
+2025-08-25 19:43:33,299 - server.app - INFO - GET /api/productos/stats - Status: 200 - Time: 0.001s
+2025-08-25 19:43:51,345 - server.routes.auth - ERROR - 🔥 Error inesperado en get_current_user: 
+2025-08-25 19:43:51,345 - server.app - INFO - GET /api/usuarios/ - Status: 500 - Time: 0.001s
+2025-08-25 19:43:58,400 - server.app - INFO - GET /docs - Status: 200 - Time: 0.002s
+2025-08-25 19:43:58,512 - server.app - INFO - GET /openapi.json - Status: 200 - Time: 0.009s
+2025-08-25 19:44:04,952 - server.routes.auth - ERROR - 🔥 Error inesperado en get_current_user: 
+2025-08-25 19:44:04,953 - server.app - INFO - GET /api/usuarios/ - Status: 500 - Time: 0.001s
+2025-08-25 19:44:13,907 - server.routes.auth - ERROR - 🔥 Error inesperado en get_current_user: 
+2025-08-25 19:44:13,907 - server.app - INFO - GET /api/productos/ - Status: 500 - Time: 0.001s
+2025-08-25 19:44:13,934 - server.routes.auth - ERROR - 🔥 Error inesperado en get_current_user: 
+2025-08-25 19:44:13,935 - server.app - INFO - GET /api/productos/ - Status: 500 - Time: 0.001s
+2025-08-25 19:44:20,076 - server.routes.auth - ERROR - 🔥 Error inesperado en get_current_user: 
+2025-08-25 19:44:20,076 - server.app - INFO - POST /api/auth/logout - Status: 500 - Time: 0.001s
+2025-08-25 19:44:22,717 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-25 19:44:22,717 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.182s
+2025-08-25 19:44:25,233 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 19:44:25,258 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 19:44:31,545 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 19:44:31,564 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 19:44:37,898 - server.app - INFO - GET /docs - Status: 200 - Time: 0.000s
+2025-08-25 19:44:37,959 - server.app - INFO - GET /openapi.json - Status: 200 - Time: 0.001s
+2025-08-25 19:44:40,534 - server.app - INFO - GET /api/usuarios/ - Status: 200 - Time: 0.003s
+2025-08-25 19:44:51,505 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.004s
+2025-08-26 08:16:47,073 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-26 08:16:47,073 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.179s
+2025-08-26 08:16:50,867 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.003s
+2025-08-26 08:16:50,889 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-26 08:46:21,428 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-26 08:46:21,451 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-26 08:46:30,838 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.005s
+2025-08-26 08:46:30,862 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.005s
+2025-08-26 08:56:10,547 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.003s
+2025-08-26 08:56:10,571 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.003s
+2025-08-26 09:07:55,624 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-26 09:07:55,646 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-26 09:08:00,259 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-26 09:08:00,286 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-26 09:09:12,429 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-26 09:09:12,455 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.003s
+2025-08-26 09:11:26,903 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.005s
+2025-08-26 09:11:26,924 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-26 09:11:34,106 - server.routes.auth - INFO - Usuario admin@almacen.com cerró sesión
+2025-08-26 09:11:34,106 - server.app - INFO - POST /api/auth/logout - Status: 200 - Time: 0.002s
+2025-08-26 09:39:10,021 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-26 09:39:10,022 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.177s
+2025-08-26 09:52:27,632 - server.routes.auth - INFO - Usuario admin@almacen.com cerró sesión
+2025-08-26 09:52:27,632 - server.app - INFO - POST /api/auth/logout - Status: 200 - Time: 0.002s
+2025-08-26 09:52:37,608 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-26 09:52:37,608 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.181s
+2025-08-26 09:55:35,195 - server.routes.auth - INFO - Usuario admin@almacen.com cerró sesión
+2025-08-26 09:55:35,196 - server.app - INFO - POST /api/auth/logout - Status: 200 - Time: 0.002s
+2025-08-26 09:56:58,256 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-26 09:56:58,256 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.180s
+2025-08-26 09:58:56,727 - server.routes.auth - INFO - Usuario admin@almacen.com cerró sesión
+2025-08-26 09:58:56,727 - server.app - INFO - POST /api/auth/logout - Status: 200 - Time: 0.001s
+2025-08-26 09:58:58,608 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-26 09:58:58,608 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.188s
+2025-08-26 10:15:08,336 - server.routes.auth - INFO - Usuario admin@almacen.com cerró sesión
+2025-08-26 10:15:08,336 - server.app - INFO - POST /api/auth/logout - Status: 200 - Time: 0.002s
+2025-08-26 10:16:05,795 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-26 10:16:05,795 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.185s
+2025-08-26 10:17:39,451 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-26 10:17:39,451 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.180s
+2025-08-26 10:18:30,649 - server.routes.auth - INFO - Usuario admin@almacen.com cerró sesión
+2025-08-26 10:18:30,649 - server.app - INFO - POST /api/auth/logout - Status: 200 - Time: 0.002s
+2025-08-26 10:18:37,656 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-26 10:18:37,656 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.180s
+2025-08-26 10:18:41,104 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-26 10:18:41,123 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-26 10:18:43,335 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.004s
+2025-08-26 10:18:43,358 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.004s
+2025-08-26 10:19:32,965 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-26 10:19:33,008 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.005s
+2025-08-26 10:20:41,958 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.003s
+2025-08-26 10:20:41,983 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.003s
+2025-08-26 10:20:47,024 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.004s
+2025-08-26 10:20:47,053 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.003s
+2025-08-26 10:20:49,801 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.004s
+2025-08-26 10:20:49,855 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.003s
+2025-08-26 10:21:40,107 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.004s
+2025-08-26 10:21:40,134 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.004s
+2025-08-26 10:22:47,340 - server.routes.auth - INFO - Usuario admin@almacen.com cerró sesión
+2025-08-26 10:22:47,340 - server.app - INFO - POST /api/auth/logout - Status: 200 - Time: 0.001s
+2025-08-26 10:22:57,030 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-26 10:22:57,030 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.180s
+2025-08-26 10:22:59,943 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.004s
+2025-08-26 10:22:59,965 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.004s
+2025-08-26 10:24:03,508 - server.routes.auth - INFO - Usuario admin@almacen.com cerró sesión
+2025-08-26 10:24:03,508 - server.app - INFO - POST /api/auth/logout - Status: 200 - Time: 0.002s
+2025-08-26 10:24:09,907 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-26 10:24:09,907 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.185s
+2025-08-26 10:25:10,037 - server.routes.auth - INFO - Usuario admin@almacen.com cerró sesión
+2025-08-26 10:25:10,038 - server.app - INFO - POST /api/auth/logout - Status: 200 - Time: 0.002s
+2025-08-26 10:25:11,541 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-26 10:25:11,542 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.178s
+2025-08-26 10:32:24,104 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.004s
+2025-08-26 10:32:24,125 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.004s
+2025-08-26 10:32:44,584 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-26 10:32:44,605 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-26 10:32:53,790 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.010s
+2025-08-26 10:32:53,821 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.004s
+2025-08-26 10:33:45,956 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.004s
+2025-08-26 10:58:40,248 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-26 10:58:40,249 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-26 10:58:40,253 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-26 10:58:52,710 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-26 10:58:52,710 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-26 10:58:52,714 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-26 11:00:12,707 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-26 11:00:12,708 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-26 11:00:12,712 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-26 11:02:47,748 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-26 11:02:47,749 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-26 11:02:47,754 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-26 11:02:59,691 - server.functions.stock - ERROR - Error calculando valorización: cannot encode object: datetime.date(2025, 8, 26), of type: <class 'datetime.date'>
+2025-08-26 11:02:59,691 - server.functions.stock - ERROR - Error obteniendo stats de stock: 
+2025-08-26 11:02:59,691 - server.functions.stock - ERROR - Error obteniendo stock: 
+2025-08-26 11:02:59,692 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.006s
+2025-08-26 11:03:50,423 - server.app - INFO - GET /docs - Status: 200 - Time: 0.000s
+2025-08-26 11:03:50,628 - server.app - INFO - GET /openapi.json - Status: 200 - Time: 0.010s
+2025-08-26 11:04:00,469 - server.app - ERROR - Error global: name 'actualizar_estadistica_productos' is not defined
+Traceback (most recent call last):
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/base.py", line 78, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/anyio/streams/memory.py", line 98, in receive
+    return self.receive_nowait()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/anyio/streams/memory.py", line 91, in receive_nowait
+    raise EndOfStream
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/base.py", line 108, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/backend/app/server/app.py", line 67, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/base.py", line 84, in call_next
+    raise app_exc
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/base.py", line 70, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/cors.py", line 83, in __call__
+    await self.app(scope, receive, send)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 20, in __call__
+    raise e
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/fastapi/routing.py", line 274, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/backend/app/server/routes/stock.py", line 33, in actualizar_estadistica_productos_ok
+    stats = await actualizar_estadistica_productos()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'actualizar_estadistica_productos' is not defined. Did you mean: 'actualizar_estadistica_productos_ok'?
+2025-08-26 11:04:56,846 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-26 11:04:56,847 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-26 11:04:56,851 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-26 11:04:58,149 - server.functions.stock - ERROR - Error calculando valorización: cannot encode object: datetime.date(2025, 8, 26), of type: <class 'datetime.date'>
+2025-08-26 11:04:58,149 - server.functions.stock - ERROR - Error obteniendo stats de stock: 
+2025-08-26 11:04:58,149 - server.app - INFO - GET /api/stock/stats_ok - Status: 500 - Time: 0.003s
+2025-08-26 11:05:14,744 - server.app - ERROR - Error global: name 'stats_collection' is not defined
+Traceback (most recent call last):
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/base.py", line 78, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/anyio/streams/memory.py", line 98, in receive
+    return self.receive_nowait()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/anyio/streams/memory.py", line 91, in receive_nowait
+    raise EndOfStream
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/base.py", line 108, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/backend/app/server/app.py", line 67, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/base.py", line 84, in call_next
+    raise app_exc
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/base.py", line 70, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/cors.py", line 83, in __call__
+    await self.app(scope, receive, send)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 20, in __call__
+    raise e
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/fastapi/routing.py", line 274, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/backend/app/server/routes/stock.py", line 41, in obtener_estadistica_stock_ok
+    stats = await obtener_estadistica_stock()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/backend/app/server/functions/stock.py", line 553, in obtener_estadistica_stock
+    stats = await stats_collection().find_one({"_id": "stock_stats"}, {"_id": 0})
+                  ^^^^^^^^^^^^^^^^
+NameError: name 'stats_collection' is not defined. Did you mean: 'stock_collection'?
+2025-08-26 11:06:40,414 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-26 11:06:40,414 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-26 11:06:40,418 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-26 11:06:42,019 - server.app - ERROR - Error global: name 'stats_collection' is not defined
+Traceback (most recent call last):
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/base.py", line 78, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/anyio/streams/memory.py", line 98, in receive
+    return self.receive_nowait()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/anyio/streams/memory.py", line 91, in receive_nowait
+    raise EndOfStream
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/base.py", line 108, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/backend/app/server/app.py", line 67, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/base.py", line 84, in call_next
+    raise app_exc
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/base.py", line 70, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/cors.py", line 83, in __call__
+    await self.app(scope, receive, send)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 20, in __call__
+    raise e
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/fastapi/routing.py", line 274, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/backend/app/server/routes/stock.py", line 42, in obtener_estadistica_stock_ok
+    stats = await obtener_estadistica_stock()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/backend/app/server/functions/stock.py", line 553, in obtener_estadistica_stock
+    stats = await stats_collection().find_one({"_id": "stock_stats"}, {"_id": 0})
+                  ^^^^^^^^^^^^^^^^
+NameError: name 'stats_collection' is not defined. Did you mean: 'stock_collection'?
+2025-08-26 11:07:06,687 - server.app - INFO - GET /api/productos/stats - Status: 200 - Time: 0.001s
+2025-08-26 11:08:15,456 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-26 11:08:15,457 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-26 11:08:15,461 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-26 11:08:28,427 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-26 11:08:28,428 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-26 11:08:28,433 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-26 11:08:32,952 - server.functions.stock - ERROR - Error calculando valorización: cannot encode object: datetime.date(2025, 8, 26), of type: <class 'datetime.date'>
+2025-08-26 11:08:32,952 - server.functions.stock - ERROR - Error obteniendo stats de stock: 
+2025-08-26 11:08:32,953 - server.app - INFO - GET /api/stock/stats_ok - Status: 500 - Time: 0.003s
+2025-08-26 11:08:36,468 - server.app - INFO - GET /api/stock/stats - Status: 200 - Time: 0.002s
+2025-08-26 11:08:42,512 - server.functions.stock - ERROR - Error calculando valorización: cannot encode object: datetime.date(2025, 8, 26), of type: <class 'datetime.date'>
+2025-08-26 11:08:42,512 - server.functions.stock - ERROR - Error obteniendo stats de stock: 
+2025-08-26 11:08:42,512 - server.app - INFO - GET /api/stock/stats_ok - Status: 500 - Time: 0.002s
+2025-08-26 11:09:36,447 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-26 11:09:36,447 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-26 11:09:36,452 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-26 11:09:38,311 - server.functions.stock - ERROR - Error calculando valorización: cannot encode object: datetime.date(2025, 8, 26), of type: <class 'datetime.date'>
+2025-08-26 11:09:38,311 - server.functions.stock - ERROR - Error obteniendo stats de stock: 
+2025-08-26 11:09:38,312 - server.app - INFO - GET /api/stock/stats_ok - Status: 500 - Time: 0.003s
+2025-08-26 11:11:09,033 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-26 11:11:09,033 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-26 11:11:09,038 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-26 11:11:12,679 - server.functions.stock - ERROR - Error recalculando stats: cannot encode object: datetime.date(2025, 8, 26), of type: <class 'datetime.date'>
+2025-08-26 11:11:12,679 - server.app - INFO - GET /api/stock/stats_ok - Status: 500 - Time: 0.008s
+2025-08-26 11:13:07,112 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-26 11:13:07,113 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-26 11:13:07,117 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-26 11:13:09,918 - server.app - INFO - GET /api/stock/stats_ok - Status: 200 - Time: 0.008s
+2025-08-26 11:14:01,609 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.010s
+2025-08-26 11:14:51,672 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-26 11:14:51,673 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-26 11:14:51,677 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-26 11:14:57,074 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.014s
+2025-08-26 11:14:57,119 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.013s
+2025-08-26 11:15:07,653 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-26 11:15:07,674 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.003s
+2025-08-26 11:15:08,992 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.010s
+2025-08-26 11:15:09,027 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.013s
+2025-08-26 11:20:03,522 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.014s
+2025-08-26 11:20:03,576 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.010s
+2025-08-26 11:20:43,834 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.014s
+2025-08-26 11:20:43,867 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.011s
+2025-08-26 11:28:30,440 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-26 11:28:30,440 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-26 11:28:30,445 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-26 11:28:34,019 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.009s
+2025-08-26 11:28:34,050 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.009s
+2025-08-26 11:28:40,009 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.011s
+2025-08-26 11:28:40,045 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.012s
+2025-08-26 11:29:12,862 - server.app - INFO - GET /api/stock/export - Status: 404 - Time: 0.000s
+2025-08-26 11:29:20,606 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.010s
+2025-08-26 11:32:13,840 - server.routes.auth - INFO - Usuario admin@almacen.com cerró sesión
+2025-08-26 11:32:13,840 - server.app - INFO - POST /api/auth/logout - Status: 200 - Time: 0.002s
+2025-08-26 11:32:26,579 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-26 11:32:26,579 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.182s
+2025-08-26 11:44:37,138 - server.app - INFO - GET /docs - Status: 200 - Time: 0.000s
+2025-08-26 11:44:37,369 - server.app - INFO - GET /openapi.json - Status: 200 - Time: 0.011s
+2025-08-26 11:44:59,765 - server.app - INFO - GET /api/usuarios/ - Status: 200 - Time: 0.004s
+2025-08-26 11:47:16,559 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-26 11:47:16,578 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-26 11:48:16,798 - server.functions.productos - INFO - Producto creado exitosamente: CN-02
+2025-08-26 11:48:16,799 - server.app - INFO - POST /api/productos/ - Status: 200 - Time: 0.007s
+2025-08-26 11:48:18,966 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-26 11:48:18,988 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-26 11:48:27,011 - server.app - INFO - GET /api/productos/3 - Status: 200 - Time: 0.002s
+2025-08-26 11:48:27,053 - server.app - INFO - GET /api/productos/3 - Status: 200 - Time: 0.002s
+2025-08-26 11:48:31,058 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-26 11:48:31,081 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-26 11:48:34,973 - server.app - INFO - GET /api/productos/3 - Status: 200 - Time: 0.004s
+2025-08-26 11:48:35,022 - server.app - INFO - GET /api/productos/3 - Status: 200 - Time: 0.002s
+2025-08-26 11:48:45,423 - server.functions.productos - INFO - Producto actualizado: ID 3
+2025-08-26 11:48:45,423 - server.app - INFO - PUT /api/productos/3 - Status: 200 - Time: 0.006s
+2025-08-26 11:48:47,588 - server.app - INFO - GET /api/productos/3 - Status: 200 - Time: 0.003s
+2025-08-26 11:48:47,612 - server.app - INFO - GET /api/productos/3 - Status: 200 - Time: 0.002s
+2025-08-26 11:48:53,399 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.010s
+2025-08-26 11:48:53,424 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.009s
+2025-08-26 11:50:06,350 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.011s
+2025-08-26 11:50:06,401 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.012s
+2025-08-26 11:50:10,989 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-26 11:50:11,008 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-26 11:52:14,897 - server.routes.auth - INFO - Usuario admin@almacen.com cerró sesión
+2025-08-26 11:52:14,897 - server.app - INFO - POST /api/auth/logout - Status: 200 - Time: 0.002s
+2025-08-26 11:52:20,097 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-26 11:52:20,098 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.178s
+2025-08-26 11:52:24,347 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-26 11:52:24,373 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s

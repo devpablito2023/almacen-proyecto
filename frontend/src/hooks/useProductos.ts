@@ -336,6 +336,8 @@ export function useProductos(filters?: ProductosFilter): UseProductosReturn {
 
   // Efecto para cargar productos inicialmente
   useEffect(() => {
+        console.log("useProductos: casi isAuthenticated es true, llamando a fetchProductos");
+        console.log("autenticacion:", isAuthenticated);
     if (isAuthenticated) {
       fetchProductos();
     }

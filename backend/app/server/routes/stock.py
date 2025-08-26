@@ -6,6 +6,8 @@ from server.functions.stock import (
     ajustar_stock,
     obtener_alertas_stock,
     calcular_valoracion_inventario,
+    actualizar_stock_stats,
+    obtener_estadistica_stock,
     obtener_movimientos_stock
 )
 from server.models.stock import StockAdjust
@@ -18,13 +20,29 @@ import logging
 logger = logging.getLogger(__name__)
 router = APIRouter()
 
-def check_stock_permission(user_type: int, action: str):
+def check_stock_permission(user_type: int, action: str): 
     """Verificar permisos de usuario para módulo stock"""
     if not check_permission(user_type, "stock", action):
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="No tiene permisos para esta operación"
         )
+
+@router.get("/stats_ok")
+async def actualizar_stock_stats_ok():
+    stats = await actualizar_stock_stats()
+    if not stats:
+        return {"message": "No procesado"}
+    return stats
+
+@router.get("/stats")
+async def obtener_estadistica_stock_ok():
+    #stats = await stats_collection().find_one({"_id": "productos_stats"}, {"_id": 0})
+    stats = await obtener_estadistica_stock()
+    if not stats:
+        return {"message": "No hay estadísticas registradas"}
+    return stats
+
 
 @router.get("/", summary="Consultar stock general")
 async def get_stock(

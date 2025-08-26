@@ -4,7 +4,7 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { getAuthDebugInfo } from '@/lib/auth/authService';
-
+ 
 /**
  * FORMULARIO DE LOGIN PROFESIONAL
  * 
@@ -54,6 +54,7 @@ const LoginForm: React.FC<LoginFormProps> = ({
   // REDIRECCIÓN SI YA ESTÁ AUTENTICADO
   // ========================================
   useEffect(() => {
+    console.log('🔄 LoginForm: Verificando estado de autenticación... useEffect');
     if (isAuthenticated && user && isInitialized) {
       console.log(`✅ LoginForm: Usuario ya autenticado (${user.nombre_usuario})`);
       if (onSuccess) {

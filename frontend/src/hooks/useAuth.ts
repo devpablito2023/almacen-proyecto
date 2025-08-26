@@ -7,6 +7,10 @@ import { authService } from '@/lib/auth/authService';
 import { ROLE_DEFAULT_ROUTES, ROLE_PERMISSIONS ,ROLE_NAMES, hasModuleAccess, hasOperationPermission } from '@/lib/auth/permissions';
 import type { User, LoginCredentials, UserRole,SystemModule } from '@/types/auth';
 
+
+//aqui debe conectrase al store
+import { useAuthStore } from '@/stores/authStore';
+
 /**
  * HOOK DE AUTENTICACIÓN PROFESIONAL
  * 
@@ -81,7 +85,7 @@ export function useAuth(): UseAuthReturn {
 
   // Estados de UI por rol
   const isAdmin = userRole === 0;
-  const isJefatura = userRole === 1;
+  const isJefatura = userRole === 1; 
   const isGeneraOT = userRole === 2;
   const isValidaSolicitudes = userRole === 3;
   const isAlmacen = userRole === 4;
@@ -94,7 +98,7 @@ export function useAuth(): UseAuthReturn {
     let isMounted = true;
 
     async function initializeAuth() {
-      console.log('🔄 useAuth: Inicializando autenticación');
+      console.log('🔄 useAuth: Inicializando autenticación validando que este bien ');
       
       try {
         setIsLoading(true);
@@ -102,7 +106,7 @@ export function useAuth(): UseAuthReturn {
 
         // 1. Verificación rápida de cookies (sin API call)
         if (!authService.hasActiveSession()) {
-          console.log('📭 useAuth: No hay sesión activa en cookies');
+          console.log('📭 useAuth: No hay sesión activa en cookies terrible');
           setUser(null);
           setIsInitialized(true);
           setIsLoading(false);
@@ -161,9 +165,13 @@ export function useAuth(): UseAuthReturn {
     try {
       setIsLoading(true);
       setError(null);
-
-      const result = await authService.login(credentials);
-
+      //console.log('Enviando credenciales al authService.login', credentials)
+      //const result = await authService.login(credentials);
+      //console.log('Resultado de authService.login:', result);
+      console.log("enviado a store")
+      const result = await useAuthStore.getState().login(credentials.email_usuario, credentials.password_usuario);
+      console.log('Resultado de useAuthStore.login:', result);
+      console.log("recibido de store")
       if (result.success && result.user) {
         console.log(`✅ useAuth: Login exitoso para ${result.user.nombre_usuario}`);
         
@@ -184,7 +192,7 @@ export function useAuth(): UseAuthReturn {
 
       } else {
         console.log(`❌ useAuth: Login fallido: ${result.message}`);
-        setError(result.message);
+        setError(`Login fallido: ${result.message}`);
         setUser(null);
         return false;
       }
