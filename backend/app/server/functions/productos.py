@@ -8,6 +8,8 @@ from server.config.database import (
     log_activity
 )
 from server.models.productos import ProductoCreate, ProductoUpdate, ProductoSearch
+from server.config.database import stats_collection
+
 from datetime import datetime
 from typing import Optional, List
 import logging
@@ -111,6 +113,11 @@ async def crear_producto(producto_data: ProductoCreate, created_by: int, created
         )
         
         logger.info(f"Producto creado exitosamente: {producto_data.codigo_producto}")
+
+        # 🔥 Actualizar estadísticas (se integra aquí)
+        await update_stats_on_create(producto_creado)
+
+
         
         return producto_creado
         
@@ -170,15 +177,24 @@ async def obtener_productos(page: int = 1, limit: int = 20, estado: Optional[int
         
         # Calcular paginación
         pages = math.ceil(total / limit) if total > 0 else 0
-        
+
+        #traer estadisticas
+        stats = await obtener_estadistica()
+        print(total)
         return {
-            "data": productos,
+            "data": {
+                "productos" : productos,
+                "stats": stats
+            },
+
+           
             "total": total,
             "page": page,
             "limit": limit,
             "pages": pages,
             "has_next": page < pages,
             "has_prev": page > 1
+    
         }
         
     except Exception as e:
@@ -469,3 +485,139 @@ async def obtener_productos_autocomplete(query: str, limit: int = 10):
            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
            detail="Error interno del servidor"
        )
+
+async def update_stats_on_create(producto):
+    await stats_collection().update_one(
+        {"_id": "productos_stats"},
+        {
+            "$inc": {
+                "total_productos": 1,
+                "productos_activos": 1,
+                f"por_tipo.{producto['tipo_producto']}": 1,
+                f"por_categoria.{producto['categoria_producto']}": 1,
+            },
+            "$set": {"last_updated": datetime.now()}
+        },
+        upsert=True
+    )
+
+async def update_stats_on_delete(producto):
+    await stats_collection().update_one(
+        {"_id": "productos_stats"},
+        {
+            "$inc": {
+                "total_productos": -1,
+                "productos_activos": -1 if producto["estado_producto"] == 1 else 0,
+                f"por_tipo.{producto['tipo_producto']}": -1,
+                f"por_categoria.{producto['categoria_producto']}": -1,
+            },
+            "$set": {"last_updated": datetime.now()}
+        }
+    )
+
+
+async def update_stats_on_stock_change(stock, old_total, new_total):
+    updates = {}
+    if old_total == 0 and new_total > 0:
+        updates["productos_sin_stock"] = -1
+    elif old_total > 0 and new_total == 0:
+        updates["productos_sin_stock"] = 1
+    
+    if updates:
+        await stats_collection().update_one(
+            {"_id": "productos_stats"},
+            {
+                "$inc": updates,
+                "$set": {"last_updated": datetime.now()}
+            }
+        )
+
+async def obtener_estadistica():
+    stats = await stats_collection().find_one({"_id": "productos_stats"}, {"_id": 0})
+    return stats
+
+
+async def actualizar_estadistica():
+    stats = await obtener_estadisticas_productos()  # tu función de antes
+    stats["_id"] = "productos_stats"
+    await stats_collection().replace_one({"_id": "productos_stats"}, stats, upsert=True)
+
+async def obtener_estadisticas_productos():
+    """Calcular estadísticas globales de productos para dashboard"""
+    try:
+        # Total productos
+        total_productos = await productos_collection().count_documents({})
+        
+        # Productos activos
+        productos_activos = await productos_collection().count_documents({"estado_producto": 1})
+        
+        # Productos sin stock
+        productos_sin_stock = await stock_collection().count_documents({"cantidad_total": 0})
+        
+        # Productos con stock bajo (<= stock_minimo)
+        pipeline_bajo = [
+            {"$lookup": {
+                "from": "stock",
+                "localField": "id_producto",
+                "foreignField": "producto_id",
+                "as": "stock_info"
+            }},
+            {"$unwind": "$stock_info"},
+            {"$match": {"$expr": {"$lte": ["$stock_info.cantidad_total", "$stock_minimo"]}}}
+        ]
+        productos_stock_bajo = len(await productos_collection().aggregate(pipeline_bajo).to_list(length=None))
+        
+        # Productos con stock crítico (<= stock_critico)
+        pipeline_critico = [
+            {"$lookup": {
+                "from": "stock",
+                "localField": "id_producto",
+                "foreignField": "producto_id",
+                "as": "stock_info"
+            }},
+            {"$unwind": "$stock_info"},
+            {"$match": {"$expr": {"$lte": ["$stock_info.cantidad_total", "$stock_critico"]}}}
+        ]
+        productos_stock_critico = len(await productos_collection().aggregate(pipeline_critico).to_list(length=None))
+        
+        # Productos próximos a vencer (30 días)
+        from datetime import datetime, timedelta
+        fecha_limite = datetime.now() + timedelta(days=30)
+        productos_proximos_vencer = await stock_collection().count_documents({
+            "fecha_vencimiento": {"$lte": fecha_limite, "$ne": None}
+        })
+        
+        # Valor total de inventario
+        agg_valor = await stock_collection().aggregate([
+            {"$group": {"_id": None, "total": {"$sum": "$valor_inventario"}}}
+        ]).to_list(length=1)
+        valor_total_inventario = agg_valor[0]["total"] if agg_valor else 0.0
+        
+        # Agrupación por tipo
+        agg_tipo = await productos_collection().aggregate([
+            {"$group": {"_id": "$tipo_producto", "count": {"$sum": 1}}}
+        ]).to_list(length=None)
+        por_tipo = {item["_id"]: item["count"] for item in agg_tipo}
+        
+        # Agrupación por categoría
+        agg_categoria = await productos_collection().aggregate([
+            {"$group": {"_id": "$categoria_producto", "count": {"$sum": 1}}}
+        ]).to_list(length=None)
+        por_categoria = {item["_id"]: item["count"] for item in agg_categoria}
+        
+        return {
+            "total_productos": total_productos,
+            "productos_activos": productos_activos,
+            "productos_stock_bajo": productos_stock_bajo,
+            "productos_stock_critico": productos_stock_critico,
+            "productos_proximos_vencer": productos_proximos_vencer,
+            "productos_sin_stock": productos_sin_stock,
+            "valor_total_inventario": valor_total_inventario,
+            "por_tipo": por_tipo,
+            "por_categoria": por_categoria
+        }
+    except Exception as e:
+        logger.error(f"Error calculando estadísticas de productos: {e}")
+        raise HTTPException(status_code=500, detail="Error interno al calcular estadísticas")
+
+

@@ -25,8 +25,10 @@ export interface Producto {
   tipo_producto: TipoProducto;
   categoria_producto: string; // Requerido según backend
   proveedor_producto: string; // Requerido según backend
-  costo_unitario: number | null; // Nullable según respuesta backend
-  precio_referencial: number | null; // Nullable según respuesta backend
+  costo_unitario: number; // Nullable según respuesta backend
+  //costo_unitario: number | null; // Nullable según respuesta backend
+  //precio_referencial: number | null; // Nullable según respuesta backend
+  precio_referencial: number; // Nullable según respuesta backend
   ubicacion_fisica: string; // Requerido según backend
   fecha_vencimiento?: string;
   lote_serie?: string;
@@ -35,7 +37,9 @@ export interface Producto {
   stock_critico: number;
   estado_producto: number; // 1=activo, 0=eliminado
   descripcion_producto: string; // Requerido según backend
-  url_foto_producto: string | null; // Nullable según respuesta backend
+  //url_foto_producto: string | null; // Nullable según respuesta backend
+  url_foto_producto: string ; // Nullable según respuesta backend
+
   magnitud_producto: string; // UND, KG, LT, etc.
   requiere_lote: boolean;
   dias_vida_util: number; // No opcional según backend
@@ -54,18 +58,18 @@ export interface ProductoCreate {
   tipo_producto: TipoProducto;
   categoria_producto: string;
   proveedor_producto: string;
-  costo_unitario?: number;
-  precio_referencial?: number;
+  costo_unitario: number;
+  precio_referencial: number;
   ubicacion_fisica: string;
   fecha_vencimiento?: string;
   lote_serie?: string;
-  stock_minimo?: number;
-  stock_maximo?: number;
-  stock_critico?: number;
-  descripcion_producto?: string;
-  magnitud_producto?: string;
-  requiere_lote?: boolean;
-  dias_vida_util?: number;
+  stock_minimo: number;
+  stock_maximo: number;
+  stock_critico: number;
+  descripcion_producto: string;
+  magnitud_producto: string;
+  requiere_lote: boolean;
+  dias_vida_util: number;
   url_foto_producto?: string;
 }
 
@@ -118,10 +122,7 @@ export interface ProductoSearchParams extends ProductosFilter {
   limit?: number;       // ← Agregar
 }
 
-interface ProductosParams extends ProductosFilter {
-  page?: number;
-  limit?: number;
-}
+
 
 
 // Paginación

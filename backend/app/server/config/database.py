@@ -61,6 +61,8 @@ h_productos_collection = lambda: get_collection("h_productos")
 contador_collection = lambda: get_collection("contador_general")
 log_collection = lambda: get_collection("log_general")
 
+stats_collection = lambda: get_collection("stats")   # 👈 Nueva colección
+
 # Función para generar ID autoincremental
 async def get_next_id(modulo: str) -> int:
     """Generar próximo ID autoincremental para un módulo"""

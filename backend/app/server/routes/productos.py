@@ -8,6 +8,8 @@ from server.functions.productos import (
     eliminar_producto,
     buscar_productos,
     verificar_codigo_producto_unico,
+    obtener_estadistica,
+    actualizar_estadistica,
     obtener_productos_autocomplete
 )
 from server.models.productos import ProductoCreate, ProductoUpdate, ProductoSearch
@@ -22,6 +24,21 @@ from pathlib import Path
 
 logger = logging.getLogger(__name__)
 router = APIRouter()
+
+@router.get("/stats_ok")
+async def actualizar_estadistica_productos():
+    stats = await actualizar_estadistica()
+    if not stats:
+        return {"message": "No procesado"}
+    return stats
+
+@router.get("/stats")
+async def obtener_estadisticas_productos():
+    #stats = await stats_collection().find_one({"_id": "productos_stats"}, {"_id": 0})
+    stats = await obtener_estadistica()
+    if not stats:
+        return {"message": "No hay estadísticas registradas"}
+    return stats
 
 def check_product_permission(user_type: int, action: str):
     """Verificar permisos de usuario para módulo productos"""

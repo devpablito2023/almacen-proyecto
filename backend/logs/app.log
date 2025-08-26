@@ -1292,3 +1292,298 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-08-25 17:47:02,670 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.003s
 2025-08-25 17:47:02,687 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.003s
 2025-08-25 17:47:14,767 - server.app - INFO - GET /api/productos/export - Status: 422 - Time: 0.002s
+2025-08-25 17:49:06,428 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 17:49:06,453 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 17:49:15,236 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.003s
+2025-08-25 17:49:15,260 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 17:52:34,224 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 17:52:34,224 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 17:52:34,229 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 18:01:45,207 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 18:01:45,207 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 18:01:45,212 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 18:03:06,213 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 18:03:06,214 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 18:03:06,218 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 18:05:23,310 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 18:05:23,310 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 18:05:23,315 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 18:05:30,028 - server.app - INFO - GET /docs - Status: 200 - Time: 0.000s
+2025-08-25 18:05:30,221 - server.app - INFO - GET /openapi.json - Status: 200 - Time: 0.012s
+2025-08-25 18:05:36,500 - server.app - ERROR - Error global: name 'db' is not defined
+Traceback (most recent call last):
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/base.py", line 78, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/anyio/streams/memory.py", line 98, in receive
+    return self.receive_nowait()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/anyio/streams/memory.py", line 91, in receive_nowait
+    raise EndOfStream
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/base.py", line 108, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/backend/app/server/app.py", line 67, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/base.py", line 84, in call_next
+    raise app_exc
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/base.py", line 70, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/cors.py", line 83, in __call__
+    await self.app(scope, receive, send)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 20, in __call__
+    raise e
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/fastapi/routing.py", line 274, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/backend/app/server/routes/productos.py", line 30, in obtener_estadisticas_productos
+    stats = await obtener_estadistica()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/backend/app/server/functions/productos.py", line 522, in obtener_estadistica
+    stats = await stats_collection().find_one({"_id": "productos_stats"}, {"_id": 0})
+                  ^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/backend/app/server/config/database.py", line 64, in <lambda>
+    stats_collection = lambda: db["stats"]   # 👈 Nueva colección
+                               ^^
+NameError: name 'db' is not defined
+2025-08-25 18:06:26,573 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 18:06:26,573 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 18:06:26,578 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 18:06:26,581 - server.app - ERROR - Error global: 'function' object is not subscriptable
+Traceback (most recent call last):
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/base.py", line 78, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/anyio/streams/memory.py", line 98, in receive
+    return self.receive_nowait()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/anyio/streams/memory.py", line 91, in receive_nowait
+    raise EndOfStream
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/base.py", line 108, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/backend/app/server/app.py", line 67, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/base.py", line 84, in call_next
+    raise app_exc
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/base.py", line 70, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/cors.py", line 83, in __call__
+    await self.app(scope, receive, send)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 20, in __call__
+    raise e
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/fastapi/routing.py", line 274, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/backend/app/server/routes/productos.py", line 30, in obtener_estadisticas_productos
+    stats = await obtener_estadistica()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/backend/app/server/functions/productos.py", line 522, in obtener_estadistica
+    stats = await stats_collection().find_one({"_id": "productos_stats"}, {"_id": 0})
+                  ^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/backend/app/server/config/database.py", line 64, in <lambda>
+    stats_collection = lambda: get_collection["stats"]   # 👈 Nueva colección
+                               ~~~~~~~~~~~~~~^^^^^^^^^
+TypeError: 'function' object is not subscriptable
+2025-08-25 18:06:26,583 - server.app - INFO - GET /docs - Status: 200 - Time: 0.002s
+2025-08-25 18:06:26,689 - server.app - INFO - GET /openapi.json - Status: 200 - Time: 0.010s
+2025-08-25 18:06:31,343 - server.app - ERROR - Error global: 'function' object is not subscriptable
+Traceback (most recent call last):
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/base.py", line 78, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/anyio/streams/memory.py", line 98, in receive
+    return self.receive_nowait()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/anyio/streams/memory.py", line 91, in receive_nowait
+    raise EndOfStream
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/base.py", line 108, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/backend/app/server/app.py", line 67, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/base.py", line 84, in call_next
+    raise app_exc
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/base.py", line 70, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/cors.py", line 83, in __call__
+    await self.app(scope, receive, send)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 20, in __call__
+    raise e
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/fastapi/routing.py", line 274, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/myTest/lib/python3.12/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/backend/app/server/routes/productos.py", line 30, in obtener_estadisticas_productos
+    stats = await obtener_estadistica()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/backend/app/server/functions/productos.py", line 522, in obtener_estadistica
+    stats = await stats_collection().find_one({"_id": "productos_stats"}, {"_id": 0})
+                  ^^^^^^^^^^^^^^^^^^
+  File "/media/telemetria/PROYECTOS/claude/almacen-proyecto/backend/app/server/config/database.py", line 64, in <lambda>
+    stats_collection = lambda: get_collection["stats"]   # 👈 Nueva colección
+                               ~~~~~~~~~~~~~~^^^^^^^^^
+TypeError: 'function' object is not subscriptable
+2025-08-25 18:07:00,065 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 18:07:00,065 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 18:07:00,070 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 18:07:01,361 - server.app - INFO - GET /api/productos/stats - Status: 200 - Time: 0.001s
+2025-08-25 18:08:46,098 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 18:08:46,098 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 18:08:46,103 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 18:09:25,585 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 18:09:25,586 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 18:09:25,590 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 18:11:34,708 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 18:11:34,708 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 18:11:34,713 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 18:11:34,715 - server.app - INFO - GET /docs - Status: 200 - Time: 0.000s
+2025-08-25 18:11:34,785 - server.app - INFO - GET /openapi.json - Status: 200 - Time: 0.014s
+2025-08-25 18:11:41,243 - server.app - INFO - GET /api/productos/stats_ok - Status: 200 - Time: 0.028s
+2025-08-25 18:11:49,031 - server.app - INFO - GET /api/productos/stats - Status: 200 - Time: 0.001s
+2025-08-25 18:15:04,873 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 18:15:04,874 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 18:15:04,879 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 18:21:23,181 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 18:21:23,181 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 18:21:23,186 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 18:21:47,800 - server.routes.productos - ERROR - Error listando productos: 'total'
+2025-08-25 18:21:47,801 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.007s
+2025-08-25 18:21:47,830 - server.routes.productos - ERROR - Error listando productos: 'total'
+2025-08-25 18:21:47,830 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 18:23:33,772 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 18:23:33,772 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 18:23:33,777 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 18:23:36,599 - server.routes.productos - ERROR - Error listando productos: 'total'
+2025-08-25 18:23:36,599 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.006s
+2025-08-25 18:23:36,629 - server.routes.productos - ERROR - Error listando productos: 'total'
+2025-08-25 18:23:36,629 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 18:24:07,276 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 18:24:07,276 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 18:24:07,281 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 18:24:09,725 - server.routes.productos - ERROR - Error listando productos: 'total'
+2025-08-25 18:24:09,725 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.007s
+2025-08-25 18:24:09,758 - server.routes.productos - ERROR - Error listando productos: 'total'
+2025-08-25 18:24:09,758 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 18:24:16,226 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 18:24:16,227 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 18:24:16,232 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 18:24:21,590 - server.routes.productos - ERROR - Error listando productos: 'total'
+2025-08-25 18:24:21,590 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.005s
+2025-08-25 18:24:21,620 - server.routes.productos - ERROR - Error listando productos: 'total'
+2025-08-25 18:24:21,620 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 18:26:43,289 - server.app - INFO - ✅ Aplicación FastAPI configurada exitosamente
+2025-08-25 18:26:43,289 - server.config.database - INFO - 🔗 Conectando a MongoDB...
+2025-08-25 18:26:43,294 - server.config.database - INFO - ✅ Conexión a MongoDB exitosa
+2025-08-25 18:26:45,013 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.005s
+2025-08-25 18:26:45,043 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.003s
+2025-08-25 18:27:28,058 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.003s
+2025-08-25 18:27:28,083 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 18:27:59,894 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 18:27:59,920 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 18:28:16,524 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.005s
+2025-08-25 18:28:16,548 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 18:29:05,587 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 18:29:05,616 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 18:29:53,381 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.003s
+2025-08-25 18:29:53,409 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.005s
+2025-08-25 18:41:00,909 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 18:41:00,939 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 18:45:47,667 - server.functions.productos - INFO - Producto creado exitosamente: CN-01
+2025-08-25 18:45:47,668 - server.app - INFO - POST /api/productos/ - Status: 200 - Time: 0.010s
+2025-08-25 18:45:49,839 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.005s
+2025-08-25 18:45:49,857 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 18:46:39,289 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 18:51:05,875 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 18:51:05,898 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.003s
+2025-08-25 18:51:11,353 - server.app - INFO - GET /api/productos/2 - Status: 200 - Time: 0.002s
+2025-08-25 18:51:11,390 - server.app - INFO - GET /api/productos/2 - Status: 200 - Time: 0.002s
+2025-08-25 18:51:35,542 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 18:51:35,558 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.003s
+2025-08-25 18:51:38,574 - server.app - INFO - GET /api/productos/2 - Status: 200 - Time: 0.002s
+2025-08-25 18:51:38,600 - server.app - INFO - GET /api/productos/2 - Status: 200 - Time: 0.002s
+2025-08-25 18:51:48,115 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.003s
+2025-08-25 18:51:48,136 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 18:51:56,690 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 18:51:56,723 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.005s
+2025-08-25 19:05:06,344 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 19:05:06,370 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 19:05:10,279 - server.app - INFO - GET /api/productos/2 - Status: 200 - Time: 0.003s
+2025-08-25 19:05:10,305 - server.app - INFO - GET /api/productos/2 - Status: 200 - Time: 0.002s
+2025-08-25 19:05:24,698 - server.functions.productos - INFO - Producto actualizado: ID 2
+2025-08-25 19:05:24,698 - server.app - INFO - PUT /api/productos/2 - Status: 200 - Time: 0.005s
+2025-08-25 19:05:26,883 - server.app - INFO - GET /api/productos/2 - Status: 200 - Time: 0.002s
+2025-08-25 19:05:26,902 - server.app - INFO - GET /api/productos/2 - Status: 200 - Time: 0.002s
+2025-08-25 19:05:30,817 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s
+2025-08-25 19:05:30,842 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.004s

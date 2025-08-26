@@ -120,18 +120,18 @@ export default function ProductosPage() {
         
         if (result.success) {
           //setProductos(result.data.productos || []);
-          setProductos(result.data || []);
+          setProductos(result.data.productos || []);
 
           setStats({
-            total_productos: result.data.total_productos || 0,
-            productos_activos: result.data.productos_activos || 0,
-            productos_stock_bajo: result.data.productos_stock_bajo || 0,
-            productos_stock_critico: result.data.productos_stock_critico || 0,        // ← Agregado
-            productos_proximos_vencer: result.data.productos_proximos_vencer || 0,      // ← Agregado
-            productos_sin_stock: result.data.productos_sin_stock || 0,            // ← Agregado
-            valor_total_inventario: result.data.valor_total_inventario || 0,
-            por_tipo: result.data.por_tipo || { insumo: 0, repuesto: 0, herramienta: 0, otro: 0 }, // ← Agregado
-            por_categoria: result.data.por_categoria || {}                  // ← Agregado
+            total_productos: result.data.stats.total_productos || 0,
+            productos_activos: result.data.stats.productos_activos || 0,
+            productos_stock_bajo: result.data.stats.productos_stock_bajo || 0,
+            productos_stock_critico: result.data.stats.productos_stock_critico || 0,        // ← Agregado
+            productos_proximos_vencer: result.data.stats.productos_proximos_vencer || 0,      // ← Agregado
+            productos_sin_stock: result.data.stats.productos_sin_stock || 0,            // ← Agregado
+            valor_total_inventario: result.data.stats.valor_total_inventario || 0,
+            por_tipo: result.data.stats.por_tipo || { insumo: 0, repuesto: 0, herramienta: 0, otro: 0 }, // ← Agregado
+            por_categoria: result.data.stats.por_categoria || {}                  // ← Agregado
 
           });
         } else {
