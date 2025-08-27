@@ -1,0 +1,373 @@
+2025-08-27 10:17:38,349 - server.app - WARNING - Static directory not found: C:\Users\Ztrack2\Desktop\almacen-proyecto\backend\app\static
+2025-08-27 10:17:56,592 - server.app - WARNING - Static directory not found: C:\Users\Ztrack2\Desktop\almacen-proyecto\backend\app\static
+2025-08-27 10:18:09,715 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:18:09,716 - server.app - INFO - GET /api/dashboard/stats - Status: 200 - Time: 0.149s
+2025-08-27 10:19:24,925 - server.app - INFO - GET /api/dashboard/alerts - Status: 200 - Time: 0.028s
+2025-08-27 10:20:00,814 - server.app - INFO - GET /api/dashboard/activity - Status: 200 - Time: 0.013s
+2025-08-27 10:20:06,029 - server.app - INFO - GET /api/dashboard/activity - Status: 200 - Time: 0.007s
+2025-08-27 10:20:22,200 - server.app - INFO - GET /docs - Status: 200 - Time: 0.000s
+2025-08-27 10:20:22,386 - server.app - INFO - GET /openapi.json - Status: 200 - Time: 0.034s
+2025-08-27 10:20:30,888 - server.app - INFO - GET /api/dashboard/summary - Status: 200 - Time: 0.020s
+2025-08-27 10:25:25,718 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:25:25,748 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.162s
+2025-08-27 10:39:31,188 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:39:31,226 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.232s
+2025-08-27 10:41:17,203 - server.app - INFO - GET /docs - Status: 200 - Time: 0.009s
+2025-08-27 10:41:21,441 - server.app - WARNING - Static directory not found: C:\Users\Ztrack2\Desktop\almacen-proyecto\backend\app\static
+2025-08-27 10:41:21,830 - server.app - INFO - GET /openapi.json - Status: 200 - Time: 0.017s
+2025-08-27 10:41:24,582 - server.app - INFO - GET /api/api/dashboard - Status: 404 - Time: 0.001s
+2025-08-27 10:41:24,633 - server.app - INFO - GET /api/api/dashboard - Status: 404 - Time: 0.000s
+2025-08-27 10:44:10,232 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:44:10,233 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:44:10,263 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.183s
+2025-08-27 10:44:10,265 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.157s
+2025-08-27 10:44:28,753 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:44:28,778 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.052s
+2025-08-27 10:44:28,911 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:44:28,941 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.120s
+2025-08-27 10:45:43,595 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:45:43,609 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:45:43,632 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.085s
+2025-08-27 10:45:43,644 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.072s
+2025-08-27 10:45:53,979 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:45:54,008 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.058s
+2025-08-27 10:45:54,056 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:45:54,076 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.040s
+2025-08-27 10:46:10,007 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:46:10,033 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.055s
+2025-08-27 10:46:10,090 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:46:10,107 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.042s
+2025-08-27 10:47:23,904 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:47:23,910 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:47:23,931 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.062s
+2025-08-27 10:47:23,937 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.071s
+2025-08-27 10:48:20,953 - server.functions.productos - INFO - === CALCULANDO ESTADISTICAS DIRECTAMENTE ===
+2025-08-27 10:48:20,980 - server.functions.productos - INFO - === ESTADISTICAS CALCULADAS: {'total_productos': 2, 'productos_activos': 2, 'productos_stock_bajo': 2, 'productos_stock_critico': 2, 'productos_proximos_vencer': 0, 'productos_sin_stock': 5, 'valor_total_inventario': 20.0, 'por_tipo': {'insumo': 1, 'repuesto': 1}, 'por_categoria': {'Lubricantes': 1, 'Repuestos Mecánicos': 1}} ===
+2025-08-27 10:48:20,984 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.050s
+2025-08-27 10:48:21,026 - server.functions.productos - INFO - === CALCULANDO ESTADISTICAS DIRECTAMENTE ===
+2025-08-27 10:48:21,041 - server.functions.productos - INFO - === ESTADISTICAS CALCULADAS: {'total_productos': 2, 'productos_activos': 2, 'productos_stock_bajo': 2, 'productos_stock_critico': 2, 'productos_proximos_vencer': 0, 'productos_sin_stock': 5, 'valor_total_inventario': 20.0, 'por_tipo': {'insumo': 1, 'repuesto': 1}, 'por_categoria': {'Lubricantes': 1, 'Repuestos Mecánicos': 1}} ===
+2025-08-27 10:48:21,042 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.023s
+2025-08-27 10:48:21,088 - server.functions.productos - INFO - === CALCULANDO ESTADISTICAS DIRECTAMENTE ===
+2025-08-27 10:48:21,103 - server.functions.productos - INFO - === ESTADISTICAS CALCULADAS: {'total_productos': 2, 'productos_activos': 2, 'productos_stock_bajo': 2, 'productos_stock_critico': 2, 'productos_proximos_vencer': 0, 'productos_sin_stock': 5, 'valor_total_inventario': 20.0, 'por_tipo': {'insumo': 1, 'repuesto': 1}, 'por_categoria': {'Lubricantes': 1, 'Repuestos Mecánicos': 1}} ===
+2025-08-27 10:48:21,104 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.023s
+2025-08-27 10:48:21,139 - server.functions.productos - INFO - === CALCULANDO ESTADISTICAS DIRECTAMENTE ===
+2025-08-27 10:48:21,155 - server.functions.productos - INFO - === ESTADISTICAS CALCULADAS: {'total_productos': 2, 'productos_activos': 2, 'productos_stock_bajo': 2, 'productos_stock_critico': 2, 'productos_proximos_vencer': 0, 'productos_sin_stock': 5, 'valor_total_inventario': 20.0, 'por_tipo': {'insumo': 1, 'repuesto': 1}, 'por_categoria': {'Lubricantes': 1, 'Repuestos Mecánicos': 1}} ===
+2025-08-27 10:48:21,156 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.023s
+2025-08-27 10:48:44,343 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:48:44,366 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.056s
+2025-08-27 10:48:44,434 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:48:44,449 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.048s
+2025-08-27 10:49:52,441 - server.app - WARNING - Static directory not found: C:\Users\Ztrack2\Desktop\almacen-proyecto\backend\app\static
+2025-08-27 10:50:46,521 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:50:46,548 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.188s
+2025-08-27 10:52:47,801 - server.app - WARNING - Static directory not found: C:\Users\Ztrack2\Desktop\almacen-proyecto\backend\app\static
+2025-08-27 10:54:52,345 - server.app - WARNING - Static directory not found: C:\Users\Ztrack2\Desktop\almacen-proyecto\backend\app\static
+2025-08-27 10:54:54,194 - server.app - WARNING - Static directory not found: C:\Users\Ztrack2\Desktop\almacen-proyecto\backend\app\static
+2025-08-27 10:55:05,632 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:05,658 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.084s
+2025-08-27 10:55:05,752 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:05,769 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.046s
+2025-08-27 10:55:09,439 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:09,469 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.077s
+2025-08-27 10:55:09,564 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:09,585 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.046s
+2025-08-27 10:55:11,809 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:11,832 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.063s
+2025-08-27 10:55:11,930 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:11,950 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.050s
+2025-08-27 10:55:15,452 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:15,477 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.057s
+2025-08-27 10:55:15,565 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:15,584 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.053s
+2025-08-27 10:55:17,487 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:17,512 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.054s
+2025-08-27 10:55:17,598 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:17,617 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.047s
+2025-08-27 10:55:19,489 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:19,510 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.053s
+2025-08-27 10:55:19,596 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:19,613 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.048s
+2025-08-27 10:55:21,189 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:21,214 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.052s
+2025-08-27 10:55:21,299 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:21,317 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.049s
+2025-08-27 10:55:24,017 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:24,046 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.068s
+2025-08-27 10:55:24,145 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:24,166 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.051s
+2025-08-27 10:55:26,391 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:26,413 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.053s
+2025-08-27 10:55:26,499 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:26,520 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.047s
+2025-08-27 10:55:31,369 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:31,393 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.053s
+2025-08-27 10:55:31,482 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:31,504 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.054s
+2025-08-27 10:55:33,767 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:33,798 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.081s
+2025-08-27 10:55:33,947 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:33,977 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.067s
+2025-08-27 10:55:36,051 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:36,085 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.080s
+2025-08-27 10:55:36,183 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:36,211 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.064s
+2025-08-27 10:55:38,400 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:38,421 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.051s
+2025-08-27 10:55:38,502 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:38,523 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.053s
+2025-08-27 10:55:40,851 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:40,874 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.054s
+2025-08-27 10:55:40,958 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:40,980 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.050s
+2025-08-27 10:55:43,094 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:43,119 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.058s
+2025-08-27 10:55:43,204 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:43,225 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.052s
+2025-08-27 10:55:45,486 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:45,511 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.052s
+2025-08-27 10:55:45,605 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:45,630 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.059s
+2025-08-27 10:55:48,005 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:48,029 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.052s
+2025-08-27 10:55:48,145 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:48,163 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.044s
+2025-08-27 10:55:50,358 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:50,383 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.063s
+2025-08-27 10:55:50,466 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:50,486 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.054s
+2025-08-27 10:55:52,479 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:52,502 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.055s
+2025-08-27 10:55:52,589 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:52,609 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.047s
+2025-08-27 10:55:54,619 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:54,642 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.053s
+2025-08-27 10:55:54,721 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:54,737 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.045s
+2025-08-27 10:55:57,755 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:57,778 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.052s
+2025-08-27 10:55:57,856 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:55:57,879 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.051s
+2025-08-27 10:56:00,390 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:56:00,413 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.052s
+2025-08-27 10:56:00,502 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:56:00,522 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.055s
+2025-08-27 10:56:04,525 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:56:04,548 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.058s
+2025-08-27 10:56:04,632 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:56:04,651 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.051s
+2025-08-27 10:56:15,344 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:56:15,378 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.082s
+2025-08-27 10:56:17,269 - server.app - WARNING - Static directory not found: C:\Users\Ztrack2\Desktop\almacen-proyecto\backend\app\static
+2025-08-27 10:56:17,487 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:56:17,515 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.066s
+2025-08-27 10:56:18,151 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:56:18,179 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.061s
+2025-08-27 10:56:18,249 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 10:56:18,268 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.053s
+2025-08-27 11:01:18,657 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 11:01:18,683 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.144s
+2025-08-27 11:06:18,869 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 11:06:18,888 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.057s
+2025-08-27 11:06:35,763 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 11:06:35,806 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.093s
+2025-08-27 11:11:37,017 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 11:11:37,039 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.070s
+2025-08-27 11:16:37,970 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 11:16:37,993 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.050s
+2025-08-27 11:21:39,297 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 11:21:39,332 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.203s
+2025-08-27 11:26:40,319 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 11:26:40,351 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.184s
+2025-08-27 11:31:40,019 - server.app - WARNING - Static directory not found: C:\Users\Ztrack2\Desktop\almacen-proyecto\backend\app\static
+2025-08-27 11:39:16,674 - server.app - INFO - GET /api/dashboard - Status: 500 - Time: 0.150s
+2025-08-27 11:40:01,902 - server.app - INFO - GET /api/dashboard - Status: 500 - Time: 0.014s
+2025-08-27 11:40:04,269 - server.app - WARNING - Static directory not found: C:\Users\Ztrack2\Desktop\almacen-proyecto\backend\app\static
+2025-08-27 11:40:04,534 - server.app - INFO - GET /api/dashboard - Status: 500 - Time: 0.012s
+2025-08-27 11:40:10,759 - server.app - WARNING - Static directory not found: C:\Users\Ztrack2\Desktop\almacen-proyecto\backend\app\static
+2025-08-27 11:40:13,870 - server.app - INFO - GET /api/dashboard - Status: 500 - Time: 0.014s
+2025-08-27 11:40:13,959 - server.app - INFO - GET /api/dashboard - Status: 500 - Time: 0.007s
+2025-08-27 11:40:25,139 - server.app - INFO - GET /api/dashboard - Status: 500 - Time: 0.006s
+2025-08-27 11:40:54,911 - server.app - INFO - GET /docs - Status: 200 - Time: 0.000s
+2025-08-27 11:40:55,174 - server.app - INFO - GET /openapi.json - Status: 200 - Time: 0.026s
+2025-08-27 11:41:55,501 - server.app - INFO - GET /api/productos/ - Status: 500 - Time: 0.010s
+2025-08-27 11:41:55,524 - server.app - INFO - GET /api/productos/ - Status: 500 - Time: 0.024s
+2025-08-27 11:41:55,525 - server.app - INFO - GET /api/productos/ - Status: 500 - Time: 0.025s
+2025-08-27 11:41:55,525 - server.app - INFO - GET /api/productos/ - Status: 500 - Time: 0.025s
+2025-08-27 11:42:02,009 - server.app - INFO - POST /api/auth/logout - Status: 500 - Time: 0.007s
+2025-08-27 11:42:05,588 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-27 11:42:05,589 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.311s
+2025-08-27 11:42:07,637 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 11:42:07,671 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.147s
+2025-08-27 11:42:07,750 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 11:42:07,772 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.062s
+2025-08-27 11:42:09,515 - server.functions.productos - INFO - === CALCULANDO ESTADISTICAS DIRECTAMENTE ===
+2025-08-27 11:42:09,533 - server.functions.productos - INFO - === ESTADISTICAS CALCULADAS: {'total_productos': 2, 'productos_activos': 2, 'productos_stock_bajo': 2, 'productos_stock_critico': 2, 'productos_proximos_vencer': 0, 'productos_sin_stock': 5, 'valor_total_inventario': 20.0, 'por_tipo': {'insumo': 1, 'repuesto': 1}, 'por_categoria': {'Repuestos Mecánicos': 1, 'Lubricantes': 1}} ===
+2025-08-27 11:42:09,535 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.028s
+2025-08-27 11:42:09,580 - server.functions.productos - INFO - === CALCULANDO ESTADISTICAS DIRECTAMENTE ===
+2025-08-27 11:42:09,599 - server.functions.productos - INFO - === ESTADISTICAS CALCULADAS: {'total_productos': 2, 'productos_activos': 2, 'productos_stock_bajo': 2, 'productos_stock_critico': 2, 'productos_proximos_vencer': 0, 'productos_sin_stock': 5, 'valor_total_inventario': 20.0, 'por_tipo': {'insumo': 1, 'repuesto': 1}, 'por_categoria': {'Repuestos Mecánicos': 1, 'Lubricantes': 1}} ===
+2025-08-27 11:42:09,600 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.028s
+2025-08-27 11:42:09,633 - server.functions.productos - INFO - === CALCULANDO ESTADISTICAS DIRECTAMENTE ===
+2025-08-27 11:42:09,649 - server.functions.productos - INFO - === ESTADISTICAS CALCULADAS: {'total_productos': 2, 'productos_activos': 2, 'productos_stock_bajo': 2, 'productos_stock_critico': 2, 'productos_proximos_vencer': 0, 'productos_sin_stock': 5, 'valor_total_inventario': 20.0, 'por_tipo': {'insumo': 1, 'repuesto': 1}, 'por_categoria': {'Repuestos Mecánicos': 1, 'Lubricantes': 1}} ===
+2025-08-27 11:42:09,650 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.025s
+2025-08-27 11:42:09,703 - server.functions.productos - INFO - === CALCULANDO ESTADISTICAS DIRECTAMENTE ===
+2025-08-27 11:42:09,719 - server.functions.productos - INFO - === ESTADISTICAS CALCULADAS: {'total_productos': 2, 'productos_activos': 2, 'productos_stock_bajo': 2, 'productos_stock_critico': 2, 'productos_proximos_vencer': 0, 'productos_sin_stock': 5, 'valor_total_inventario': 20.0, 'por_tipo': {'insumo': 1, 'repuesto': 1}, 'por_categoria': {'Repuestos Mecánicos': 1, 'Lubricantes': 1}} ===
+2025-08-27 11:42:09,720 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.028s
+2025-08-27 11:42:15,403 - server.config.database - ERROR - Error guardando en histórico: E11000 duplicate key error collection: almacen_control.h_productos index: _id_ dup key: { _id: ObjectId('68af155b28cb109694ba215a') }, full error: {'index': 0, 'code': 11000, 'errmsg': "E11000 duplicate key error collection: almacen_control.h_productos index: _id_ dup key: { _id: ObjectId('68af155b28cb109694ba215a') }", 'keyPattern': {'_id': 1}, 'keyValue': {'_id': ObjectId('68af155b28cb109694ba215a')}}
+2025-08-27 11:42:15,405 - server.functions.productos - INFO - Producto eliminado: ID 5
+2025-08-27 11:42:15,405 - server.app - INFO - DELETE /api/productos/5 - Status: 200 - Time: 0.023s
+2025-08-27 11:42:15,458 - server.functions.productos - INFO - === CALCULANDO ESTADISTICAS DIRECTAMENTE ===
+2025-08-27 11:42:15,477 - server.functions.productos - INFO - === ESTADISTICAS CALCULADAS: {'total_productos': 2, 'productos_activos': 1, 'productos_stock_bajo': 2, 'productos_stock_critico': 2, 'productos_proximos_vencer': 0, 'productos_sin_stock': 5, 'valor_total_inventario': 20.0, 'por_tipo': {'insumo': 1, 'repuesto': 1}, 'por_categoria': {'Repuestos Mecánicos': 1, 'Lubricantes': 1}} ===
+2025-08-27 11:42:15,478 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.028s
+2025-08-27 11:42:20,839 - server.config.database - ERROR - Error guardando en histórico: E11000 duplicate key error collection: almacen_control.h_productos index: _id_ dup key: { _id: ObjectId('68af155b28cb109694ba215a') }, full error: {'index': 0, 'code': 11000, 'errmsg': "E11000 duplicate key error collection: almacen_control.h_productos index: _id_ dup key: { _id: ObjectId('68af155b28cb109694ba215a') }", 'keyPattern': {'_id': 1}, 'keyValue': {'_id': ObjectId('68af155b28cb109694ba215a')}}
+2025-08-27 11:42:20,841 - server.functions.productos - INFO - Producto restablecido: ID 5
+2025-08-27 11:42:20,842 - server.app - INFO - PATCH /api/productos/5/restore - Status: 200 - Time: 0.010s
+2025-08-27 11:42:20,900 - server.functions.productos - INFO - === CALCULANDO ESTADISTICAS DIRECTAMENTE ===
+2025-08-27 11:42:20,919 - server.functions.productos - INFO - === ESTADISTICAS CALCULADAS: {'total_productos': 2, 'productos_activos': 2, 'productos_stock_bajo': 2, 'productos_stock_critico': 2, 'productos_proximos_vencer': 0, 'productos_sin_stock': 5, 'valor_total_inventario': 20.0, 'por_tipo': {'insumo': 1, 'repuesto': 1}, 'por_categoria': {'Repuestos Mecánicos': 1, 'Lubricantes': 1}} ===
+2025-08-27 11:42:20,920 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.028s
+2025-08-27 11:42:27,850 - server.routes.auth - INFO - Usuario admin@almacen.com cerró sesión
+2025-08-27 11:42:27,850 - server.app - INFO - POST /api/auth/logout - Status: 200 - Time: 0.004s
+2025-08-27 11:42:29,847 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-27 11:42:29,848 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.251s
+2025-08-27 11:42:30,322 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 11:42:30,348 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.061s
+2025-08-27 11:42:30,441 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 11:42:30,465 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.053s
+2025-08-27 11:42:35,080 - server.routes.auth - INFO - Usuario admin@almacen.com cerró sesión
+2025-08-27 11:42:35,081 - server.app - INFO - POST /api/auth/logout - Status: 200 - Time: 0.005s
+2025-08-27 11:42:36,400 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-27 11:42:36,401 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.262s
+2025-08-27 11:42:37,516 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 11:42:37,542 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.069s
+2025-08-27 11:42:37,627 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 11:42:37,654 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.055s
+2025-08-27 11:42:39,070 - server.routes.auth - INFO - Usuario admin@almacen.com cerró sesión
+2025-08-27 11:42:39,071 - server.app - INFO - POST /api/auth/logout - Status: 200 - Time: 0.004s
+2025-08-27 11:42:41,542 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-27 11:42:41,543 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.250s
+2025-08-27 11:42:41,991 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 11:42:42,015 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.062s
+2025-08-27 11:42:42,104 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 11:42:42,125 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.055s
+2025-08-27 11:42:44,703 - server.routes.auth - INFO - Usuario admin@almacen.com cerró sesión
+2025-08-27 11:42:44,703 - server.app - INFO - POST /api/auth/logout - Status: 200 - Time: 0.003s
+2025-08-27 11:42:46,414 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-27 11:42:46,414 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.252s
+2025-08-27 11:42:46,848 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 11:42:46,871 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.061s
+2025-08-27 11:42:46,978 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 11:42:46,997 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.050s
+2025-08-27 11:42:50,026 - server.routes.auth - INFO - Usuario admin@almacen.com cerró sesión
+2025-08-27 11:42:50,027 - server.app - INFO - POST /api/auth/logout - Status: 200 - Time: 0.004s
+2025-08-27 11:42:51,528 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-27 11:42:51,529 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.255s
+2025-08-27 11:42:51,958 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 11:42:51,983 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.058s
+2025-08-27 11:42:52,074 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 11:42:52,093 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.046s
+2025-08-27 11:42:54,098 - server.routes.auth - INFO - Usuario admin@almacen.com cerró sesión
+2025-08-27 11:42:54,098 - server.app - INFO - POST /api/auth/logout - Status: 200 - Time: 0.004s
+2025-08-27 11:42:55,885 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-27 11:42:55,887 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.250s
+2025-08-27 11:42:56,331 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 11:42:56,353 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.056s
+2025-08-27 11:42:56,439 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 11:42:56,457 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.048s
+2025-08-27 11:42:58,839 - server.routes.auth - INFO - Usuario admin@almacen.com cerró sesión
+2025-08-27 11:42:58,839 - server.app - INFO - POST /api/auth/logout - Status: 200 - Time: 0.003s
+2025-08-27 11:43:00,219 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-27 11:43:00,220 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.252s
+2025-08-27 11:43:00,646 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 11:43:00,668 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.061s
+2025-08-27 11:43:00,760 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 11:43:00,782 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.052s
+2025-08-27 11:43:02,847 - server.routes.auth - INFO - Usuario admin@almacen.com cerró sesión
+2025-08-27 11:43:02,848 - server.app - INFO - POST /api/auth/logout - Status: 200 - Time: 0.004s
+2025-08-27 11:43:04,427 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-27 11:43:04,428 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.257s
+2025-08-27 11:43:05,017 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 11:43:05,044 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.064s
+2025-08-27 11:43:05,144 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 11:43:05,170 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.064s
+2025-08-27 11:43:08,602 - server.routes.auth - INFO - Usuario admin@almacen.com cerró sesión
+2025-08-27 11:43:08,603 - server.app - INFO - POST /api/auth/logout - Status: 200 - Time: 0.005s
+2025-08-27 12:07:15,520 - server.app - WARNING - Static directory not found: C:\Users\Ztrack2\Desktop\almacen-proyecto\backend\app\static
+2025-08-27 12:07:16,567 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-27 12:07:16,568 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.334s
+2025-08-27 12:07:20,320 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 12:07:20,359 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.212s
+2025-08-27 12:07:20,651 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 12:07:20,676 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.081s
+2025-08-27 12:07:21,862 - server.functions.productos - INFO - === CALCULANDO ESTADISTICAS DIRECTAMENTE ===
+2025-08-27 12:07:21,887 - server.functions.productos - INFO - === ESTADISTICAS CALCULADAS: {'total_productos': 2, 'productos_activos': 2, 'productos_stock_bajo': 2, 'productos_stock_critico': 2, 'productos_proximos_vencer': 0, 'productos_sin_stock': 5, 'valor_total_inventario': 20.0, 'por_tipo': {'insumo': 1, 'repuesto': 1}, 'por_categoria': {'Lubricantes': 1, 'Repuestos Mecánicos': 1}} ===
+2025-08-27 12:07:21,888 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.038s
+2025-08-27 12:07:21,929 - server.functions.productos - INFO - === CALCULANDO ESTADISTICAS DIRECTAMENTE ===
+2025-08-27 12:07:21,949 - server.functions.productos - INFO - === ESTADISTICAS CALCULADAS: {'total_productos': 2, 'productos_activos': 2, 'productos_stock_bajo': 2, 'productos_stock_critico': 2, 'productos_proximos_vencer': 0, 'productos_sin_stock': 5, 'valor_total_inventario': 20.0, 'por_tipo': {'insumo': 1, 'repuesto': 1}, 'por_categoria': {'Lubricantes': 1, 'Repuestos Mecánicos': 1}} ===
+2025-08-27 12:07:21,950 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.031s
+2025-08-27 12:07:21,991 - server.functions.productos - INFO - === CALCULANDO ESTADISTICAS DIRECTAMENTE ===
+2025-08-27 12:07:22,014 - server.functions.productos - INFO - === ESTADISTICAS CALCULADAS: {'total_productos': 2, 'productos_activos': 2, 'productos_stock_bajo': 2, 'productos_stock_critico': 2, 'productos_proximos_vencer': 0, 'productos_sin_stock': 5, 'valor_total_inventario': 20.0, 'por_tipo': {'insumo': 1, 'repuesto': 1}, 'por_categoria': {'Repuestos Mecánicos': 1, 'Lubricantes': 1}} ===
+2025-08-27 12:07:22,016 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.036s
+2025-08-27 12:07:22,058 - server.functions.productos - INFO - === CALCULANDO ESTADISTICAS DIRECTAMENTE ===
+2025-08-27 12:07:22,081 - server.functions.productos - INFO - === ESTADISTICAS CALCULADAS: {'total_productos': 2, 'productos_activos': 2, 'productos_stock_bajo': 2, 'productos_stock_critico': 2, 'productos_proximos_vencer': 0, 'productos_sin_stock': 5, 'valor_total_inventario': 20.0, 'por_tipo': {'insumo': 1, 'repuesto': 1}, 'por_categoria': {'Lubricantes': 1, 'Repuestos Mecánicos': 1}} ===
+2025-08-27 12:07:22,082 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.030s
+2025-08-27 12:07:23,030 - server.routes.auth - INFO - Usuario admin@almacen.com cerró sesión
+2025-08-27 12:07:23,030 - server.app - INFO - POST /api/auth/logout - Status: 200 - Time: 0.007s
+2025-08-27 12:07:24,939 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-27 12:07:24,939 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.255s
+2025-08-27 12:07:25,505 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 12:07:25,532 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.059s
+2025-08-27 12:07:25,654 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-27 12:07:25,682 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.068s
+2025-08-27 12:07:28,211 - server.functions.productos - INFO - === CALCULANDO ESTADISTICAS DIRECTAMENTE ===
+2025-08-27 12:07:28,231 - server.functions.productos - INFO - === ESTADISTICAS CALCULADAS: {'total_productos': 2, 'productos_activos': 2, 'productos_stock_bajo': 2, 'productos_stock_critico': 2, 'productos_proximos_vencer': 0, 'productos_sin_stock': 5, 'valor_total_inventario': 20.0, 'por_tipo': {'insumo': 1, 'repuesto': 1}, 'por_categoria': {'Repuestos Mecánicos': 1, 'Lubricantes': 1}} ===
+2025-08-27 12:07:28,233 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.031s
+2025-08-27 12:07:28,283 - server.functions.productos - INFO - === CALCULANDO ESTADISTICAS DIRECTAMENTE ===
+2025-08-27 12:07:28,301 - server.functions.productos - INFO - === ESTADISTICAS CALCULADAS: {'total_productos': 2, 'productos_activos': 2, 'productos_stock_bajo': 2, 'productos_stock_critico': 2, 'productos_proximos_vencer': 0, 'productos_sin_stock': 5, 'valor_total_inventario': 20.0, 'por_tipo': {'insumo': 1, 'repuesto': 1}, 'por_categoria': {'Lubricantes': 1, 'Repuestos Mecánicos': 1}} ===
+2025-08-27 12:07:28,302 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.028s
+2025-08-27 12:07:28,342 - server.functions.productos - INFO - === CALCULANDO ESTADISTICAS DIRECTAMENTE ===
+2025-08-27 12:07:28,359 - server.functions.productos - INFO - === ESTADISTICAS CALCULADAS: {'total_productos': 2, 'productos_activos': 2, 'productos_stock_bajo': 2, 'productos_stock_critico': 2, 'productos_proximos_vencer': 0, 'productos_sin_stock': 5, 'valor_total_inventario': 20.0, 'por_tipo': {'insumo': 1, 'repuesto': 1}, 'por_categoria': {'Lubricantes': 1, 'Repuestos Mecánicos': 1}} ===
+2025-08-27 12:07:28,360 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.023s
+2025-08-27 12:07:28,405 - server.functions.productos - INFO - === CALCULANDO ESTADISTICAS DIRECTAMENTE ===
+2025-08-27 12:07:28,422 - server.functions.productos - INFO - === ESTADISTICAS CALCULADAS: {'total_productos': 2, 'productos_activos': 2, 'productos_stock_bajo': 2, 'productos_stock_critico': 2, 'productos_proximos_vencer': 0, 'productos_sin_stock': 5, 'valor_total_inventario': 20.0, 'por_tipo': {'insumo': 1, 'repuesto': 1}, 'por_categoria': {'Repuestos Mecánicos': 1, 'Lubricantes': 1}} ===
+2025-08-27 12:07:28,424 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.025s
+2025-08-27 12:07:38,239 - server.config.database - ERROR - Error guardando en histórico: E11000 duplicate key error collection: almacen_control.h_productos index: _id_ dup key: { _id: ObjectId('68af155b28cb109694ba215a') }, full error: {'index': 0, 'code': 11000, 'errmsg': "E11000 duplicate key error collection: almacen_control.h_productos index: _id_ dup key: { _id: ObjectId('68af155b28cb109694ba215a') }", 'keyPattern': {'_id': 1}, 'keyValue': {'_id': ObjectId('68af155b28cb109694ba215a')}}
+2025-08-27 12:07:38,241 - server.functions.productos - INFO - Producto eliminado: ID 5
+2025-08-27 12:07:38,242 - server.app - INFO - DELETE /api/productos/5 - Status: 200 - Time: 0.028s
+2025-08-27 12:07:38,287 - server.functions.productos - INFO - === CALCULANDO ESTADISTICAS DIRECTAMENTE ===
+2025-08-27 12:07:38,307 - server.functions.productos - INFO - === ESTADISTICAS CALCULADAS: {'total_productos': 2, 'productos_activos': 1, 'productos_stock_bajo': 2, 'productos_stock_critico': 2, 'productos_proximos_vencer': 0, 'productos_sin_stock': 5, 'valor_total_inventario': 20.0, 'por_tipo': {'insumo': 1, 'repuesto': 1}, 'por_categoria': {'Lubricantes': 1, 'Repuestos Mecánicos': 1}} ===
+2025-08-27 12:07:38,308 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.030s
+2025-08-27 12:07:42,469 - server.config.database - ERROR - Error guardando en histórico: E11000 duplicate key error collection: almacen_control.h_productos index: _id_ dup key: { _id: ObjectId('68af155b28cb109694ba215a') }, full error: {'index': 0, 'code': 11000, 'errmsg': "E11000 duplicate key error collection: almacen_control.h_productos index: _id_ dup key: { _id: ObjectId('68af155b28cb109694ba215a') }", 'keyPattern': {'_id': 1}, 'keyValue': {'_id': ObjectId('68af155b28cb109694ba215a')}}
+2025-08-27 12:07:42,471 - server.functions.productos - INFO - Producto restablecido: ID 5
+2025-08-27 12:07:42,471 - server.app - INFO - PATCH /api/productos/5/restore - Status: 200 - Time: 0.011s
+2025-08-27 12:07:42,535 - server.functions.productos - INFO - === CALCULANDO ESTADISTICAS DIRECTAMENTE ===
+2025-08-27 12:07:42,560 - server.functions.productos - INFO - === ESTADISTICAS CALCULADAS: {'total_productos': 2, 'productos_activos': 2, 'productos_stock_bajo': 2, 'productos_stock_critico': 2, 'productos_proximos_vencer': 0, 'productos_sin_stock': 5, 'valor_total_inventario': 20.0, 'por_tipo': {'insumo': 1, 'repuesto': 1}, 'por_categoria': {'Lubricantes': 1, 'Repuestos Mecánicos': 1}} ===
+2025-08-27 12:07:42,561 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.036s
+2025-08-27 12:07:47,185 - server.app - INFO - GET /api/productos/5 - Status: 200 - Time: 0.009s
+2025-08-27 12:07:47,265 - server.app - INFO - GET /api/productos/5 - Status: 200 - Time: 0.005s
+2025-08-27 12:07:49,719 - server.functions.productos - INFO - === CALCULANDO ESTADISTICAS DIRECTAMENTE ===
+2025-08-27 12:07:49,743 - server.functions.productos - INFO - === ESTADISTICAS CALCULADAS: {'total_productos': 2, 'productos_activos': 2, 'productos_stock_bajo': 2, 'productos_stock_critico': 2, 'productos_proximos_vencer': 0, 'productos_sin_stock': 5, 'valor_total_inventario': 20.0, 'por_tipo': {'insumo': 1, 'repuesto': 1}, 'por_categoria': {'Repuestos Mecánicos': 1, 'Lubricantes': 1}} ===
+2025-08-27 12:07:49,745 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.034s
+2025-08-27 12:07:49,830 - server.functions.productos - INFO - === CALCULANDO ESTADISTICAS DIRECTAMENTE ===
+2025-08-27 12:07:49,851 - server.functions.productos - INFO - === ESTADISTICAS CALCULADAS: {'total_productos': 2, 'productos_activos': 2, 'productos_stock_bajo': 2, 'productos_stock_critico': 2, 'productos_proximos_vencer': 0, 'productos_sin_stock': 5, 'valor_total_inventario': 20.0, 'por_tipo': {'insumo': 1, 'repuesto': 1}, 'por_categoria': {'Lubricantes': 1, 'Repuestos Mecánicos': 1}} ===
+2025-08-27 12:07:49,852 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.029s
+2025-08-27 12:07:49,906 - server.functions.productos - INFO - === CALCULANDO ESTADISTICAS DIRECTAMENTE ===
+2025-08-27 12:07:49,923 - server.functions.productos - INFO - === ESTADISTICAS CALCULADAS: {'total_productos': 2, 'productos_activos': 2, 'productos_stock_bajo': 2, 'productos_stock_critico': 2, 'productos_proximos_vencer': 0, 'productos_sin_stock': 5, 'valor_total_inventario': 20.0, 'por_tipo': {'insumo': 1, 'repuesto': 1}, 'por_categoria': {'Repuestos Mecánicos': 1, 'Lubricantes': 1}} ===
+2025-08-27 12:07:49,923 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.023s
+2025-08-27 12:07:49,970 - server.functions.productos - INFO - === CALCULANDO ESTADISTICAS DIRECTAMENTE ===
+2025-08-27 12:07:49,991 - server.functions.productos - INFO - === ESTADISTICAS CALCULADAS: {'total_productos': 2, 'productos_activos': 2, 'productos_stock_bajo': 2, 'productos_stock_critico': 2, 'productos_proximos_vencer': 0, 'productos_sin_stock': 5, 'valor_total_inventario': 20.0, 'por_tipo': {'insumo': 1, 'repuesto': 1}, 'por_categoria': {'Lubricantes': 1, 'Repuestos Mecánicos': 1}} ===
+2025-08-27 12:07:49,991 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.029s
+2025-08-27 12:07:51,980 - server.app - INFO - GET /api/productos/5 - Status: 200 - Time: 0.008s
+2025-08-27 12:07:52,068 - server.app - INFO - GET /api/productos/5 - Status: 200 - Time: 0.006s
+2025-08-27 12:08:04,775 - server.functions.productos - INFO - === CALCULANDO ESTADISTICAS DIRECTAMENTE ===
+2025-08-27 12:08:04,803 - server.functions.productos - INFO - === ESTADISTICAS CALCULADAS: {'total_productos': 2, 'productos_activos': 2, 'productos_stock_bajo': 2, 'productos_stock_critico': 2, 'productos_proximos_vencer': 0, 'productos_sin_stock': 5, 'valor_total_inventario': 20.0, 'por_tipo': {'insumo': 1, 'repuesto': 1}, 'por_categoria': {'Repuestos Mecánicos': 1, 'Lubricantes': 1}} ===
+2025-08-27 12:08:04,805 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.041s
+2025-08-27 12:08:04,886 - server.functions.productos - INFO - === CALCULANDO ESTADISTICAS DIRECTAMENTE ===
+2025-08-27 12:08:04,909 - server.functions.productos - INFO - === ESTADISTICAS CALCULADAS: {'total_productos': 2, 'productos_activos': 2, 'productos_stock_bajo': 2, 'productos_stock_critico': 2, 'productos_proximos_vencer': 0, 'productos_sin_stock': 5, 'valor_total_inventario': 20.0, 'por_tipo': {'insumo': 1, 'repuesto': 1}, 'por_categoria': {'Repuestos Mecánicos': 1, 'Lubricantes': 1}} ===
+2025-08-27 12:08:04,910 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.035s
+2025-08-27 12:08:04,973 - server.functions.productos - INFO - === CALCULANDO ESTADISTICAS DIRECTAMENTE ===
+2025-08-27 12:08:04,994 - server.functions.productos - INFO - === ESTADISTICAS CALCULADAS: {'total_productos': 2, 'productos_activos': 2, 'productos_stock_bajo': 2, 'productos_stock_critico': 2, 'productos_proximos_vencer': 0, 'productos_sin_stock': 5, 'valor_total_inventario': 20.0, 'por_tipo': {'insumo': 1, 'repuesto': 1}, 'por_categoria': {'Repuestos Mecánicos': 1, 'Lubricantes': 1}} ===
+2025-08-27 12:08:04,995 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.030s
+2025-08-27 12:08:05,034 - server.functions.productos - INFO - === CALCULANDO ESTADISTICAS DIRECTAMENTE ===
+2025-08-27 12:08:05,052 - server.functions.productos - INFO - === ESTADISTICAS CALCULADAS: {'total_productos': 2, 'productos_activos': 2, 'productos_stock_bajo': 2, 'productos_stock_critico': 2, 'productos_proximos_vencer': 0, 'productos_sin_stock': 5, 'valor_total_inventario': 20.0, 'por_tipo': {'insumo': 1, 'repuesto': 1}, 'por_categoria': {'Repuestos Mecánicos': 1, 'Lubricantes': 1}} ===
+2025-08-27 12:08:05,053 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.028s
+2025-08-27 12:26:13,494 - server.app - WARNING - Static directory not found: C:\Users\Ztrack2\Desktop\almacen-proyecto\backend\app\static
+2025-08-27 12:28:56,028 - server.app - WARNING - Static directory not found: C:\Users\Ztrack2\Desktop\almacen-proyecto\backend\app\static

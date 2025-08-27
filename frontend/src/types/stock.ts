@@ -130,7 +130,6 @@ export interface StockAjuste {
   tipo_ajuste: 'positivo' | 'negativo';
   cantidad_ajuste: number;
   motivo: string;
-  observaciones?: string;
   ubicacion_fisica?: string;
   lote_serie?: string;
 }

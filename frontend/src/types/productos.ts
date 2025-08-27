@@ -242,6 +242,7 @@ export interface UseProductosReturn {
   createProducto: (data: ProductoCreate) => Promise<Producto>;
   updateProducto: (id: number, data: ProductoUpdate) => Promise<Producto>;
   deleteProducto: (id: number) => Promise<void>;
+  restoreProducto: (id: number) => Promise<void>;
   // Funciones especiales
   exportProductos: () => Promise<void>;
   importProductos: (file: File) => Promise<ImportResult>;
@@ -407,3 +408,88 @@ export const EXCEL_HEADER_LABELS: Record<string, string> = {
   'requiere_lote': 'Requiere Lote (SI/NO)',
   'dias_vida_util': 'Días Vida Útil'
 };
+
+// ==========================================
+// INTERFACES DE COMPONENTES
+// ==========================================
+
+// Props para componentes principales
+export interface ProductosHeaderProps {
+  onExport: () => void;
+  onImport: () => void;
+  onToggleFilters: () => void;
+  showFilters: boolean;
+  canCreate: boolean;
+}
+
+export interface ProductosStatsProps {
+  stats: ProductoStats;
+}
+
+export interface ProductosFiltersProps {
+  show: boolean;
+  searchTerm: string;
+  selectedTipo: string;
+  selectedCategoria: string;
+  onFiltersChange: (filters: {
+    search?: string;
+    tipo_producto?: string;
+    categoria_producto?: string;
+  }) => void;
+}
+
+export interface ProductosTableProps {
+  productos: Producto[];
+  pagination: any;
+  currentPage: number;
+  itemsPerPage: number;
+  onPageChange: (page: number) => void;
+  onItemsPerPageChange: (limit: number) => void;
+  onDelete: (id: number) => void;
+  canEdit: boolean;
+  canDelete: boolean;
+}
+
+// Props para componentes de detalle
+export interface ProductoDetailProps {
+  productId: number;
+}
+
+export interface ProductoInfoProps {
+  producto: Producto;
+}
+
+export interface ProductoActionsProps {
+  onEdit: () => void;
+  onDelete: () => void;
+  canEdit: boolean;
+  canDelete: boolean;
+}
+
+export interface ProductoDeleteModalProps {
+  show: boolean;
+  producto: Producto;
+  loading: boolean;
+  onConfirm: () => void;
+  onCancel: () => void;
+}
+
+// Props para componentes de creación/edición
+export interface ProductoCreateProps {
+  onSuccess?: (producto: Producto) => void;
+  onCancel?: () => void;
+}
+
+export interface ProductoEditProps {
+  productId: number;
+  onSuccess?: (producto: Producto) => void;
+  onCancel?: () => void;
+}
+
+export interface ProductoFormProps {
+  initialData?: Partial<ProductoFormData>;
+  onSubmit: (data: ProductoFormData) => Promise<void>;
+  onCancel: () => void;
+  loading?: boolean;
+  submitText?: string;
+}

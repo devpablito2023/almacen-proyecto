@@ -1,6 +1,6 @@
 # backend/app/server/models/productos.py
 from pydantic import BaseModel, Field, validator
-from typing import Optional
+from typing import Optional, List
 from decimal import Decimal
 from datetime import date
 from .base import BaseSchema
@@ -93,3 +93,35 @@ class ProductoSearch(BaseModel):
     proveedor: Optional[str] = None
     estado: Optional[int] = Field(None, ge=0, le=1)
     stock_bajo: Optional[bool] = False
+
+class ProductoImportRow(BaseModel):
+    """Schema para fila de importación desde Excel"""
+    codigo_producto: str = Field(..., description="Código único del producto")
+    nombre_producto: str = Field(..., description="Nombre del producto")
+    tipo_producto: str = Field(..., description="Tipo de producto")
+    categoria_producto: Optional[str] = Field(None, description="Categoría del producto")
+    proveedor_producto: Optional[str] = Field(None, description="Proveedor principal")
+    costo_unitario: Optional[Decimal] = Field(None, description="Costo unitario")
+    precio_referencial: Optional[Decimal] = Field(None, description="Precio de referencia")
+    ubicacion_fisica: Optional[str] = Field(None, description="Ubicación en almacén")
+    stock_minimo: int = Field(default=1, description="Stock mínimo")
+    stock_maximo: int = Field(default=100, description="Stock máximo")
+    stock_critico: int = Field(default=0, description="Stock crítico")
+    descripcion_producto: Optional[str] = Field(None, description="Descripción del producto")
+    magnitud_producto: str = Field(default="UND", description="Unidad de medida")
+    requiere_lote: bool = Field(default=False, description="¿Requiere control de lotes?")
+    dias_vida_util: Optional[int] = Field(None, description="Días de vida útil")
+
+class ImportError(BaseModel):
+    """Error en importación"""
+    fila: int
+    errores: List[str]
+    datos: dict
+
+class ImportResult(BaseModel):
+    """Resultado de importación masiva"""
+    total_procesados: int
+    exitosos: int
+    errores: int
+    productos_creados: List[dict]
+    errores_detalle: List[ImportError]

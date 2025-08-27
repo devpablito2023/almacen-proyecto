@@ -98,83 +98,80 @@ export const solicitudEndpoints = {
   byOT: (otId: number) => `/solicitudes/ot/${otId}`,
   pending: '/solicitudes/pending',
   stats: '/solicitudes/stats',
-  overdue: '/solicitudes/overdue',
+  overdue: '/api/solicitudes/overdue',
 } as const;
 
 // Endpoints de Asignaciones
 export const asignacionEndpoints = {
-  list: '/asignaciones',
-  getById: (id: number) => `/asignaciones/${id}`,
-  bySolicitud: (solicitudId: number) => `/asignaciones/solicitud/${solicitudId}`,
-  validate: (id: number) => `/asignaciones/${id}/validate`,
-  dispatch: (id: number) => `/asignaciones/${id}/dispatch`,
-  return: (id: number) => `/asignaciones/${id}/return`,
-  stats: '/asignaciones/stats',
+  list: '/api/asignaciones',
+  getById: (id: number) => `/api/asignaciones/${id}`,
+  bySolicitud: (solicitudId: number) => `/api/asignaciones/solicitud/${solicitudId}`,
+  validate: (id: number) => `/api/asignaciones/${id}/validate`,
+  dispatch: (id: number) => `/api/asignaciones/${id}/dispatch`,
+  return: (id: number) => `/api/asignaciones/${id}/return`,
+  stats: '/api/asignaciones/stats',
 } as const;
 
 // Endpoints de Kardex
 export const kardexEndpoints = {
-  list: '/kardex',
-  getById: (id: number) => `/kardex/${id}`,
-  byProduct: (productId: number) => `/kardex/product/${productId}`,
-  byDateRange: '/kardex/date-range',
-  byOperation: (operation: string) => `/kardex/operation/${operation}`,
-  summary: '/kardex/summary',
-  export: '/kardex/export',
+  list: '/api/kardex',
+  getById: (id: number) => `/api/kardex/${id}`,
+  byProduct: (productId: number) => `/api/kardex/product/${productId}`,
+  byDateRange: '/api/kardex/date-range',
+  byOperation: (operation: string) => `/api/kardex/operation/${operation}`,
+  summary: '/api/kardex/summary',
+  export: '/api/kardex/export',
 } as const;
 
 // Endpoints de Dashboard
 export const dashboardEndpoints = {
-  metrics: '/dashboard/metrics',
-  charts: '/dashboard/charts',
-  alerts: '/dashboard/alerts',
-  activities: '/dashboard/activities',
-  kpis: '/dashboard/kpis',
-  summary: '/dashboard/summary',
+  stats: '/dashboard/stats',
+  activity: '/dashboard/activity',
+  health: '/dashboard/health',
 } as const;
 
 // Endpoints de Reportes
 export const reportEndpoints = {
-  list: '/reportes',
-  generate: '/reportes/generate',
-  rotation: '/reportes/rotation',
-  movements: '/reportes/movements',
-  costs: '/reportes/costs',
-  inventory: '/reportes/inventory',
-  efficiency: '/reportes/efficiency',
-  custom: '/reportes/custom',
-  templates: '/reportes/templates',
-  scheduled: '/reportes/scheduled',
+  list: '/api/reportes',
+  generate: '/api/reportes/generate',
+  rotation: '/api/reportes/rotation',
+  movements: '/api/reportes/movements',
+  costs: '/api/reportes/costs',
+  inventory: '/api/reportes/inventory',
+  efficiency: '/api/reportes/efficiency',
+  custom: '/api/reportes/custom',
+  templates: '/api/reportes/templates',
+  scheduled: '/api/reportes/scheduled',
 } as const;
 
 // Endpoints de Colaboradores
 export const colaboradorEndpoints = {
-  list: '/colaboradores',
-  create: '/colaboradores',
-  getById: (id: number) => `/colaboradores/${id}`,
-  update: (id: number) => `/colaboradores/${id}`,
-  delete: (id: number) => `/colaboradores/${id}`,
-  search: '/colaboradores/search',
-  stats: '/colaboradores/stats',
-  active: '/colaboradores/active',
+  list: '/api/colaboradores',
+  create: '/api/colaboradores',
+  getById: (id: number) => `/api/colaboradores/${id}`,
+  update: (id: number) => `/api/colaboradores/${id}`,
+  delete: (id: number) => `/api/colaboradores/${id}`,
+  search: '/api/colaboradores/search',
+  stats: '/api/colaboradores/stats',
+  active: '/api/colaboradores/active',
 } as const;
 
 // Endpoints de Configuración
 export const configEndpoints = {
-  general: '/config/general',
-  alerts: '/config/alerts',
-  notifications: '/config/notifications',
-  system: '/config/system',
-  backup: '/config/backup',
-  restore: '/config/restore',
+  general: '/api/config/general',
+  alerts: '/api/config/alerts',
+  notifications: '/api/config/notifications',
+  system: '/api/config/system',
+  backup: '/api/config/backup',
+  restore: '/api/config/restore',
 } as const;
 
 // Endpoints de Archivos
 export const fileEndpoints = {
-  upload: '/files/upload',
-  download: (filename: string) => `/files/download/${filename}`,
-  delete: (filename: string) => `/files/${filename}`,
-  list: '/files',
+  upload: '/api/files/upload',
+  download: (filename: string) => `/api/files/download/${filename}`,
+  delete: (filename: string) => `/api/files/${filename}`,
+  list: '/api/files',
 } as const;
 
 // Unión de todos los endpoints

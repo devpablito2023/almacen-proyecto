@@ -1,18 +1,21 @@
 # backend/app/server/routes/productos.py
 from fastapi import APIRouter, Depends, HTTPException, status, Query, File, UploadFile
+from fastapi.responses import StreamingResponse
 from server.functions.productos import (
     crear_producto,
     obtener_producto_por_id,
     obtener_productos,
     actualizar_producto,
     eliminar_producto,
+    restablecer_producto,
     buscar_productos,
     verificar_codigo_producto_unico,
     obtener_estadistica,
     actualizar_estadistica,
-    obtener_productos_autocomplete
+    obtener_productos_autocomplete,
+    importar_productos_masivo
 )
-from server.models.productos import ProductoCreate, ProductoUpdate, ProductoSearch
+from server.models.productos import ProductoCreate, ProductoUpdate, ProductoSearch, ImportResult
 from server.models.responses import success_response, error_response, paginated_response
 from server.routes.auth import get_current_user
 from server.config.security import check_permission
@@ -21,6 +24,11 @@ import logging
 import os
 import uuid
 from pathlib import Path
+import openpyxl
+from openpyxl.styles import Font, PatternFill, Alignment
+from openpyxl.utils import get_column_letter
+import io
+from datetime import datetime
 
 logger = logging.getLogger(__name__)
 router = APIRouter()
@@ -245,7 +253,7 @@ async def search_productos(
             error="INTERNAL_ERROR",
             message="Error interno del servidor",
             code=500
-        )
+       )
 
 @router.get("/{product_id}", summary="Obtener producto por ID")
 async def get_producto(
@@ -366,6 +374,48 @@ async def delete_producto(
         )
     except Exception as e:
         logger.error(f"Error eliminando producto {product_id}: {e}")
+        return error_response(
+            error="INTERNAL_ERROR",
+            message="Error interno del servidor",
+            code=500
+        )
+
+@router.patch("/{product_id}/restore", summary="Restablecer producto")
+async def restore_producto(
+    product_id: int,
+    current_user = Depends(get_current_user)
+):
+    """
+    Restablecer un producto eliminado (revertir soft delete)
+    
+    - **product_id**: ID del producto a restablecer
+    
+    Requiere permisos de eliminación de productos
+    """
+    try:
+        # Verificar permisos (mismo permiso que eliminar)
+        user_type = current_user["user"]["tipo_usuario"]
+        check_product_permission(user_type, "delete")
+        
+        result = await restablecer_producto(
+            product_id,
+            restored_by=current_user["user"]["id_usuario"],
+            restored_by_name=current_user["user"]["nombre_usuario"]
+        )
+        
+        return success_response(
+            data=result,
+            message="Producto restablecido exitosamente"
+        )
+        
+    except HTTPException as e:
+        return error_response(
+            error="PRODUCT_RESTORE_FAILED",
+            message=e.detail,
+            code=e.status_code
+        )
+    except Exception as e:
+        logger.error(f"Error restableciendo producto {product_id}: {e}")
         return error_response(
             error="INTERNAL_ERROR",
             message="Error interno del servidor",
@@ -497,5 +547,198 @@ async def validate_codigo_producto(
            message="Error validando código",
            code=500
        )
+
+@router.get("/export", summary="Exportar productos a Excel")
+async def exportar_productos(
+    current_user=Depends(get_current_user),
+    estado: Optional[int] = Query(None, description="Filtro por estado (1=activo, 0=inactivo)"),
+    tipo: Optional[str] = Query(None, description="Filtro por tipo de producto"),
+):
+    """
+    Exportar productos a archivo Excel con filtros aplicados
+    """
+    try:
+        # Debug: ver qué parámetros llegan
+        logger.info(f"DEBUG PRODUCTOS EXPORT - estado: {estado}, tipo: {tipo}")
+        logger.info(f"DEBUG PRODUCTOS EXPORT - user_type: {current_user['user']['tipo_usuario']}")
+        
+        # Verificar permisos
+        check_product_permission(current_user["user"]["tipo_usuario"], "read")
+        
+        # Obtener productos con filtros
+        productos_data = await obtener_productos(
+            page=1,
+            limit=10000,  # Obtener todos los productos
+            estado=estado,
+            tipo=tipo
+        )
+        
+        productos = productos_data["data"]["productos"]
+        
+        # Crear workbook y hoja
+        wb = openpyxl.Workbook()
+        ws = wb.active
+        ws.title = "Productos"
+        
+        # Definir headers
+        headers = [
+            "Código", "Nombre", "Descripción", "Tipo", "Categoría",
+            "Proveedor", "Magnitud", "Stock Mínimo", "Stock Máximo", "Stock Crítico",
+            "Costo Unitario", "Precio Referencial", "Ubicación Física", "Estado", "Fecha Creación"
+        ]
+        
+        # Aplicar estilo a headers
+        header_fill = PatternFill(start_color="366092", end_color="366092", fill_type="solid")
+        header_font = Font(color="FFFFFF", bold=True)
+        
+        for col, header in enumerate(headers, 1):
+            cell = ws.cell(row=1, column=col, value=header)
+            cell.fill = header_fill
+            cell.font = header_font
+            cell.alignment = Alignment(horizontal="center")
+        
+        # Agregar datos
+        for row, producto in enumerate(productos, 2):
+            ws.cell(row=row, column=1, value=producto.get("codigo_producto", ""))
+            ws.cell(row=row, column=2, value=producto.get("nombre_producto", ""))
+            ws.cell(row=row, column=3, value=producto.get("descripcion_producto", ""))
+            ws.cell(row=row, column=4, value=producto.get("tipo_producto", ""))
+            ws.cell(row=row, column=5, value=producto.get("categoria_producto", ""))
+            ws.cell(row=row, column=6, value=producto.get("magnitud_producto", ""))
+            ws.cell(row=row, column=7, value=producto.get("stock_minimo", 0))
+            ws.cell(row=row, column=8, value=producto.get("stock_maximo", 0))
+            ws.cell(row=row, column=9, value=producto.get("stock_critico", 0))
+            ws.cell(row=row, column=10, value=producto.get("precio_unitario", 0))
+            ws.cell(row=row, column=11, value=producto.get("ubicacion_fisica", ""))
+            ws.cell(row=row, column=12, value="Activo" if producto.get("estado_producto", 1) == 1 else "Inactivo")
+            ws.cell(row=row, column=13, value=str(producto.get("created_at", "")))
+        
+        # Ajustar ancho de columnas
+        for column in ws.columns:
+            max_length = 0
+            column_letter = get_column_letter(column[0].column)
+            for cell in column:
+                try:
+                    if len(str(cell.value)) > max_length:
+                        max_length = len(str(cell.value))
+                except:
+                    pass
+            adjusted_width = min(max_length + 2, 50)
+            ws.column_dimensions[column_letter].width = adjusted_width
+        
+        # Guardar en memoria
+        output = io.BytesIO()
+        wb.save(output)
+        output.seek(0)
+        
+        # Generar nombre de archivo
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        filename = f"productos_export_{timestamp}.xlsx"
+        
+        logger.info(f"Exportación de productos completada por usuario {current_user['user']['codigo_usuario']}")
+        
+        return StreamingResponse(
+            io.BytesIO(output.getvalue()),
+            media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            headers={"Content-Disposition": f"attachment; filename={filename}"}
+        )
+        
+    except Exception as e:
+        logger.error(f"Error exportando productos: {e}")
+        return error_response(
+            error="EXPORT_ERROR",
+            message="Error al exportar productos",
+            code=500
+        )
+
+@router.post("/import", summary="Importar productos desde Excel")
+async def importar_productos(
+    file: UploadFile = File(...),
+    current_user = Depends(get_current_user)
+):
+    """
+    Importar productos masivamente desde archivo Excel
+    
+    - **file**: Archivo Excel (.xlsx, .xls) con los datos de productos
+    
+    El archivo debe contener las columnas:
+    - codigo_producto (requerido)
+    - nombre_producto (requerido) 
+    - tipo_producto (requerido): insumo, repuesto, herramienta, otro
+    - categoria_producto (opcional)
+    - proveedor_producto (opcional)
+    - costo_unitario (opcional)
+    - precio_referencial (opcional)
+    - ubicacion_fisica (opcional)
+    - stock_minimo (opcional, default: 1)
+    - stock_maximo (opcional, default: 100)
+    - stock_critico (opcional, default: 0)
+    - descripcion_producto (opcional)
+    - magnitud_producto (opcional, default: UND)
+    - requiere_lote (opcional, default: false)
+    - dias_vida_util (opcional)
+    
+    Requiere permisos de creación de productos
+    """
+    try:
+        # Verificar permisos
+        user_type = current_user["user"]["tipo_usuario"]
+        check_product_permission(user_type, "create")
+        
+        # Validar archivo
+        if not file.content_type in [
+            'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+            'application/vnd.ms-excel'
+        ]:
+            return error_response(
+                error="INVALID_FILE_TYPE",
+                message="Solo se permiten archivos Excel (.xlsx, .xls)",
+                code=400
+            )
+        
+        # Validar tamaño (10MB máximo)
+        file_content = await file.read()
+        if len(file_content) > 10 * 1024 * 1024:  # 10MB
+            return error_response(
+                error="FILE_TOO_LARGE",
+                message="El archivo es demasiado grande (máximo 10MB)",
+                code=400
+            )
+        
+        # Procesar importación
+        resultado = await importar_productos_masivo(
+            file_content,
+            created_by=current_user["user"]["id_usuario"],
+            created_by_name=current_user["user"]["nombre_usuario"]
+        )
+        
+        # Preparar mensaje de respuesta
+        if resultado.errores == 0:
+            message = f"Importación exitosa: {resultado.exitosos} productos creados"
+        elif resultado.exitosos == 0:
+            message = f"Importación fallida: {resultado.errores} errores encontrados"
+        else:
+            message = f"Importación parcial: {resultado.exitosos} exitosos, {resultado.errores} errores"
+        
+        logger.info(f"Importación completada por usuario {current_user['user']['codigo_usuario']}: {message}")
+        
+        return success_response(
+            data=resultado.dict(),
+            message=message
+        )
+        
+    except HTTPException as e:
+        return error_response(
+            error="IMPORT_FAILED",
+            message=e.detail,
+            code=e.status_code
+        )
+    except Exception as e:
+        logger.error(f"Error importando productos: {e}")
+        return error_response(
+            error="INTERNAL_ERROR",
+            message="Error interno del servidor",
+            code=500
+        )
 
         

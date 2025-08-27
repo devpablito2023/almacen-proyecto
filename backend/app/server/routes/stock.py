@@ -1,5 +1,6 @@
 # backend/app/server/routes/stock.py
 from fastapi import APIRouter, Depends, HTTPException, status, Query
+from fastapi.responses import StreamingResponse
 from server.functions.stock import (
     obtener_stock,
     obtener_stock_por_producto,
@@ -16,6 +17,11 @@ from server.routes.auth import get_current_user
 from server.config.security import check_permission
 from typing import Optional
 import logging
+import io
+import openpyxl
+from openpyxl.styles import Font, PatternFill, Alignment
+from openpyxl.utils import get_column_letter
+from datetime import datetime
 
 logger = logging.getLogger(__name__)
 router = APIRouter()
@@ -146,9 +152,16 @@ async def adjust_stock(
     Requiere permisos de actualización de stock
     """
     try:
+        # DEBUG: Log de entrada
+        logger.info(f"🔧 DEBUG - Ajuste de stock iniciado")
+        logger.info(f"🔧 DEBUG - Datos recibidos: {adjustment_data}")
+        logger.info(f"🔧 DEBUG - Usuario actual: {current_user['user']['nombre_usuario']}")
+        
         # Verificar permisos
         user_type = current_user["user"]["tipo_usuario"]
+        logger.info(f"🔧 DEBUG - Tipo de usuario: {user_type}")
         check_stock_permission(user_type, "update")
+        logger.info(f"🔧 DEBUG - Permisos verificados exitosamente")
         
         result = await ajustar_stock(
             adjustment_data,
@@ -156,18 +169,22 @@ async def adjust_stock(
             adjusted_by_name=current_user["user"]["nombre_usuario"]
         )
         
+        logger.info(f"🔧 DEBUG - Resultado del ajuste: {result}")
+        
         return success_response(
             data=result,
             message="Ajuste de stock realizado exitosamente"
         )
         
     except HTTPException as e:
+        logger.error(f"🔧 DEBUG - HTTPException en ajuste: {e.detail}")
         return error_response(
             error="STOCK_ADJUSTMENT_FAILED",
             message=e.detail,
             code=e.status_code
         )
     except Exception as e:
+        logger.error(f"🔧 DEBUG - Error inesperado en ajuste: {e}")
         logger.error(f"Error ajustando stock: {e}")
         return error_response(
             error="INTERNAL_ERROR",
@@ -381,5 +398,111 @@ async def get_resumen_stock(
         return error_response(
             error="INTERNAL_ERROR",
             message="Error interno del servidor",
+            code=500
+        )
+
+@router.get("/export", summary="Exportar stock a Excel")
+async def exportar_stock(
+    current_user=Depends(get_current_user),
+    stock_bajo: Optional[bool] = Query(False, description="Filtro por stock bajo"),
+    stock_critico: Optional[bool] = Query(False, description="Filtro por stock crítico"),
+):
+    """
+    Exportar stock a archivo Excel con filtros aplicados
+    """
+    try:
+        # Debug: ver qué parámetros llegan
+        logger.info(f"DEBUG STOCK EXPORT - stock_bajo: {stock_bajo}, stock_critico: {stock_critico}")
+        logger.info(f"DEBUG STOCK EXPORT - user_type: {current_user['user']['tipo_usuario']}")
+        
+        # Verificar permisos
+        check_stock_permission(current_user["user"]["tipo_usuario"], "read")
+        
+        # Obtener stock con filtros
+        stock_data = await obtener_stock(
+            page=1,
+            limit=10000,  # Obtener todo el stock
+            stock_bajo=stock_bajo,
+            stock_critico=stock_critico
+        )
+        
+        stock_items = stock_data["data"]["stock"]
+        
+        # Crear workbook y hoja
+        wb = openpyxl.Workbook()
+        ws = wb.active
+        ws.title = "Stock"
+        
+        # Definir headers
+        headers = [
+            "Código Producto", "Nombre Producto", "Cantidad Disponible", "Cantidad Reservada", 
+            "Cantidad Total", "Stock Mínimo", "Stock Crítico", "Magnitud",
+            "Ubicación Física", "Lote/Serie", "Costo Promedio", "Valor Inventario",
+            "Fecha Vencimiento", "Último Movimiento", "Alerta"
+        ]
+        
+        # Aplicar estilo a headers
+        header_fill = PatternFill(start_color="366092", end_color="366092", fill_type="solid")
+        header_font = Font(color="FFFFFF", bold=True)
+        
+        for col, header in enumerate(headers, 1):
+            cell = ws.cell(row=1, column=col, value=header)
+            cell.fill = header_fill
+            cell.font = header_font
+            cell.alignment = Alignment(horizontal="center")
+        
+        # Agregar datos
+        for row, item in enumerate(stock_items, 2):
+            ws.cell(row=row, column=1, value=item.get("producto_codigo", ""))
+            ws.cell(row=row, column=2, value=item.get("producto_nombre", ""))
+            ws.cell(row=row, column=3, value=item.get("cantidad_disponible", 0))
+            ws.cell(row=row, column=4, value=item.get("cantidad_reservada", 0))
+            ws.cell(row=row, column=5, value=item.get("cantidad_total", 0))
+            ws.cell(row=row, column=6, value=item.get("stock_minimo", 0))
+            ws.cell(row=row, column=7, value=item.get("stock_critico", 0))
+            ws.cell(row=row, column=8, value=item.get("magnitud", ""))
+            ws.cell(row=row, column=9, value=item.get("ubicacion_fisica", ""))
+            ws.cell(row=row, column=10, value=item.get("lote_serie", ""))
+            ws.cell(row=row, column=11, value=item.get("costo_promedio", 0))
+            ws.cell(row=row, column=12, value=item.get("valor_inventario", 0))
+            ws.cell(row=row, column=13, value=item.get("fecha_vencimiento", ""))
+            ws.cell(row=row, column=14, value=item.get("fecha_ultimo_movimiento", ""))
+            ws.cell(row=row, column=15, value="Sí" if item.get("alerta_generada", False) else "No")
+        
+        # Ajustar ancho de columnas
+        for column in ws.columns:
+            max_length = 0
+            column_letter = get_column_letter(column[0].column)
+            for cell in column:
+                try:
+                    if len(str(cell.value)) > max_length:
+                        max_length = len(str(cell.value))
+                except:
+                    pass
+            adjusted_width = min(max_length + 2, 50)
+            ws.column_dimensions[column_letter].width = adjusted_width
+        
+        # Guardar en memoria
+        output = io.BytesIO()
+        wb.save(output)
+        output.seek(0)
+        
+        # Generar nombre de archivo
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        filename = f"stock_export_{timestamp}.xlsx"
+        
+        logger.info(f"Exportación de stock completada por usuario {current_user['user']['codigo_usuario']}")
+        
+        return StreamingResponse(
+            io.BytesIO(output.getvalue()),
+            media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            headers={"Content-Disposition": f"attachment; filename={filename}"}
+        )
+        
+    except Exception as e:
+        logger.error(f"Error exportando stock: {e}")
+        return error_response(
+            error="EXPORT_ERROR",
+            message="Error al exportar stock",
             code=500
         )

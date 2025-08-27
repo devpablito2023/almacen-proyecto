@@ -188,25 +188,35 @@ async def obtener_stock_por_producto(product_id: int):
 async def ajustar_stock(adjustment_data: StockAdjust, adjusted_by: int, adjusted_by_name: str):
     """Realizar ajuste de stock"""
     try:
+        logger.info(f"🔧 DEBUG FUNC - Iniciando ajuste de stock")
+        logger.info(f"🔧 DEBUG FUNC - adjustment_data: {adjustment_data}")
+        logger.info(f"🔧 DEBUG FUNC - adjusted_by: {adjusted_by}, adjusted_by_name: {adjusted_by_name}")
+        
         # Verificar que producto existe
+        logger.info(f"🔧 DEBUG FUNC - Buscando producto ID: {adjustment_data.producto_id}")
         producto = await productos_collection().find_one({
             "id_producto": adjustment_data.producto_id,
             "estado_producto": 1
         })
         
         if not producto:
+            logger.error(f"🔧 DEBUG FUNC - Producto no encontrado: {adjustment_data.producto_id}")
             raise HTTPException(
                 status_code=status.HTTP_404_NOT_FOUND,
                 detail="Producto no encontrado"
             )
         
+        logger.info(f"🔧 DEBUG FUNC - Producto encontrado: {producto['nombre_producto']}")
+        
         # Obtener stock actual
+        logger.info(f"🔧 DEBUG FUNC - Buscando stock para producto ID: {adjustment_data.producto_id}")
         stock_actual = await stock_collection().find_one({
             "producto_id": adjustment_data.producto_id,
             "estado_stock": 1
         })
         
         if not stock_actual:
+            logger.error(f"🔧 DEBUG FUNC - Stock no encontrado para producto: {adjustment_data.producto_id}")
             raise HTTPException(
                 status_code=status.HTTP_404_NOT_FOUND,
                 detail="Stock no encontrado para el producto"
@@ -216,8 +226,13 @@ async def ajustar_stock(adjustment_data: StockAdjust, adjusted_by: int, adjusted
         cantidad_anterior = stock_actual["cantidad_total"]
         nueva_cantidad = cantidad_anterior + adjustment_data.cantidad_ajuste
         
+        logger.info(f"🔧 DEBUG FUNC - Cantidad anterior: {cantidad_anterior}")
+        logger.info(f"🔧 DEBUG FUNC - Ajuste: {adjustment_data.cantidad_ajuste}")
+        logger.info(f"🔧 DEBUG FUNC - Nueva cantidad: {nueva_cantidad}")
+        
         # Validar que no quede negativo
         if nueva_cantidad < 0:
+            logger.error(f"🔧 DEBUG FUNC - Stock negativo: {nueva_cantidad}")
             raise HTTPException(
                 status_code=status.HTTP_400_BAD_REQUEST,
                 detail="El ajuste resultaría en stock negativo"
@@ -233,26 +248,37 @@ async def ajustar_stock(adjustment_data: StockAdjust, adjusted_by: int, adjusted
             "updated_by_name": adjusted_by_name
         }
         
+        logger.info(f"🔧 DEBUG FUNC - Datos de actualización: {update_data}")
+        
         # Actualizar ubicación si se proporciona
         if adjustment_data.ubicacion:
             update_data["ubicacion_fisica"] = adjustment_data.ubicacion
+            logger.info(f"🔧 DEBUG FUNC - Ubicación añadida: {adjustment_data.ubicacion}")
         
         # Actualizar lote/serie si se proporciona
         if adjustment_data.lote_serie:
             update_data["lote_serie"] = adjustment_data.lote_serie
+            logger.info(f"🔧 DEBUG FUNC - Lote/serie añadido: {adjustment_data.lote_serie}")
         
         # Calcular valor de inventario
         costo_promedio = stock_actual.get("costo_promedio", 0)
         update_data["valor_inventario"] = nueva_cantidad * costo_promedio
         
+        logger.info(f"🔧 DEBUG FUNC - Costo promedio: {costo_promedio}")
+        logger.info(f"🔧 DEBUG FUNC - Valor inventario: {update_data['valor_inventario']}")
+        
+        logger.info(f"🔧 DEBUG FUNC - Actualizando stock en MongoDB...")
         await stock_collection().update_one(
             {"producto_id": adjustment_data.producto_id},
             {"$set": update_data}
         )
         
+        logger.info(f"🔧 DEBUG FUNC - Stock actualizado en MongoDB exitosamente")
+        
         # TODO: Registrar en kardex (se implementará en Fase 2)
         
         # Log de actividad
+        logger.info(f"🔧 DEBUG FUNC - Registrando actividad...")
         await log_activity(
             action="STOCK_ADJUSTED",
             module="stock",
@@ -268,18 +294,23 @@ async def ajustar_stock(adjustment_data: StockAdjust, adjusted_by: int, adjusted
         )
         
         # Verificar si necesita generar alertas
+        logger.info(f"🔧 DEBUG FUNC - Verificando alertas...")
         await verificar_alertas_stock(adjustment_data.producto_id, producto)
         
         logger.info(f"Stock ajustado para producto {adjustment_data.producto_id}: {adjustment_data.cantidad_ajuste}")
         
         # Obtener stock actualizado
+        logger.info(f"🔧 DEBUG FUNC - Obteniendo stock actualizado...")
         stock_actualizado = await obtener_stock_por_producto(adjustment_data.producto_id)
         
+        logger.info(f"🔧 DEBUG FUNC - Ajuste completado exitosamente: {stock_actualizado}")
         return stock_actualizado
         
     except HTTPException:
+        logger.error(f"🔧 DEBUG FUNC - HTTPException capturada")
         raise
     except Exception as e:
+        logger.error(f"🔧 DEBUG FUNC - Exception inesperada: {e}")
         logger.error(f"Error ajustando stock: {e}")
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,

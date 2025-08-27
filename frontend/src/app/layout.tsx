@@ -112,7 +112,8 @@ export default function RootLayout({
         {/* Portal para toasts */}
         <div id="toast-root" />
         
-        {/* Script para tema oscuro (futuro) */}
+        {/* Script para tema oscuro (comentado para evitar problemas de hidratación) */}
+        {/*
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -126,6 +127,7 @@ export default function RootLayout({
             `,
           }}
         />
+        */}
       </body>
     </html>
   );

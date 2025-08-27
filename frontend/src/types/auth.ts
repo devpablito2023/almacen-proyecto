@@ -117,3 +117,53 @@ export interface SessionState {
   permissions?: RolePermissions;
   expiresAt?: number;
 }
+
+// ==========================================
+// INTERFACES DE COMPONENTES
+// ==========================================
+
+/**
+ * Props para el formulario de login
+ */
+export interface LoginFormProps {
+  onSuccess?: () => void;
+  className?: string;
+}
+
+/**
+ * Props para el componente principal de login
+ */
+export interface LoginMainProps {
+  className?: string;
+}
+
+/**
+ * Props para el panel de testing (desarrollo)
+ */
+export interface TestingPanelProps {
+  onTestLogin: (credentials: TestCredential) => Promise<void>;
+  isLoading?: boolean;
+  className?: string;
+}
+
+/**
+ * Resultado de testing para desarrollo
+ */
+export interface TestResult {
+  credentialId: string;
+  success: boolean;
+  error?: string;
+  timestamp: Date;
+  duration: number;
+}
+
+/**
+ * Credenciales de testing predefinidas
+ */
+export interface TestCredential {
+  id: string;
+  email_usuario: string;
+  password_usuario: string;
+  role: string;
+  description: string;
+}

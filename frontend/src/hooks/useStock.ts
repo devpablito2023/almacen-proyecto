@@ -58,6 +58,10 @@ export function useStock(filters?: StockFilter): UseStockReturn {
       if (allFilters.sin_movimiento_dias) params.append('sin_movimiento_dias', String(allFilters.sin_movimiento_dias));
       if (allFilters.fecha_desde) params.append('fecha_desde', allFilters.fecha_desde);
       if (allFilters.fecha_hasta) params.append('fecha_hasta', allFilters.fecha_hasta);
+      
+      // Agregar parámetros de paginación
+      if (allFilters.page) params.append('page', String(allFilters.page));
+      if (allFilters.limit) params.append('limit', String(allFilters.limit));
 
       const response = await fetch(`/api/stock?${params}`, {
         method: 'GET',
@@ -106,15 +110,13 @@ export function useStock(filters?: StockFilter): UseStockReturn {
       const params = new URLSearchParams();
       const allFilters = { ...filters, ...customFilters };
 
-      // Agregar filtros para exportación
-      if (allFilters.search) params.append('search', allFilters.search);
-      if (allFilters.tipo_producto) params.append('tipo_producto', allFilters.tipo_producto);
-      if (allFilters.categoria_producto) params.append('categoria_producto', allFilters.categoria_producto);
-      if (allFilters.ubicacion_fisica) params.append('ubicacion_fisica', allFilters.ubicacion_fisica);
-      if (allFilters.nivel_alerta) params.append('nivel_alerta', allFilters.nivel_alerta);
-      if (allFilters.con_stock !== undefined) params.append('con_stock', String(allFilters.con_stock));
-      if (allFilters.fecha_desde) params.append('fecha_desde', allFilters.fecha_desde);
-      if (allFilters.fecha_hasta) params.append('fecha_hasta', allFilters.fecha_hasta);
+      // Agregar filtros para exportación (usando los parámetros que acepta el backend)
+      // El backend acepta: stock_bajo y stock_critico
+      if (allFilters.nivel_alerta === 'bajo') params.append('stock_bajo', 'true');
+      if (allFilters.nivel_alerta === 'critico') params.append('stock_critico', 'true');
+
+      console.log('DEBUG STOCK EXPORT - URL params:', params.toString());
+      console.log('DEBUG STOCK EXPORT - allFilters:', allFilters);
 
       const response = await fetch(`/api/stock/export?${params}`, {
         method: 'GET',
@@ -150,13 +152,31 @@ export function useStock(filters?: StockFilter): UseStockReturn {
     }
 
     try {
-      const response = await fetch('/api/stock', {
+      // Convertir datos al formato esperado por el backend
+      const ajusteData: any = {
+        producto_id: ajuste.producto_id,
+        cantidad_ajuste: ajuste.tipo_ajuste === 'negativo' ? -ajuste.cantidad_ajuste : ajuste.cantidad_ajuste,
+        motivo: ajuste.motivo,
+      };
+
+      // Solo agregar campos opcionales si tienen valor
+      if (ajuste.ubicacion_fisica) {
+        ajusteData.ubicacion = ajuste.ubicacion_fisica;
+      }
+      if (ajuste.lote_serie) {
+        ajusteData.lote_serie = ajuste.lote_serie;
+      }
+
+      console.log('🔧 HOOK - Datos originales:', ajuste);
+      console.log('🔧 HOOK - Datos transformados:', ajusteData);
+
+      const response = await fetch('/api/stock/ajustar', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         credentials: 'include',
-        body: JSON.stringify(ajuste),
+        body: JSON.stringify(ajusteData),
       });
 
       if (!response.ok) {

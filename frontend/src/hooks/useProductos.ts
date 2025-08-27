@@ -71,7 +71,7 @@ export function useProductos(filters?: ProductosFilter): UseProductosReturn {
         },
         credentials: 'include',
       });
-
+      console.log("response:", response);
       if (!response.ok) {
         throw new Error(`Error ${response.status}: ${response.statusText}`);
       }
@@ -248,14 +248,71 @@ export function useProductos(filters?: ProductosFilter): UseProductosReturn {
     }
   };
 
-  // Función para exportar productos
-  const exportProductos = async (): Promise<void> => {
+  // Función para restablecer producto
+  const restoreProducto = async (id: number): Promise<void> => {
     if (!isAuthenticated) {
       throw new Error('Usuario no autenticado');
     }
 
     try {
-      const response = await fetch('/api/productos/export', {
+      const response = await fetch(`/api/productos/${id}/restore`, {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        credentials: 'include',
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || `Error ${response.status}: ${response.statusText}`);
+      }
+
+      const result: { success: boolean; message: string } = await response.json();
+
+      if (result.success) {
+        // Actualizar el producto en la lista local
+        setProductos(prevProductos =>
+          prevProductos.map(p => 
+            p.id_producto === id 
+              ? { ...p, estado_producto: 1 } 
+              : p
+          )
+        );
+        // Actualizar estadísticas
+        setStats(prevStats => ({
+          ...prevStats,
+          productos_activos: prevStats.productos_activos + 1
+        }));
+      } else {
+        throw new Error(result.message || 'Error al restablecer producto');
+      }
+    } catch (err) {
+      const errorMessage = err instanceof Error ? err.message : 'Error desconocido';
+      console.error('Error restoring producto:', errorMessage);
+      throw err;
+    }
+  };
+
+  // Función para exportar productos
+  const exportProductos = async (customFilters?: ProductosFilter): Promise<void> => {
+    if (!isAuthenticated) {
+      throw new Error('Usuario no autenticado');
+    }
+
+    try {
+      const params = new URLSearchParams();
+      const allFilters = { ...filters, ...customFilters };
+
+      // Agregar filtros para exportación (usando los parámetros que acepta el backend)
+      // El backend acepta: estado y tipo
+      if (allFilters.tipo_producto) params.append('tipo', allFilters.tipo_producto);
+      if (allFilters.estado_producto !== undefined) params.append('estado', String(allFilters.estado_producto));
+
+      console.log('DEBUG PRODUCTOS EXPORT - URL params:', params.toString());
+      console.log('DEBUG PRODUCTOS EXPORT - allFilters:', allFilters);
+
+      const response = await fetch(`/api/productos/export?${params}`, {
         method: 'GET',
         credentials: 'include',
       });
@@ -362,6 +419,7 @@ export function useProductos(filters?: ProductosFilter): UseProductosReturn {
     createProducto,
     updateProducto,
     deleteProducto,
+    restoreProducto,
     exportProductos,
     importProductos,
     refreshProductos,

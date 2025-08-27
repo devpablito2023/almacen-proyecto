@@ -1,5 +1,5 @@
 // Crear base de datos y usuario
-db = db.getSiblingDB('control_almacen');
+db = db.getSiblingDB('almacen_control');
 
 // Crear usuario con permisos
 db.createUser({
@@ -8,7 +8,7 @@ db.createUser({
   roles: [
     {
       role: 'readWrite',
-      db: 'control_almacen'
+      db: 'almacen_control'
     }
   ]
 });
@@ -29,14 +29,16 @@ db.createCollection('log_general');
 // Insertar usuario superadmin inicial
 db.usuarios.insertOne({
   id_usuario: 1,
+  codigo_usuario: "ADMIN001",
   nombre_usuario: 'Administrador',
-  email_usuario: 'admin@controlalmacen.com',
-  login_usuario: 'admin',
-  password_usuario: '$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewYpF3xqfUoJpYbe', // password: admin123
+  email_usuario: 'admin@almacen.com',
+  password_hash: '$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewmhndCD2ZjKneXa', // password: admin123
   tipo_usuario: 0, // Superusuario
+  area_usuario: "Sistemas",
   estado_usuario: 1,
   created_at: new Date(),
-  ultimo_acceso: null
+  created_by: 0,
+  created_by_name: "Sistema"
 });
 
 // Insertar algunos productos de ejemplo
@@ -109,6 +111,25 @@ db.stock.insertMany([
     cantidad_total: 12,
     stock_minimo: 5,
     stock_maximo: 50,
+    created_at: new Date()
+  }
+]);
+
+// Crear contadores para IDs autoincrementales
+db.contador_general.insertMany([
+  {
+    modulo: "usuarios",
+    id_usuarios: 1,
+    created_at: new Date()
+  },
+  {
+    modulo: "productos", 
+    id_productos: 3,
+    created_at: new Date()
+  },
+  {
+    modulo: "stock",
+    id_stock: 3,
     created_at: new Date()
   }
 ]);

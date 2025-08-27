@@ -12,6 +12,7 @@ from server.routes.auth import router as AuthRouter
 from server.routes.usuarios import router as UsuariosRouter
 from server.routes.productos import router as ProductosRouter
 from server.routes.stock import router as StockRouter
+from server.routes.dashboard import router as DashboardRouter
 
 
 from server.config import database
@@ -56,7 +57,11 @@ app.add_middleware(
 )
 
 # Montar archivos estáticos
-app.mount("/static", StaticFiles(directory="static"), name="static")
+static_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "static")
+if os.path.exists(static_dir):
+    app.mount("/static", StaticFiles(directory=static_dir), name="static")
+else:
+    logger.warning(f"Static directory not found: {static_dir}")
 
 # Middleware para logging de requests
 @app.middleware("http")
@@ -114,6 +119,12 @@ app.include_router(
     StockRouter, 
     prefix="/api/stock", 
     tags=["Stock"]
+)
+
+app.include_router(
+    DashboardRouter, 
+    prefix="/api", 
+    tags=["Dashboard"]
 )
 
 # Endpoint de salud
