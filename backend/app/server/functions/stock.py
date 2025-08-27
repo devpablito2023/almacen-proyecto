@@ -15,6 +15,128 @@ from server.config.database import stats_collection
 
 logger = logging.getLogger(__name__)
 
+async def actualizar_stock_por_ingreso(
+    producto_id: int,
+    cantidad: int,
+    costo_unitario: float,
+    lote_serie: str = None,
+    fecha_vencimiento = None,
+    ubicacion: str = None
+):
+    """Actualizar stock cuando se valida un ingreso"""
+    try:
+        # Obtener stock actual
+        stock_actual = await stock_collection().find_one({"producto_id": producto_id})
+        
+        if not stock_actual:
+            # Si no existe stock, crear registro inicial
+            producto = await productos_collection().find_one({
+                "id_producto": producto_id,
+                "estado_producto": 1
+            })
+            
+            if not producto:
+                raise Exception(f"Producto {producto_id} no encontrado")
+            
+            # Crear stock inicial
+            contador_stock = await ids_collection().find_one({"id_stock": {"$exists": True}})
+            id_stock = (contador_stock["id_stock"] + 1) if contador_stock else 1
+            
+            nuevo_stock = {
+                "id_stock": id_stock,
+                "producto_id": producto_id,
+                "producto_codigo": producto["codigo_producto"],
+                "producto_nombre": producto["nombre_producto"],
+                "cantidad_disponible": cantidad,
+                "cantidad_reservada": 0,
+                "cantidad_total": cantidad,
+                "ubicacion_fisica": ubicacion or "SIN_UBICACION",
+                "lote_serie": lote_serie,
+                "fecha_vencimiento": fecha_vencimiento,
+                "costo_promedio": costo_unitario,
+                "valor_inventario": cantidad * costo_unitario,
+                "fecha_ultimo_movimiento": datetime.now(),
+                "estado_stock": 1,
+                "alerta_generada": False,
+                "created_at": datetime.now(),
+                "created_by": 0,
+                "updated_at": None,
+                "updated_by": None
+            }
+            
+            await stock_collection().insert_one(nuevo_stock)
+            
+            # Actualizar contador
+            await ids_collection().update_one(
+                {"_id": contador_stock["_id"] if contador_stock else None},
+                {"$set": {"id_stock": id_stock, "fecha": datetime.now()}},
+                upsert=True
+            )
+            
+            logger.info(f"Stock inicial creado para producto {producto_id}: {cantidad}")
+            return {
+                "producto_id": producto_id,
+                "cantidad_anterior": 0,
+                "cantidad_nueva": cantidad,
+                "incremento": cantidad,
+                "nuevo_costo_promedio": costo_unitario,
+                "accion": "creado"
+            }
+        
+        # Calcular nuevos valores
+        cantidad_anterior = stock_actual["cantidad_total"]
+        nueva_cantidad_disponible = stock_actual["cantidad_disponible"] + cantidad
+        nueva_cantidad_total = stock_actual["cantidad_total"] + cantidad
+        
+        # Calcular nuevo costo promedio ponderado
+        valor_anterior = stock_actual["cantidad_total"] * stock_actual.get("costo_promedio", 0)
+        valor_ingreso = cantidad * costo_unitario
+        valor_total = valor_anterior + valor_ingreso
+        
+        nuevo_costo_promedio = valor_total / nueva_cantidad_total if nueva_cantidad_total > 0 else 0
+        nuevo_valor_inventario = nueva_cantidad_total * nuevo_costo_promedio
+        
+        # Actualizar stock
+        update_data = {
+            "cantidad_disponible": nueva_cantidad_disponible,
+            "cantidad_total": nueva_cantidad_total,
+            "costo_promedio": nuevo_costo_promedio,
+            "valor_inventario": nuevo_valor_inventario,
+            "fecha_ultimo_movimiento": datetime.now(),
+            "updated_at": datetime.now()
+        }
+        
+        # Actualizar ubicación si se proporciona
+        if ubicacion:
+            update_data["ubicacion_fisica"] = ubicacion
+        
+        # Actualizar lote/serie y vencimiento si se proporciona
+        if lote_serie:
+            update_data["lote_serie"] = lote_serie
+        if fecha_vencimiento:
+            update_data["fecha_vencimiento"] = fecha_vencimiento
+        
+        await stock_collection().update_one(
+            {"producto_id": producto_id},
+            {"$set": update_data}
+        )
+        
+        logger.info(f"Stock actualizado para producto {producto_id}: {cantidad_anterior} -> {nueva_cantidad_total}")
+        
+        return {
+            "producto_id": producto_id,
+            "cantidad_anterior": cantidad_anterior,
+            "cantidad_nueva": nueva_cantidad_total,
+            "incremento": cantidad,
+            "nuevo_costo_promedio": nuevo_costo_promedio,
+            "accion": "actualizado"
+        }
+        
+    except Exception as e:
+        logger.error(f"Error actualizando stock por ingreso: {e}")
+        raise
+
+
 async def obtener_stock(page: int = 1, limit: int = 20, stock_bajo: bool = False, stock_critico: bool = False):
     """Obtener stock con paginación y filtros"""
     try:

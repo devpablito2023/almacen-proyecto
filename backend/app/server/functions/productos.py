@@ -17,6 +17,11 @@ import math
 
 logger = logging.getLogger(__name__)
 
+
+
+
+
+
 async def crear_producto(producto_data: ProductoCreate, created_by: int, created_by_name: str):
     """Crear nuevo producto"""
     try:
