@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { validateConfig } from '../lib/config/env';
+import { ReactQueryProvider } from "@/lib/react-query";
+
 
 // Configurar la fuente Inter
 const inter = Inter({ 
@@ -102,9 +104,10 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} antialiased`}>
         {/* Wrapper principal de la aplicación */}
-        <div id="root">
+
+        <ReactQueryProvider>
           {children}
-        </div>
+        </ReactQueryProvider>
         
         {/* Portal para modales */}
         <div id="modal-root" />

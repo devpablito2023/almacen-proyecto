@@ -250,3 +250,10 @@ export const STOCK_EXPORT_LABELS: Record<string, string> = {
   'valor_inventario': 'Valor Inventario',
   'ultimo_movimiento': 'Último Movimiento'
 };
+
+export const TIPO_COLORS: Record<string, string> = {
+  'insumo': 'bg-blue-100 text-blue-800',
+  'repuesto': 'bg-green-100 text-green-800',
+  'herramienta': 'bg-purple-100 text-purple-800',
+  'otro': 'bg-gray-100 text-gray-800'
+};

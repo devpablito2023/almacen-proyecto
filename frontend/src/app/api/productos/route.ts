@@ -7,9 +7,10 @@ console.log("BACKEND_URL:", BACKEND_URL);
 
 export async function GET(request: NextRequest) {
   try {
+    console.log("Aqui viene estamos pa ir al cakend");
+
     const cookieStore = await cookies();
     const token = cookieStore.get('auth-token')?.value;
-
     if (!token) {
       return NextResponse.json(
         { success: false, message: 'No autorizado' },
