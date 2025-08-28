@@ -1,6 +1,7 @@
 import { MagnifyingGlassIcon, FunnelIcon } from '@heroicons/react/24/outline';
 import { TIPOS_PRODUCTO, CATEGORIAS_PRODUCTO } from '@/types/productos';
 import { NIVELES_STOCK } from '@/types/stock';
+import { Button, Input, Label } from '../commons';
 
 interface StockFiltersProps {
   searchTerm: string;
@@ -36,29 +37,30 @@ export default function StockFilters({
       <div className="flex flex-col md:flex-row gap-4 mb-4">
         {/* Búsqueda */}
         <div className="flex-1 relative">
-          <MagnifyingGlassIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-          <input
+          <Input
             type="text"
             placeholder="Buscar por producto, código o ubicación..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            leftIcon={<MagnifyingGlassIcon className="w-5 h-5 text-gray-400" />}
           />
         </div>
 
-        <button
+        <Button
+          variant="secondary"
           onClick={() => setShowFilters(!showFilters)}
           className="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50"
+          leftIcon={<FunnelIcon className="w-5 h-5" />}
         >
-          <FunnelIcon className="w-5 h-5" />
           Filtros
-        </button>
+        </Button>
       </div>
 
       {showFilters && (
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 pt-4 border-t border-gray-200">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Tipo de Producto</label>
+            <Label className="block text-sm font-medium text-gray-700 mb-2">Tipo de Producto</Label>
             <select
               value={selectedTipo}
               onChange={(e) => setSelectedTipo(e.target.value)}
@@ -72,7 +74,7 @@ export default function StockFilters({
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Categoría</label>
+            <Label className="block text-sm font-medium text-gray-700 mb-2">Categoría</Label>
             <select
               value={selectedCategoria}
               onChange={(e) => setSelectedCategoria(e.target.value)}
@@ -86,7 +88,7 @@ export default function StockFilters({
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Nivel de Stock</label>
+            <Label className="block text-sm font-medium text-gray-700 mb-2">Nivel de Stock</Label>
             <select
               value={selectedNivel}
               onChange={(e) => setSelectedNivel(e.target.value as 'critico' | 'bajo' | 'normal' | 'sin_stock' | '')}
@@ -100,7 +102,7 @@ export default function StockFilters({
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Con Stock</label>
+            <Label className="block text-sm font-medium text-gray-700 mb-2">Con Stock</Label>
             <select
               value={conStock === undefined ? '' : conStock.toString()}
               onChange={(e) => setConStock(e.target.value === '' ? undefined : e.target.value === 'true')}

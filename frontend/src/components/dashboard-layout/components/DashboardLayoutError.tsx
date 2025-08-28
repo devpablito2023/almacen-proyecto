@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { DashboardLayoutErrorProps } from '@/types/layout';
+import { Button } from '../../commons';
 
 /**
  * COMPONENTE DE ERROR PARA EL LAYOUT
@@ -26,12 +27,12 @@ export default function DashboardLayoutError({
         <p className="text-gray-600 mb-4">
           Tu sesión ha expirado o no tienes permisos para acceder a esta área.
         </p>
-        <button
+        <Button
           onClick={onReturnLogin}
-          className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+          variant="primary"
         >
           Volver al Login
-        </button>
+        </Button>
       </div>
     </div>
   );

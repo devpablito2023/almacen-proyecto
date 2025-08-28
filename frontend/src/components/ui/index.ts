@@ -1,9 +1,9 @@
 /**
- * Exportaciones centralizadas de componentes UI
- * Permite importar todos los componentes base desde un solo lugar
+ * Exportaciones centralizadas de componentes UI compuestos
+ * Los componentes primitivos están en commons/
  */
 
-// Button components
+// Re-exportar componentes primitivos de commons para compatibilidad
 export {
   Button,
   PrimaryButton,
@@ -11,16 +11,15 @@ export {
   DangerButton,
   IconButton,
   type ButtonProps,
-} from './Button';
+} from '../commons';
 
-// Input components
 export {
   Input,
   SearchInput,
   PasswordInput,
   NumberInput,
   type InputProps,
-} from './Input';
+} from '../commons';
 
 // Card components
 export {

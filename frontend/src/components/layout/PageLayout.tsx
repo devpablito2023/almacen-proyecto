@@ -2,6 +2,7 @@ import React from 'react';
 import { cn } from '../../lib/utils/cn';
 import { BreadcrumbsWithActions } from './Breadcrumbs';
 import { LoadingState, EmptyState } from '../ui';
+import { Button } from '../commons';
 import type { BreadcrumbItem } from '../../types/global';
 
 /**
@@ -174,43 +175,31 @@ export const FormPageLayout: React.FC<FormPageLayoutProps> = ({
     <div className="flex items-center space-x-3">
       {actions}
       {onCancel && (
-        <button
+        <Button
           type="button"
           onClick={onCancel}
           disabled={isSubmitting}
-          className="px-4 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 disabled:opacity-50"
+          variant="secondary"
         >
           {cancelLabel}
-        </button>
+        </Button>
       )}
       {onSave && (
-        <button
+        <Button
           type="button"
           onClick={onSave}
           disabled={isSubmitting}
-          className={cn(
-            'inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white',
-            'bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500',
-            'disabled:opacity-50 disabled:cursor-not-allowed'
-          )}
+          variant="primary"
+          isLoading={isSubmitting}
+          loadingText="Guardando..."
         >
-          {isSubmitting ? (
-            <>
-              <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" fill="none" viewBox="0 0 24 24">
-                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-              </svg>
-              Guardando...
-            </>
-          ) : (
-            <>
-              {hasUnsavedChanges && (
-                <span className="w-2 h-2 bg-warning-400 rounded-full mr-2" />
-              )}
-              {saveLabel}
-            </>
-          )}
-        </button>
+          <>
+            {hasUnsavedChanges && (
+              <span className="w-2 h-2 bg-warning-400 rounded-full mr-2" />
+            )}
+            {saveLabel}
+          </>
+        </Button>
       )}
     </div>
   );
@@ -253,11 +242,12 @@ export const DetailPageLayout: React.FC<DetailPageLayoutProps> = ({
           <div className="border-b border-gray-200">
             <nav className="-mb-px flex space-x-8 px-6">
               {tabs.map((tab) => (
-                <button
+                <Button
                   key={tab.id}
                   onClick={() => onTabChange?.(tab.id)}
+                  variant="ghost"
                   className={cn(
-                    'whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm transition-colors',
+                    'whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm transition-colors h-auto',
                     activeTab === tab.id
                       ? 'border-primary-500 text-primary-600'
                       : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
@@ -274,7 +264,7 @@ export const DetailPageLayout: React.FC<DetailPageLayoutProps> = ({
                       {tab.count}
                     </span>
                   )}
-                </button>
+                </Button>
               ))}
             </nav>
           </div>

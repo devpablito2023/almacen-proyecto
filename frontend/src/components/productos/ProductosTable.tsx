@@ -9,6 +9,7 @@ import {
   ChevronRightIcon
 } from '@heroicons/react/24/outline';
 import { Producto, TIPOS_PRODUCTO, ProductosTableProps } from '@/types/productos';
+import { Button } from '../commons';
 
 export default function ProductosTable({
   productos,
@@ -145,30 +146,36 @@ export default function ProductosTable({
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                   <div className="flex items-center gap-2">
-                    <button
+                    <Button
+                      variant="ghost"
+                      size="sm"
                       onClick={() => window.location.href = `/dashboard/productos/${producto.id_producto}`}
-                      className="text-blue-600 hover:text-blue-900"
+                      className="text-blue-600 hover:text-blue-900 p-1"
                       title="Ver detalles"
                     >
                       <EyeIcon className="w-4 h-4" />
-                    </button>
+                    </Button>
                     {canEdit && (
-                      <button
+                      <Button
+                        variant="ghost"
+                        size="sm"
                         onClick={() => window.location.href = `/dashboard/productos/${producto.id_producto}/edit`}
-                        className="text-green-600 hover:text-green-900"
+                        className="text-green-600 hover:text-green-900 p-1"
                         title="Editar producto"
                       >
                         <PencilIcon className="w-4 h-4" />
-                      </button>
+                      </Button>
                     )}
                     {canDelete && (
-                      <button
+                      <Button
+                        variant="ghost"
+                        size="sm"
                         onClick={() => onDelete(producto.id_producto)}
-                        className="text-red-600 hover:text-red-900"
+                        className="text-red-600 hover:text-red-900 p-1"
                         title="Eliminar producto"
                       >
                         <TrashIcon className="w-4 h-4" />
-                      </button>
+                      </Button>
                     )}
                   </div>
                 </td>
@@ -228,27 +235,36 @@ export default function ProductosTable({
               </span>
               
               <div className="flex items-center gap-2">
-                <button
+                <Button
+                  variant="ghost"
+                  size="sm"
                   onClick={() => window.location.href = `/dashboard/productos/${producto.id_producto}`}
                   className="p-2 text-blue-600 hover:bg-blue-100 rounded-full"
+                  title="Ver detalles"
                 >
                   <EyeIcon className="w-4 h-4" />
-                </button>
+                </Button>
                 {canEdit && (
-                  <button
+                  <Button
+                    variant="ghost"
+                    size="sm"
                     onClick={() => window.location.href = `/dashboard/productos/${producto.id_producto}/edit`}
                     className="p-2 text-green-600 hover:bg-green-100 rounded-full"
+                    title="Editar producto"
                   >
                     <PencilIcon className="w-4 h-4" />
-                  </button>
+                  </Button>
                 )}
                 {canDelete && (
-                  <button
+                  <Button
+                    variant="ghost"
+                    size="sm"
                     onClick={() => onDelete(producto.id_producto)}
                     className="p-2 text-red-600 hover:bg-red-100 rounded-full"
+                    title="Eliminar producto"
                   >
                     <TrashIcon className="w-4 h-4" />
-                  </button>
+                  </Button>
                 )}
               </div>
             </div>
@@ -264,13 +280,16 @@ export default function ProductosTable({
               Página {currentPage} de {totalPages}
             </div>
             <div className="flex items-center gap-2">
-              <button
+              <Button
+                variant="ghost"
+                size="sm"
                 onClick={() => onPageChange(currentPage - 1)}
                 disabled={currentPage === 1}
                 className="p-2 text-gray-400 hover:text-gray-600 disabled:opacity-50"
+                title="Página anterior"
               >
                 <ChevronLeftIcon className="w-5 h-5" />
-              </button>
+              </Button>
               
               {/* Números de página */}
               {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
@@ -278,8 +297,10 @@ export default function ProductosTable({
                 if (page > totalPages) return null;
                 
                 return (
-                  <button
+                  <Button
                     key={page}
+                    variant={page === currentPage ? "primary" : "ghost"}
+                    size="sm"
                     onClick={() => onPageChange(page)}
                     className={`px-3 py-1 text-sm rounded ${
                       page === currentPage
@@ -288,17 +309,20 @@ export default function ProductosTable({
                     }`}
                   >
                     {page}
-                  </button>
+                  </Button>
                 );
               })}
               
-              <button
+              <Button
+                variant="ghost"
+                size="sm"
                 onClick={() => onPageChange(currentPage + 1)}
                 disabled={currentPage === totalPages}
                 className="p-2 text-gray-400 hover:text-gray-600 disabled:opacity-50"
+                title="Página siguiente"
               >
                 <ChevronRightIcon className="w-5 h-5" />
-              </button>
+              </Button>
             </div>
           </div>
         </div>

@@ -2,8 +2,8 @@ import React from 'react';
 import { cn, createVariants } from '../../lib/utils/cn';
 
 /**
- * Componente Button base con variantes y estados
- * Usado en todo el sistema para mantener consistencia
+ * Componente Button primitivo con variantes y estados
+ * Componente atómico base para todo el sistema
  */
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -12,7 +12,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   isLoading?: boolean;
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
-  loadingText?: string;  // 👈 Agregar esta línea
+  loadingText?: string;
   fullWidth?: boolean;
   children: React.ReactNode;
 }
@@ -40,8 +40,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     variant = 'primary',
     size = 'md',
     isLoading = false,
-    loadingText,  // 👈 Agregar esta línea
-
+    loadingText,
     leftIcon,
     rightIcon,
     fullWidth = false,
@@ -97,9 +96,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {/* Contenido del botón */}
         <div className={cn('flex items-center gap-2', isLoading && 'opacity-0')}>
           {leftIcon && <span className="flex-shrink-0">{leftIcon}</span>}
-          {/*<span>{children}</span>*/}
-          <span>{isLoading && loadingText ? loadingText : children}</span>  {/* 👈 Cambiar esta línea */}
-
+          <span>{isLoading && loadingText ? loadingText : children}</span>
           {rightIcon && <span className="flex-shrink-0">{rightIcon}</span>}
         </div>
       </button>

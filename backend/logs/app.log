@@ -2808,3 +2808,116 @@ NameError: name 'stats_collection' is not defined. Did you mean: 'stock_collecti
 2025-08-27 17:46:19,783 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.069s
 2025-08-27 17:46:33,220 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.049s
 2025-08-27 17:46:33,284 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.032s
+2025-08-28 15:07:23,231 - server.app - WARNING - Static directory not found: C:\Users\Ztrack2\Desktop\almacen-proyecto\backend\app\static
+2025-08-28 15:07:25,740 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-28 15:07:25,741 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.373s
+2025-08-28 15:07:29,469 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 15:07:29,516 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.241s
+2025-08-28 15:07:29,586 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 15:07:29,614 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.071s
+2025-08-28 15:07:34,865 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.041s
+2025-08-28 15:07:34,951 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.029s
+2025-08-28 15:07:35,042 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.045s
+2025-08-28 15:07:35,117 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.028s
+2025-08-28 15:07:42,840 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.028s
+2025-08-28 15:07:42,917 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.032s
+2025-08-28 15:07:42,992 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.030s
+2025-08-28 15:07:43,063 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.037s
+2025-08-28 15:07:46,635 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.034s
+2025-08-28 15:07:46,709 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.040s
+2025-08-28 15:07:50,263 - server.app - INFO - GET /api/stock/ - Status: 200 - Time: 0.044s
+2025-08-28 15:07:55,663 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.024s
+2025-08-28 15:07:55,723 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.030s
+2025-08-28 15:07:55,785 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.024s
+2025-08-28 15:07:55,843 - server.app - INFO - GET /api/productos/ - Status: 200 - Time: 0.020s
+2025-08-28 15:07:58,789 - server.routes.auth - INFO - Usuario admin@almacen.com cerró sesión
+2025-08-28 15:07:58,790 - server.app - INFO - POST /api/auth/logout - Status: 200 - Time: 0.005s
+2025-08-28 15:08:04,445 - server.functions.auth - INFO - Login exitoso para usuario: admin@almacen.com
+2025-08-28 15:08:04,446 - server.app - INFO - POST /api/auth/login - Status: 200 - Time: 0.242s
+2025-08-28 15:08:05,036 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 15:08:05,065 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.063s
+2025-08-28 15:08:05,151 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 15:08:05,177 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.060s
+2025-08-28 15:08:46,983 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 15:08:46,990 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 15:08:47,035 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.116s
+2025-08-28 15:08:47,040 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.117s
+2025-08-28 15:09:50,685 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 15:09:50,686 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 15:09:50,721 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.081s
+2025-08-28 15:09:50,723 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.079s
+2025-08-28 15:11:40,887 - server.app - WARNING - Static directory not found: C:\Users\Ztrack2\Desktop\almacen-proyecto\backend\app\static
+2025-08-28 15:11:43,585 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 15:11:43,625 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.074s
+2025-08-28 15:11:43,638 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 15:11:43,675 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.079s
+2025-08-28 15:20:13,062 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 15:20:13,064 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 15:20:13,099 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.171s
+2025-08-28 15:20:13,104 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.180s
+2025-08-28 15:23:34,564 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 15:23:34,567 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 15:23:34,600 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.078s
+2025-08-28 15:23:34,611 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.085s
+2025-08-28 15:28:34,872 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 15:28:34,902 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.090s
+2025-08-28 15:33:35,809 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 15:33:35,842 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.066s
+2025-08-28 15:38:36,845 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 15:38:36,869 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.064s
+2025-08-28 15:43:37,844 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 15:43:37,860 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.043s
+2025-08-28 15:48:38,829 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 15:48:38,844 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.047s
+2025-08-28 15:53:39,896 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 15:53:39,920 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.060s
+2025-08-28 15:58:40,917 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 15:58:40,941 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.054s
+2025-08-28 16:03:41,864 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 16:03:41,887 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.048s
+2025-08-28 16:08:42,861 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 16:08:42,891 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.060s
+2025-08-28 16:13:43,888 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 16:13:43,997 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.133s
+2025-08-28 16:18:44,837 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 16:18:44,863 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.062s
+2025-08-28 16:23:45,863 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 16:23:45,892 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.057s
+2025-08-28 16:28:46,837 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 16:28:46,866 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.069s
+2025-08-28 16:33:47,898 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 16:33:47,978 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.134s
+2025-08-28 16:38:48,994 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 16:38:49,022 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.069s
+2025-08-28 16:43:49,831 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 16:43:49,865 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.065s
+2025-08-28 16:48:50,832 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 16:48:50,855 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.057s
+2025-08-28 16:53:51,823 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 16:53:51,853 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.059s
+2025-08-28 16:58:52,814 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 16:58:52,835 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.044s
+2025-08-28 17:03:53,817 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 17:03:53,847 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.063s
+2025-08-28 17:08:54,838 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 17:08:54,874 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.075s
+2025-08-28 17:13:55,804 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 17:13:55,828 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.050s
+2025-08-28 17:18:56,834 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 17:18:56,862 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.064s
+2025-08-28 17:23:57,821 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 17:23:57,847 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.054s
+2025-08-28 17:28:58,853 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 17:28:58,889 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.076s
+2025-08-28 17:34:00,118 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 17:34:00,142 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.077s
+2025-08-28 17:39:00,819 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 17:39:00,846 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.060s
+2025-08-28 17:44:01,825 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 17:44:01,851 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.057s
+2025-08-28 17:49:02,863 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 17:49:02,898 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.084s
+2025-08-28 17:54:03,840 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 17:54:03,865 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.064s
+2025-08-28 17:59:04,855 - server.functions.dashboard - INFO - Estadísticas del dashboard obtenidas exitosamente
+2025-08-28 17:59:04,885 - server.app - INFO - GET /api/dashboard - Status: 200 - Time: 0.063s

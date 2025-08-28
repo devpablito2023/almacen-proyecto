@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import { useAuth } from '@/hooks/useAuth';
 import { SystemModule } from '@/types/auth';
+import { Button } from '../commons';
 
 /**
  * SIDEBAR PROFESIONAL CON PERMISOS
@@ -287,10 +288,12 @@ const Sidebar: React.FC<SidebarProps> = ({
             </div>
           )}
           
-          <button
+          <Button
             onClick={handleToggle}
-            className="p-1.5 rounded-lg hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
+            variant="ghost"
+            size="sm"
             title={collapsed ? 'Expandir sidebar' : 'Contraer sidebar'}
+            className="p-1.5"
           >
             <svg 
               className={`h-4 w-4 text-gray-600 transition-transform ${collapsed ? 'rotate-180' : ''}`} 
@@ -300,7 +303,7 @@ const Sidebar: React.FC<SidebarProps> = ({
             >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
             </svg>
-          </button>
+          </Button>
         </div>
       </div>
 
@@ -322,9 +325,11 @@ const Sidebar: React.FC<SidebarProps> = ({
                 
                 return (
                   <li key={item.id}>
-                    <button
+                    <Button
+                      variant="ghost"
+                      size="sm"
                       onClick={() => handleNavigation(item.href)}
-                      className={`w-full flex items-center px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 group ${
+                      className={`w-full flex items-center px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 group h-auto ${
                         active
                           ? 'bg-blue-50 text-blue-700 border border-blue-200'
                           : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
@@ -359,7 +364,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                       {collapsed && active && (
                         <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-1 h-6 bg-blue-600 rounded-l"></div>
                       )}
-                    </button>
+                    </Button>
                   </li>
                 );
               })}

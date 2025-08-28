@@ -16,6 +16,7 @@ import {
   MAGNITUDES_PRODUCTO,
   ProductoInfoProps
 } from '@/types/productos';
+import { Label } from '../../commons';
 
 // Funciones utilitarias
 const formatCurrency = (amount: number): string => {
@@ -71,18 +72,18 @@ export default function ProductoInfo({ producto }: ProductoInfoProps) {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <Label className="block text-sm font-medium text-gray-700 mb-1">
                 Código
-              </label>
+              </Label>
               <p className="text-sm text-gray-900 bg-gray-50 px-3 py-2 rounded">
                 {producto.codigo_producto}
               </p>
             </div>
             
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <Label className="block text-sm font-medium text-gray-700 mb-1">
                 Tipo de Producto
-              </label>
+              </Label>
               <div className="flex items-center gap-2">
                 <span 
                   className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
@@ -95,18 +96,18 @@ export default function ProductoInfo({ producto }: ProductoInfoProps) {
             </div>
             
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <Label className="block text-sm font-medium text-gray-700 mb-1">
                 Magnitud
-              </label>
+              </Label>
               <p className="text-sm text-gray-900 bg-gray-50 px-3 py-2 rounded">
                 {MAGNITUDES_PRODUCTO.find(m => m.value === producto.magnitud_producto)?.label || producto.magnitud_producto}
               </p>
             </div>
             
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <Label className="block text-sm font-medium text-gray-700 mb-1">
                 Ubicación
-              </label>
+              </Label>
               <p className="text-sm text-gray-900 bg-gray-50 px-3 py-2 rounded flex items-center gap-2">
                 <MapPinIcon className="w-4 h-4 text-gray-500" />
                 {producto.ubicacion_fisica || 'No especificada'}
@@ -116,9 +117,9 @@ export default function ProductoInfo({ producto }: ProductoInfoProps) {
           
           {producto.descripcion_producto && (
             <div className="mt-4">
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <Label className="block text-sm font-medium text-gray-700 mb-1">
                 Descripción
-              </label>
+              </Label>
               <p className="text-sm text-gray-900 bg-gray-50 px-3 py-2 rounded">
                 {producto.descripcion_producto}
               </p>
@@ -135,18 +136,18 @@ export default function ProductoInfo({ producto }: ProductoInfoProps) {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <Label className="block text-sm font-medium text-gray-700 mb-1">
                 Costo Unitario
-              </label>
+              </Label>
               <p className="text-lg font-semibold text-green-600">
                 {formatCurrency(producto.costo_unitario)}
               </p>
             </div>
             
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <Label className="block text-sm font-medium text-gray-700 mb-1">
                 Precio Referencial
-              </label>
+              </Label>
               <p className="text-lg font-semibold text-blue-600">
                 {formatCurrency(producto.precio_referencial)}
               </p>
@@ -222,9 +223,9 @@ export default function ProductoInfo({ producto }: ProductoInfoProps) {
           
           <div className="space-y-3">
             <div>
-              <label className="block text-xs font-medium text-gray-500 mb-1">
+              <Label className="block text-xs font-medium text-gray-500 mb-1">
                 Creado por
-              </label>
+              </Label>
               <p className="text-sm text-gray-900 flex items-center gap-2">
                 <UserIcon className="w-4 h-4 text-gray-500" />
                 {producto.created_by_name || `Usuario #${producto.created_by}`}
@@ -232,9 +233,9 @@ export default function ProductoInfo({ producto }: ProductoInfoProps) {
             </div>
             
             <div>
-              <label className="block text-xs font-medium text-gray-500 mb-1">
+              <Label className="block text-xs font-medium text-gray-500 mb-1">
                 Fecha de creación
-              </label>
+              </Label>
               <p className="text-sm text-gray-900">
                 {formatDate(producto.created_at)}
               </p>
@@ -242,9 +243,9 @@ export default function ProductoInfo({ producto }: ProductoInfoProps) {
             
             {producto.updated_at && (
               <div>
-                <label className="block text-xs font-medium text-gray-500 mb-1">
+                <Label className="block text-xs font-medium text-gray-500 mb-1">
                   Última actualización
-                </label>
+                </Label>
                 <p className="text-sm text-gray-900">
                   {formatDate(producto.updated_at)}
                 </p>

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { DashboardHeaderProps } from '@/types/dashboard';
+import { Button } from '../commons';
 
 /**
  * HEADER DEL DASHBOARD
@@ -47,13 +48,14 @@ export default function DashboardHeader({
           </div>
 
           {/* Botón de refresh */}
-          <button
+          <Button
             onClick={onRefresh}
             disabled={isRefreshing}
-            className="px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+            variant="primary"
+            size="sm"
           >
             {isRefreshing ? '🔄' : '↻'} Actualizar
-          </button>
+          </Button>
         </div>
       </div>
 

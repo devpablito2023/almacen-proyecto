@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { TestingPanelProps, TestResult, TestCredential } from '@/types/auth';
+import { Button } from '../../commons';
 
 /**
  * PANEL DE TESTING PARA DESARROLLO
@@ -151,21 +152,26 @@ const TestingPanel: React.FC<TestingPanelProps> = ({
         </div>
         
         <div className="flex space-x-2">
-          <button
+          <Button
+            variant="primary"
+            size="sm"
             onClick={handleTestAllCredentials}
             disabled={isLoading || isRunningTests}
-            className="px-3 py-1 text-sm bg-yellow-600 text-white rounded hover:bg-yellow-700 disabled:opacity-50 disabled:cursor-not-allowed"
+            isLoading={isRunningTests}
+            loadingText="Testing..."
+            className="bg-yellow-600 hover:bg-yellow-700"
           >
-            {isRunningTests ? 'Testing...' : 'Test All'}
-          </button>
+            Test All
+          </Button>
           
-          <button
+          <Button
+            variant="secondary"
+            size="sm"
             onClick={clearResults}
             disabled={isLoading || isRunningTests}
-            className="px-3 py-1 text-sm bg-gray-600 text-white rounded hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             Clear
-          </button>
+          </Button>
         </div>
       </div>
 
@@ -235,13 +241,17 @@ const TestingPanel: React.FC<TestingPanelProps> = ({
                 </div>
               )}
               
-              <button
+              <Button
+                variant="secondary"
+                size="sm"
+                fullWidth
                 onClick={() => handleTestSingleCredential(credential)}
                 disabled={isLoading || isRunningTests}
-                className="w-full px-3 py-2 text-sm border border-gray-300 rounded hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                isLoading={isTestingThis}
+                loadingText="Testing..."
               >
-                {isTestingThis ? 'Testing...' : 'Test Login'}
-              </button>
+                Test Login
+              </Button>
             </div>
           );
         })}

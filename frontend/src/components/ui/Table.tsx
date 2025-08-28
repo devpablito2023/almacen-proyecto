@@ -1,6 +1,8 @@
 import React from 'react';
 import { cn } from '../../lib/utils/cn';
 import { TableColumn } from '../../types/global';
+import { Button } from '../commons';
+import { Label } from '../commons';
 
 /**
  * Componente Table con paginación, sorting y filtros
@@ -94,6 +96,7 @@ const Table = <T extends Record<string, any>>({
           <tr>
             {columns.map((column) => (
               <th
+               
                 key={String(column.key)}
                 scope="col"
                 className={cn(
@@ -223,20 +226,22 @@ const Pagination: React.FC<PaginationProps> = ({
   return (
     <div className={cn('flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6', className)}>
       <div className="flex flex-1 justify-between sm:hidden">
-        <button
+        <Button
           onClick={() => onPageChange(currentPage - 1)}
           disabled={currentPage === 1}
-          className="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+          variant="secondary"
+          size="sm"
         >
           Anterior
-        </button>
-        <button
+        </Button>
+        <Button
           onClick={() => onPageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
-          className="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+          variant="secondary"
+          size="sm"
         >
           Siguiente
-        </button>
+        </Button>
       </div>
       
       <div className="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
@@ -251,8 +256,9 @@ const Pagination: React.FC<PaginationProps> = ({
           
           {onPageSizeChange && (
             <div className="flex items-center space-x-2">
-              <label className="text-sm text-gray-700">Mostrar:</label>
+              <Label className="text-sm text-gray-700">Mostrar:</Label>
               <select
+                aria-label='Cantidad de elementos por página'
                 value={itemsPerPage}
                 onChange={(e) => onPageSizeChange(Number(e.target.value))}
                 className="rounded-md border border-gray-300 bg-white px-2 py-1 text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
@@ -269,16 +275,19 @@ const Pagination: React.FC<PaginationProps> = ({
 
         <div>
           <nav className="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
-            <button
+            <Button
               onClick={() => onPageChange(currentPage - 1)}
               disabled={currentPage === 1}
-              className="relative inline-flex items-center rounded-l-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20 disabled:opacity-50 disabled:cursor-not-allowed"
+              variant="ghost"
+              size="sm"
+              className="rounded-l-md border border-gray-300 bg-white px-2 py-2 text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+              title="Anterior"
             >
               <span className="sr-only">Anterior</span>
               <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z" clipRule="evenodd" />
               </svg>
-            </button>
+            </Button>
             
             {getVisiblePages().map((page, index) => (
               <React.Fragment key={index}>
@@ -287,31 +296,36 @@ const Pagination: React.FC<PaginationProps> = ({
                     ...
                   </span>
                 ) : (
-                  <button
+                  <Button
                     onClick={() => onPageChange(Number(page))}
+                    variant="ghost"
+                    size="sm"
                     className={cn(
-                      'relative inline-flex items-center border px-4 py-2 text-sm font-medium focus:z-20',
+                      'border px-4 py-2 text-sm font-medium h-auto',
                       currentPage === page
                         ? 'z-10 bg-primary-50 border-primary-500 text-primary-600'
                         : 'bg-white border-gray-300 text-gray-500 hover:bg-gray-50'
                     )}
                   >
                     {page}
-                  </button>
+                  </Button>
                 )}
               </React.Fragment>
             ))}
             
-            <button
+            <Button
               onClick={() => onPageChange(currentPage + 1)}
               disabled={currentPage === totalPages}
-              className="relative inline-flex items-center rounded-r-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20 disabled:opacity-50 disabled:cursor-not-allowed"
+              variant="ghost"
+              size="sm"
+              className="rounded-r-md border border-gray-300 bg-white px-2 py-2 text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+              title="Siguiente"
             >
               <span className="sr-only">Siguiente</span>
               <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clipRule="evenodd" />
               </svg>
-            </button>
+            </Button>
           </nav>
         </div>
       </div>

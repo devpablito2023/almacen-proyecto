@@ -6,7 +6,9 @@ import {
   ArrowDownTrayIcon,
   FunnelIcon
 } from '@heroicons/react/24/outline';
+import React from 'react';
 import { ProductosHeaderProps } from '@/types/productos';
+import { Button } from '../commons';
 
 export default function ProductosHeader({
   onExport,
@@ -24,46 +26,46 @@ export default function ProductosHeader({
       
       <div className="flex gap-3">
         {/* Botón de filtros */}
-        <button
+        <Button
+          variant={showFilters ? "primary" : "secondary"}
           onClick={onToggleFilters}
-          className={`flex items-center gap-2 px-4 py-2 rounded-lg border transition-colors ${
-            showFilters 
-              ? 'bg-blue-50 text-blue-700 border-blue-200' 
-              : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
-          }`}
+          leftIcon={<svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+          </svg>}
         >
-          <FunnelIcon className="w-5 h-5" />
           Filtros
-        </button>
+        </Button>
 
         {/* Botones para usuarios autorizados */}
         {canCreate && (
           <>
-            <button
+            <Button
+              variant="primary"
               onClick={onImport}
-              className="flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+              leftIcon={<ArrowUpTrayIcon className="w-5 h-5" />}
+              className="bg-green-600 hover:bg-green-700"
             >
-              <ArrowUpTrayIcon className="w-5 h-5" />
               Importar Excel
-            </button>
-            <button
+            </Button>
+            <Button
+              variant="primary"
               onClick={() => window.location.href = '/dashboard/productos/nuevo'}
-              className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              leftIcon={<PlusIcon className="w-5 h-5" />}
             >
-              <PlusIcon className="w-5 h-5" />
               Nuevo Producto
-            </button>
+            </Button>
           </>
         )}
 
         {/* Botón exportar (siempre visible) */}
-        <button
+        <Button
+          variant="secondary"
           onClick={onExport}
-          className="flex items-center gap-2 px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
+          leftIcon={<ArrowDownTrayIcon className="w-5 h-5" />}
+          className="bg-gray-600 hover:bg-gray-700 text-white"
         >
-          <ArrowDownTrayIcon className="w-5 h-5" />
           Exportar
-        </button>
+        </Button>
       </div>
     </div>
   );

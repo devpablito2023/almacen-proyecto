@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from '../commons';
 import { cn } from '../../lib/utils/cn';
 
 /**
@@ -125,29 +126,29 @@ const Footer: React.FC<FooterProps> = ({
                 </h3>
                 <ul className="space-y-2">
                   <li>
-                    <button className="text-gray-600 hover:text-primary-600 text-sm transition-colors text-left">
+                    <Button variant="ghost" size="sm" className="text-gray-600 hover:text-primary-600 text-sm text-left h-auto p-0">
                       Manual de Usuario
-                    </button>
+                    </Button>
                   </li>
                   <li>
-                    <button className="text-gray-600 hover:text-primary-600 text-sm transition-colors text-left">
+                    <Button variant="ghost" size="sm" className="text-gray-600 hover:text-primary-600 text-sm text-left h-auto p-0">
                       Preguntas Frecuentes
-                    </button>
+                    </Button>
                   </li>
                   <li>
-                    <button className="text-gray-600 hover:text-primary-600 text-sm transition-colors text-left">
+                    <Button variant="ghost" size="sm" className="text-gray-600 hover:text-primary-600 text-sm text-left h-auto p-0">
                       Soporte Técnico
-                    </button>
+                    </Button>
                   </li>
                   <li>
-                    <button className="text-gray-600 hover:text-primary-600 text-sm transition-colors text-left">
+                    <Button variant="ghost" size="sm" className="text-gray-600 hover:text-primary-600 text-sm text-left h-auto p-0">
                       Reportar Problema
-                    </button>
+                    </Button>
                   </li>
                   <li>
-                    <button className="text-gray-600 hover:text-primary-600 text-sm transition-colors text-left">
+                    <Button variant="ghost" size="sm" className="text-gray-600 hover:text-primary-600 text-sm text-left h-auto p-0">
                       Solicitar Función
-                    </button>
+                    </Button>
                   </li>
                 </ul>
               </div>
@@ -172,19 +173,19 @@ const Footer: React.FC<FooterProps> = ({
               )}
               
               <div className="flex items-center space-x-4">
-                <button className="text-gray-400 hover:text-gray-600 transition-colors">
+                <Button variant="ghost" size="sm" className="text-gray-400 hover:text-gray-600 h-auto p-1" title="Privacidad">
                   <span className="sr-only">Privacidad</span>
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
-                </button>
+                </Button>
                 
-                <button className="text-gray-400 hover:text-gray-600 transition-colors">
+                <Button variant="ghost" size="sm" className="text-gray-400 hover:text-gray-600 h-auto p-1" title="Términos">
                   <span className="sr-only">Términos</span>
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
-                </button>
+                </Button>
               </div>
             </div>
           </div>
@@ -203,13 +204,13 @@ export const AuthFooter: React.FC = () => {
       <div className="flex items-center justify-center space-x-2 text-sm text-gray-500">
         <span>© {currentYear} Control de Almacén</span>
         <span>•</span>
-        <button className="hover:text-primary-600 transition-colors">
+        <Button variant="ghost" size="sm" className="hover:text-primary-600 text-sm h-auto p-0">
           Soporte
-        </button>
+        </Button>
         <span>•</span>
-        <button className="hover:text-primary-600 transition-colors">
+        <Button variant="ghost" size="sm" className="hover:text-primary-600 text-sm h-auto p-0">
           Privacidad
-        </button>
+        </Button>
       </div>
       
       <div className="mt-2 text-xs text-gray-400">

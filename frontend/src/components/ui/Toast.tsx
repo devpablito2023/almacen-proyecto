@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import { cn } from '../../lib/utils/cn';
+import { Button } from '../commons';
 
 /**
  * Sistema de notificaciones Toast
@@ -127,39 +128,44 @@ const ToastComponent: React.FC<ToastProps> = ({
             
             {action && (
               <div className="mt-3">
-                <button
+                <Button
                   type="button"
-                  className={cn(
-                    'text-sm font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2',
-                    type === 'success' && 'text-success-800 hover:text-success-900 focus:ring-success-500',
-                    type === 'error' && 'text-danger-800 hover:text-danger-900 focus:ring-danger-500',
-                    type === 'warning' && 'text-warning-800 hover:text-warning-900 focus:ring-warning-500',
-                    type === 'info' && 'text-primary-800 hover:text-primary-900 focus:ring-primary-500'
-                  )}
                   onClick={action.onClick}
+                  variant="ghost"
+                  size="sm"
+                  className={cn(
+                    'h-auto p-0',
+                    type === 'success' && 'text-success-800 hover:text-success-900',
+                    type === 'error' && 'text-danger-800 hover:text-danger-900',
+                    type === 'warning' && 'text-warning-800 hover:text-warning-900',
+                    type === 'info' && 'text-primary-800 hover:text-primary-900'
+                  )}
                 >
                   {action.label}
-                </button>
+                </Button>
               </div>
             )}
           </div>
           
           <div className="ml-4 flex-shrink-0 flex">
-            <button
-              className={cn(
-                'inline-flex rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2',
-                type === 'success' && 'text-success-400 hover:text-success-500 focus:ring-success-500',
-                type === 'error' && 'text-danger-400 hover:text-danger-500 focus:ring-danger-500',
-                type === 'warning' && 'text-warning-400 hover:text-warning-500 focus:ring-warning-500',
-                type === 'info' && 'text-primary-400 hover:text-primary-500 focus:ring-primary-500'
-              )}
+            <Button
               onClick={handleClose}
+              variant="ghost"
+              size="sm"
+              className={cn(
+                'h-auto p-1',
+                type === 'success' && 'text-success-400 hover:text-success-500',
+                type === 'error' && 'text-danger-400 hover:text-danger-500',
+                type === 'warning' && 'text-warning-400 hover:text-warning-500',
+                type === 'info' && 'text-primary-400 hover:text-primary-500'
+              )}
+              title="Cerrar"
             >
               <span className="sr-only">Cerrar</span>
               <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
               </svg>
-            </button>
+            </Button>
           </div>
         </div>
       </div>

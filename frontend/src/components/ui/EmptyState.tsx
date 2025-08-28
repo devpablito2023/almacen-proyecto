@@ -1,5 +1,6 @@
 import React from 'react';
 import { cn } from '../../lib/utils/cn';
+import { Button } from '../commons';
 
 /**
  * Componente EmptyState para mostrar cuando no hay datos
@@ -75,23 +76,12 @@ const EmptyState: React.FC<EmptyStateProps> = ({
 
       {/* Action */}
       {action && (
-        <button
+        <Button
           onClick={action.onClick}
-          className={cn(
-            'inline-flex items-center px-4 py-2 border text-sm font-medium rounded-md transition-colors duration-200',
-            'focus:outline-none focus:ring-2 focus:ring-offset-2',
-            action.variant === 'primary' && [
-              'border-transparent text-white bg-primary-600 hover:bg-primary-700',
-              'focus:ring-primary-500'
-            ],
-            (!action.variant || action.variant === 'secondary') && [
-              'border-gray-300 text-gray-700 bg-white hover:bg-gray-50',
-              'focus:ring-primary-500'
-            ]
-          )}
+          variant={action.variant === 'primary' ? 'primary' : 'secondary'}
         >
           {action.label}
-        </button>
+        </Button>
       )}
     </div>
   );

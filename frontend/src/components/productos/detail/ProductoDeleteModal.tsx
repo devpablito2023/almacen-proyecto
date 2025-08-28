@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { ExclamationTriangleIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import { Producto, ProductoDeleteModalProps } from '@/types/productos';
+import { Button } from '../../commons';
 
 export default function ProductoDeleteModal({ 
   show, 
@@ -68,14 +69,16 @@ export default function ProductoDeleteModal({
               </div>
             </div>
             
-            <button
+            <Button
+              variant="ghost"
+              size="sm"
               onClick={onCancel}
               disabled={loading}
               className="text-gray-400 hover:text-gray-600 disabled:opacity-50"
               title="Cerrar modal"
             >
               <XMarkIcon className="w-6 h-6" />
-            </button>
+            </Button>
           </div>
 
           {/* Content */}
@@ -93,22 +96,24 @@ export default function ProductoDeleteModal({
 
           {/* Footer */}
           <div className="flex gap-3 justify-end p-6 border-t bg-gray-50">
-            <button
-              type="button"
-              className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50"
+            <Button
+              variant="secondary"
               onClick={onCancel}
               disabled={loading}
+              className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50"
             >
               Cancelar
-            </button>
-            <button
-              type="button"
-              className="px-4 py-2 text-sm font-medium text-white bg-red-600 border border-transparent rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 disabled:opacity-50"
+            </Button>
+            <Button
+              variant="danger"
               onClick={onConfirm}
               disabled={loading}
+              isLoading={loading}
+              loadingText="Eliminando..."
+              className="px-4 py-2 text-sm font-medium text-white bg-red-600 border border-transparent rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 disabled:opacity-50"
             >
-              {loading ? 'Eliminando...' : 'Eliminar'}
-            </button>
+              Eliminar
+            </Button>
           </div>
         </div>
       </div>

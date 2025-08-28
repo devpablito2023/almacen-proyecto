@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { CheckCircleIcon, ExclamationTriangleIcon, PlusIcon, MinusIcon } from '@heroicons/react/24/outline';
+import { Button, Input, Label } from '../commons';
 
 interface AdjustData {
   tipo_ajuste: 'positivo' | 'negativo';
@@ -59,7 +60,9 @@ export default function StockAdjustModal({
       <div className="bg-white rounded-lg p-6 max-w-md w-full mx-4">
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-semibold text-gray-900">Ajustar Stock</h3>
-          <button
+          <Button
+            variant="ghost"
+            size="sm"
             onClick={() => {
               onClose();
               resetForm();
@@ -67,7 +70,7 @@ export default function StockAdjustModal({
             className="text-gray-400 hover:text-gray-600"
           >
             ✕
-          </button>
+          </Button>
         </div>
 
         {success && (
@@ -90,9 +93,9 @@ export default function StockAdjustModal({
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <Label className="block text-sm font-medium text-gray-700 mb-2">
               Tipo de Ajuste
-            </label>
+            </Label>
             <select
               value={adjustData.tipo_ajuste}
               onChange={(e) => setAdjustData(prev => ({ ...prev, tipo_ajuste: e.target.value as 'positivo' | 'negativo' }))}
@@ -105,10 +108,10 @@ export default function StockAdjustModal({
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <Label className="block text-sm font-medium text-gray-700 mb-2">
               Cantidad
-            </label>
-            <input
+            </Label>
+            <Input
               type="number"
               min="1"
               value={adjustData.cantidad_ajuste}
@@ -120,10 +123,10 @@ export default function StockAdjustModal({
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <Label className="block text-sm font-medium text-gray-700 mb-2">
               Motivo *
-            </label>
-            <input
+            </Label>
+            <Input
               type="text"
               value={adjustData.motivo}
               onChange={(e) => setAdjustData(prev => ({ ...prev, motivo: e.target.value }))}
@@ -135,38 +138,27 @@ export default function StockAdjustModal({
           </div>
 
           <div className="flex items-center justify-end gap-3 pt-4">
-            <button
+            <Button
               type="button"
               onClick={() => {
                 onClose();
                 resetForm();
               }}
               disabled={loading}
-              className="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50"
+              variant="secondary"
             >
               Cancelar
-            </button>
-            <button
+            </Button>
+            <Button
               type="submit"
               disabled={loading || adjustData.cantidad_ajuste <= 0 || !adjustData.motivo.trim()}
-              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+              variant="primary"
+              isLoading={loading}
+              loadingText="Procesando..."
+              leftIcon={!loading && adjustData.tipo_ajuste === 'positivo' ? <PlusIcon className="w-4 h-4" /> : !loading && adjustData.tipo_ajuste === 'negativo' ? <MinusIcon className="w-4 h-4" /> : undefined}
             >
-              {loading ? (
-                <>
-                  <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
-                  Procesando...
-                </>
-              ) : (
-                <>
-                  {adjustData.tipo_ajuste === 'positivo' ? (
-                    <PlusIcon className="w-4 h-4" />
-                  ) : (
-                    <MinusIcon className="w-4 h-4" />
-                  )}
-                  Realizar Ajuste
-                </>
-              )}
-            </button>
+              Realizar Ajuste
+            </Button>
           </div>
         </form>
       </div>

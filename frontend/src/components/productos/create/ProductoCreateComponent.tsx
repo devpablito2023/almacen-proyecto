@@ -15,6 +15,7 @@ import {
   MAGNITUDES_PRODUCTO
 } from '@/types/productos';
 import { authService } from '@/lib/auth/authService';
+import { Button } from '../../commons';
 import ProductoForm from './ProductoForm';
 import LoadingSpinner from '../../stock/LoadingSpinner';
 import ErrorAlert from '../../stock/ErrorAlert';
@@ -97,13 +98,14 @@ export default function ProductoCreateComponent() {
           <h3 className="mt-2 text-sm font-medium text-gray-900">Sin permisos</h3>
           <p className="mt-1 text-sm text-gray-500">No tienes permisos para crear productos.</p>
           <div className="mt-6">
-            <button
+            <Button
+              variant="ghost"
               onClick={handleBack}
               className="flex items-center gap-2 mx-auto text-blue-600 hover:text-blue-800"
+              leftIcon={<ArrowLeftIcon className="w-5 h-5" />}
             >
-              <ArrowLeftIcon className="w-5 h-5" />
               Volver a productos
-            </button>
+            </Button>
           </div>
         </div>
       </div>
@@ -126,13 +128,14 @@ export default function ProductoCreateComponent() {
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-4">
-          <button
+          <Button
+            variant="ghost"
             onClick={handleBack}
             className="flex items-center gap-2 text-gray-600 hover:text-gray-800"
+            leftIcon={<ArrowLeftIcon className="w-5 h-5" />}
           >
-            <ArrowLeftIcon className="w-5 h-5" />
             Volver
-          </button>
+          </Button>
           <div>
             <h1 className="text-2xl font-bold text-gray-900">Crear Nuevo Producto</h1>
             <p className="text-gray-600">Agrega un nuevo producto al inventario</p>

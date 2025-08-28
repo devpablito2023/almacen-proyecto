@@ -13,6 +13,7 @@ import {
   MAGNITUDES_PRODUCTO,
   ProductoFormProps
 } from '@/types/productos';
+import { Button, Input, Label } from '../../commons';
 
 export default function ProductoForm({ 
   initialData = {}, 
@@ -126,10 +127,10 @@ export default function ProductoForm({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Código */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <Label className="block text-sm font-medium text-gray-700 mb-1">
               Código del Producto *
-            </label>
-            <input
+            </Label>
+            <Input
               type="text"
               value={formData.codigo_producto}
               onChange={(e) => handleChange('codigo_producto', e.target.value.toUpperCase())}
@@ -146,10 +147,10 @@ export default function ProductoForm({
 
           {/* Nombre */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <Label className="block text-sm font-medium text-gray-700 mb-1">
               Nombre del Producto *
-            </label>
-            <input
+            </Label>
+            <Input
               type="text"
               value={formData.nombre_producto}
               onChange={(e) => handleChange('nombre_producto', e.target.value)}
@@ -166,9 +167,9 @@ export default function ProductoForm({
 
           {/* Tipo */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <Label className="block text-sm font-medium text-gray-700 mb-1">
               Tipo de Producto *
-            </label>
+            </Label>
             <select
               value={formData.tipo_producto}
               onChange={(e) => handleChange('tipo_producto', e.target.value)}
@@ -185,9 +186,9 @@ export default function ProductoForm({
 
           {/* Categoría */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <Label className="block text-sm font-medium text-gray-700 mb-1">
               Categoría *
-            </label>
+            </Label>
             <select
               value={formData.categoria_producto}
               onChange={(e) => handleChange('categoria_producto', e.target.value)}
@@ -210,10 +211,10 @@ export default function ProductoForm({
 
           {/* Proveedor */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <Label className="block text-sm font-medium text-gray-700 mb-1">
               Proveedor *
-            </label>
-            <input
+            </Label>
+            <Input
               type="text"
               value={formData.proveedor_producto}
               onChange={(e) => handleChange('proveedor_producto', e.target.value)}
@@ -230,9 +231,9 @@ export default function ProductoForm({
 
           {/* Magnitud */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <Label className="block text-sm font-medium text-gray-700 mb-1">
               Unidad de Medida *
-            </label>
+            </Label>
             <select
               value={formData.magnitud_producto}
               onChange={(e) => handleChange('magnitud_producto', e.target.value)}
@@ -250,9 +251,9 @@ export default function ProductoForm({
 
         {/* Descripción */}
         <div className="mt-4">
-          <label className="block text-sm font-medium text-gray-700 mb-1">
+          <Label className="block text-sm font-medium text-gray-700 mb-1">
             Descripción
-          </label>
+          </Label>
           <textarea
             value={formData.descripcion_producto}
             onChange={(e) => handleChange('descripcion_producto', e.target.value)}
@@ -270,10 +271,10 @@ export default function ProductoForm({
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <Label className="block text-sm font-medium text-gray-700 mb-1">
               Costo Unitario *
-            </label>
-            <input
+            </Label>
+            <Input
               type="number"
               step="0.01"
               min="0"
@@ -290,10 +291,10 @@ export default function ProductoForm({
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <Label className="block text-sm font-medium text-gray-700 mb-1">
               Precio Referencial
-            </label>
-            <input
+            </Label>
+            <Input
               type="number"
               step="0.01"
               min="0"
@@ -312,10 +313,10 @@ export default function ProductoForm({
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <Label className="block text-sm font-medium text-gray-700 mb-1">
               Stock Mínimo *
-            </label>
-            <input
+            </Label>
+            <Input
               type="number"
               min="0"
               value={formData.stock_minimo}
@@ -331,10 +332,10 @@ export default function ProductoForm({
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <Label className="block text-sm font-medium text-gray-700 mb-1">
               Stock Máximo *
-            </label>
-            <input
+            </Label>
+            <Input
               type="number"
               min="1"
               value={formData.stock_maximo}
@@ -350,10 +351,10 @@ export default function ProductoForm({
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <Label className="block text-sm font-medium text-gray-700 mb-1">
               Stock Crítico *
-            </label>
-            <input
+            </Label>
+            <Input
               type="number"
               min="0"
               value={formData.stock_critico}
@@ -371,10 +372,10 @@ export default function ProductoForm({
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <Label className="block text-sm font-medium text-gray-700 mb-1">
               Ubicación Física *
-            </label>
-            <input
+            </Label>
+            <Input
               type="text"
               value={formData.ubicacion_fisica}
               onChange={(e) => handleChange('ubicacion_fisica', e.target.value)}
@@ -390,10 +391,10 @@ export default function ProductoForm({
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <Label className="block text-sm font-medium text-gray-700 mb-1">
               Días Vida Útil
-            </label>
-            <input
+            </Label>
+            <Input
               type="number"
               min="0"
               value={formData.dias_vida_util}
@@ -407,8 +408,8 @@ export default function ProductoForm({
 
         {/* Checkbox de requiere lote */}
         <div className="mt-4">
-          <label className="flex items-center">
-            <input
+          <Label className="flex items-center">
+            <Input
               type="checkbox"
               checked={formData.requiere_lote}
               onChange={(e) => handleChange('requiere_lote', e.target.checked)}
@@ -416,17 +417,17 @@ export default function ProductoForm({
               disabled={isLoading}
             />
             <span className="ml-2 text-sm text-gray-700">Requiere control por lote/serie</span>
-          </label>
+          </Label>
         </div>
 
         {/* Campos adicionales si requiere lote */}
         {formData.requiere_lote && (
           <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <Label className="block text-sm font-medium text-gray-700 mb-1">
                 Lote/Serie
-              </label>
-              <input
+              </Label>
+              <Input
                 type="text"
                 value={formData.lote_serie}
                 onChange={(e) => handleChange('lote_serie', e.target.value)}
@@ -437,10 +438,10 @@ export default function ProductoForm({
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <Label className="block text-sm font-medium text-gray-700 mb-1">
                 Fecha de Vencimiento
-              </label>
-              <input
+              </Label>
+              <Input
                 type="date"
                 value={formData.fecha_vencimiento}
                 onChange={(e) => handleChange('fecha_vencimiento', e.target.value)}
@@ -454,28 +455,25 @@ export default function ProductoForm({
 
       {/* Botones */}
       <div className="flex justify-end gap-3 pt-6 border-t">
-        <button
+        <Button
           type="button"
+          variant="secondary"
           onClick={onCancel}
           className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           disabled={isLoading}
         >
           Cancelar
-        </button>
-        <button
+        </Button>
+        <Button
           type="submit"
+          variant="primary"
+          isLoading={isLoading}
+          loadingText="Guardando..."
           className="px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
           disabled={isLoading}
         >
-          {isLoading ? (
-            <div className="flex items-center gap-2">
-              <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
-              Guardando...
-            </div>
-          ) : (
-            submitText
-          )}
-        </button>
+          {submitText}
+        </Button>
       </div>
     </form>
   );

@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { ProductoEditProps, Producto, ProductoFormData } from '@/types/productos';
 import { authService } from '@/lib/auth/authService';
+import { Button } from '../../commons';
 import ProductoForm from '../create/ProductoForm';
 import LoadingSpinner from '../../stock/LoadingSpinner';
 import ErrorAlert from '../../stock/ErrorAlert';
@@ -122,12 +123,13 @@ export default function ProductoEdit({ productId, onSuccess, onCancel }: Product
       <div className="p-6">
         <ErrorAlert error={error || 'Producto no encontrado'} onClose={() => setError(null)} />
         <div className="mt-4">
-          <button
+          <Button
             onClick={handleCancel}
-            className="text-blue-600 hover:text-blue-800"
+            variant="ghost"
+            size="sm"
           >
             Volver
-          </button>
+          </Button>
         </div>
       </div>
     );

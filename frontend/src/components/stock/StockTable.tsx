@@ -1,6 +1,7 @@
 import { MapPinIcon, ClockIcon, ChartBarIcon, CubeIcon } from '@heroicons/react/24/outline';
 import { TIPO_COLORS } from '@/types/productos';
 import { STOCK_ALERT_COLORS } from '@/types/stock';
+import { Button } from '../commons/Button';
 
 interface StockItem {
   id_stock: number;
@@ -159,13 +160,14 @@ export default function StockTable({
                     {canAdjustStock && (
                       <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                         <div className="flex items-center gap-2">
-                          <button
+                          <Button
                             onClick={() => onAdjustStock(item.producto_id)}
-                            className="text-blue-600 hover:text-blue-900 flex items-center gap-1"
+                            variant="ghost"
+                            size="sm"
+                            leftIcon={<ChartBarIcon className="w-4 h-4" />}
                           >
-                            <ChartBarIcon className="w-4 h-4" />
                             Ajustar
-                          </button>
+                          </Button>
                         </div>
                       </td>
                     )}
@@ -211,12 +213,15 @@ export default function StockTable({
                   <div className="flex items-center gap-2">
                     <span className="text-xs text-gray-500">{formatDate(item.fecha_ultimo_movimiento)}</span>
                     {canAdjustStock && (
-                      <button
+                      <Button
                         onClick={() => onAdjustStock(item.producto_id)}
-                        className="p-2 text-blue-600 hover:bg-blue-100 rounded-full"
+                        variant="ghost"
+                        size="sm"
+                        leftIcon={<ChartBarIcon className="w-4 h-4" />}
+                        title="Ajustar stock"
                       >
-                        <ChartBarIcon className="w-4 h-4" />
-                      </button>
+                        Ajustar
+                      </Button>
                     )}
                   </div>
                 </div>

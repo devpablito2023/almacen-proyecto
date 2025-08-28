@@ -1,8 +1,12 @@
 // src/app/(dashboard)/dashboard/page.tsx
-'use client';
-
 import React from 'react';
 import DashboardMain from '@/components/dashboard/DashboardMain';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Dashboard - Sistema Control de Almacén',
+  description: 'Panel de control del sistema de almacén',
+};
 
 /**
  * PÁGINA DEL DASHBOARD
@@ -10,16 +14,5 @@ import DashboardMain from '@/components/dashboard/DashboardMain';
  * Simple wrapper que usa el componente DashboardMain modularizado
  */
 export default function DashboardPage() {
-  return (
-    <>
-      {/* Metadata para SEO */}
-      <head>
-        <title>Dashboard - Sistema Control de Almacén</title>
-        <meta name="description" content="Panel de control del sistema de almacén" />
-      </head>
-
-      {/* Componente principal modularizado */}
-      <DashboardMain />
-    </>
-  );
+  return <DashboardMain />;
 }

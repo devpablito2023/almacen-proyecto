@@ -2,8 +2,8 @@ import React from 'react';
 import { cn } from '../../lib/utils/cn';
 
 /**
- * Componente Input base con validaciones y estados
- * Incluye soporte para iconos, errores y diferentes variantes
+ * Componente Input primitivo con validaciones y estados
+ * Componente atómico base para inputs en todo el sistema
  */
 
 export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
